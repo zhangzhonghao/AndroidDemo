@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 填满屏幕的 FrameLayout，PetActivity 在其中以绝对坐标移动 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grass">
+
+    <!-- 狗 + 气泡容器（用绝对坐标移动） -->
+    <!-- 设置固定尺寸为气泡预留空间（DogView约131x150dp，气泡各需约60dp） -->
+    <FrameLayout
+        android:id="@+id/dog_bubble_container"
+        android:layout_width="200dp"
+        android:layout_height="300dp">
+
+        <!-- 宠物狗 -->
+        <com.example.androiddemo.ai.DogView
+            android:id="@+id/dog_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <!-- 头顶气泡 -->
+        <TextView
+            android:id="@+id/tv_bubble_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="-4dp"
+            android:background="@drawable/bg_bubble_top"
+            android:gravity="center"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp"
+            android:text="来自哥的问候"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- 底部气泡 -->
+        <TextView
+            android:id="@+id/tv_bubble_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="-4dp"
+            android:background="@drawable/bg_bubble_bottom"
+            android:gravity="center"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp"
+            android:text="莫挨老子"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</FrameLayout>

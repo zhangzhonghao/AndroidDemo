@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 天空渐变 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#87CEEB"
+                android:endColor="#C8E6FA"
+                android:angle="270" />
+        </shape>
+    </item>
+
+    <!-- 远景草地（深绿） -->
+    <item android:top="400dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#5A8F3E" />
+        </shape>
+    </item>
+
+    <!-- 中景草地（暖绿） -->
+    <item android:top="500dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#6AAF4A"
+                android:endColor="#7BC24E"
+                android:angle="270" />
+        </shape>
+    </item>
+
+    <!-- 前景草地（温暖黄绿） -->
+    <item android:top="580dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#8CC65A"
+                android:endColor="#A4D46A"
+                android:angle="270" />
+        </shape>
+    </item>
+</layer-list>

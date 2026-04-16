@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 宠物狗（居中） -->
+    <com.example.androiddemo.ai.DogView
+        android:id="@+id/dog_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <!-- 头顶气泡：使用负 margin 定位到狗上方 -->
+    <TextView
+        android:id="@+id/tv_bubble_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bg_bubble_top"
+        android:gravity="center"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="8dp"
+        android:text="来自哥的问候"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- 底部气泡：使用负 margin 定位到狗下方 -->
+    <TextView
+        android:id="@+id/tv_bubble_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/bg_bubble_bottom"
+        android:gravity="center"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="8dp"
+        android:text="莫挨老子"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -73,11 +73,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- 类型2: 数据存储 -->
+        <!-- 类型2: AI -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="数据存储"
+            android:text="AI"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="?attr/colorPrimary"
@@ -91,31 +91,17 @@
             android:background="@drawable/section_background">
 
             <Button
-                android:id="@+id/btn_storage_sharedprefs"
+                android:id="@+id/btn_ai_voice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SharedPreferences"
+                android:text="语音采集"
                 android:onClick="onFeatureClick" />
 
             <Button
-                android:id="@+id/btn_storage_file"
+                android:id="@+id/btn_ai_pet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="文件存储"
-                android:onClick="onFeatureClick" />
-
-            <Button
-                android:id="@+id/btn_storage_database"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="数据库"
-                android:onClick="onFeatureClick" />
-
-            <Button
-                android:id="@+id/btn_storage_cache"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="缓存管理"
+                android:text="电子宠物"
                 android:onClick="onFeatureClick" />
         </LinearLayout>
 

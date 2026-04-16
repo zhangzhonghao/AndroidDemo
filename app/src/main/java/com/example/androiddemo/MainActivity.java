@@ -10,10 +10,8 @@ import com.example.androiddemo.location.LocationGeofenceActivity;
 import com.example.androiddemo.location.LocationDistanceActivity;
 import com.example.androiddemo.location.LocationMapActivity;
 import com.example.androiddemo.location.LocationNavigationActivity;
-import com.example.androiddemo.storage.StorageSharedPrefsActivity;
-import com.example.androiddemo.storage.StorageFileActivity;
-import com.example.androiddemo.storage.StorageDatabaseActivity;
-import com.example.androiddemo.storage.StorageCacheActivity;
+import com.example.androiddemo.ai.VoiceCollectionActivity;
+import com.example.androiddemo.ai.PetActivity;
 import com.example.androiddemo.network.NetworkHttpActivity;
 import com.example.androiddemo.network.NetworkJsonActivity;
 import com.example.androiddemo.network.NetworkImageActivity;
@@ -43,15 +41,11 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.btn_location_navigation) {
             intent = new Intent(this, LocationNavigationActivity.class);
         }
-        // 数据存储
-        else if (id == R.id.btn_storage_sharedprefs) {
-            intent = new Intent(this, StorageSharedPrefsActivity.class);
-        } else if (id == R.id.btn_storage_file) {
-            intent = new Intent(this, StorageFileActivity.class);
-        } else if (id == R.id.btn_storage_database) {
-            intent = new Intent(this, StorageDatabaseActivity.class);
-        } else if (id == R.id.btn_storage_cache) {
-            intent = new Intent(this, StorageCacheActivity.class);
+        // AI
+        else if (id == R.id.btn_ai_voice) {
+            intent = new Intent(this, VoiceCollectionActivity.class);
+        } else if (id == R.id.btn_ai_pet) {
+            intent = new Intent(this, PetActivity.class);
         }
         // 网络通信
         else if (id == R.id.btn_network_http) {
