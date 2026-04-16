@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="定位功能"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="24dp" />
+
+    <!-- 状态提示 -->
+    <TextView
+        android:id="@+id/tv_location_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="点击下方按钮获取当前定位\n\n支持 GPS + 网络混合定位\n获取经纬度及地址信息"
+        android:textSize="15sp"
+        android:textColor="#666666"
+        android:lineSpacingExtra="6dp"
+        android:gravity="center" />
+
+    <!-- 定位按钮 -->
+    <Button
+        android:id="@+id/btn_get_location"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="获取当前定位"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/purple_500"
+        android:layout_marginBottom="32dp" />
+
+</LinearLayout>

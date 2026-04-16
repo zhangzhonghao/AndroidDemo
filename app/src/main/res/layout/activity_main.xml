@@ -1,17 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <Button
-        android:id="@+id/btn_test"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- 类型1: 定位 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="定位"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_location_gps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="定位"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_location_geofence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="电子围栏"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_location_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="距离判断"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_location_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="静态地图"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_location_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="导航"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorOnSurface"
+            android:alpha="0.2"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 类型2: 数据存储 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数据存储"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_storage_sharedprefs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SharedPreferences"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_storage_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="文件存储"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_storage_database"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="数据库"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_storage_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="缓存管理"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorOnSurface"
+            android:alpha="0.2"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 类型3: 网络通信 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="网络通信"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_network_http"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HTTP请求"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_network_json"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JSON解析"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_network_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片加载"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_network_websocket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WebSocket"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

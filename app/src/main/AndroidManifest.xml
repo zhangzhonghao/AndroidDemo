@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemo">
+
+        <!-- 高德地图 Key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="47c170f3e9ffb34a8edb5158a2f3c508" />
+
+        <!-- 主页面 -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -19,6 +32,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 定位 -->
+        <activity android:name=".location.LocationGpsActivity" />
+        <activity android:name=".location.LocationGeofenceActivity" />
+        <activity android:name=".location.LocationDistanceActivity" />
+        <activity android:name=".location.LocationMapActivity" />
+        <activity android:name=".location.LocationNavigationActivity" />
+
+        <!-- 数据存储 -->
+        <activity android:name=".storage.StorageSharedPrefsActivity" />
+        <activity android:name=".storage.StorageFileActivity" />
+        <activity android:name=".storage.StorageDatabaseActivity" />
+        <activity android:name=".storage.StorageCacheActivity" />
+
+        <!-- 网络通信 -->
+        <activity android:name=".network.NetworkHttpActivity" />
+        <activity android:name=".network.NetworkJsonActivity" />
+        <activity android:name=".network.NetworkImageActivity" />
+        <activity android:name=".network.NetworkWebsocketActivity" />
+
+        <service android:name="com.amap.api.location.APSService"/>
+
+
     </application>
 
 </manifest>
