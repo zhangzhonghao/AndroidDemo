@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="白屏埋点"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击按钮将模拟白屏5秒，之后保存异常日志到本地文件"
+        android:textSize="14sp"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/btn_trigger_white_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="触发白屏"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="白屏日志:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingBottom="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:drawable/edit_text">
+
+        <TextView
+            android:id="@+id/tv_white_screen_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击按钮触发白屏后，日志将显示在这里"
+            android:textSize="12sp"
+            android:padding="8dp"
+            android:textIsSelectable="true" />
+    </ScrollView>
+
+</LinearLayout>

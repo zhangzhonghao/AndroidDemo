@@ -49,6 +49,14 @@
         <!-- UI -->
         <activity android:name=".ui.bottomnav.BottomNavFoldableActivity" />
 
+        <!-- 应用埋点 -->
+        <activity android:name=".trace.CustomTraceActivity" />
+        <activity android:name=".trace.CrashTraceActivity" />
+        <activity android:name=".trace.WhiteScreenTraceActivity" />
+        <activity android:name=".trace.LagTraceActivity" />
+        <activity android:name=".trace.PerformanceTraceActivity" />
+        <activity android:name=".trace.PerformanceMeasureActivity" />
+
         <service android:name="com.amap.api.location.APSService"/>
 
 

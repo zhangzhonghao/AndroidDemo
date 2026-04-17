@@ -17,6 +17,11 @@ import com.example.androiddemo.network.NetworkJsonActivity;
 import com.example.androiddemo.network.NetworkImageActivity;
 import com.example.androiddemo.network.NetworkWebsocketActivity;
 import com.example.androiddemo.ui.bottomnav.BottomNavFoldableActivity;
+import com.example.androiddemo.trace.CustomTraceActivity;
+import com.example.androiddemo.trace.CrashTraceActivity;
+import com.example.androiddemo.trace.WhiteScreenTraceActivity;
+import com.example.androiddemo.trace.LagTraceActivity;
+import com.example.androiddemo.trace.PerformanceTraceActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +56,18 @@ public class MainActivity extends AppCompatActivity {
         // UI
         else if (id == R.id.btn_ui_bottom_nav_foldable) {
             intent = new Intent(this, BottomNavFoldableActivity.class);
+        }
+        // 应用埋点
+        else if (id == R.id.btn_trace_custom) {
+            intent = new Intent(this, CustomTraceActivity.class);
+        } else if (id == R.id.btn_trace_crash) {
+            intent = new Intent(this, CrashTraceActivity.class);
+        } else if (id == R.id.btn_trace_white_screen) {
+            intent = new Intent(this, WhiteScreenTraceActivity.class);
+        } else if (id == R.id.btn_trace_lag) {
+            intent = new Intent(this, LagTraceActivity.class);
+        } else if (id == R.id.btn_trace_performance) {
+            intent = new Intent(this, PerformanceTraceActivity.class);
         }
 
         if (intent != null) {

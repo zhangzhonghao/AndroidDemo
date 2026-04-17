@@ -2,9 +2,9 @@
 <resources>
     <!-- Minimal Light Theme Colors -->
     
-    <!-- Primary colors - Soft blue-gray -->
-    <color name="primary">#5C6BC0</color>
-    <color name="primary_variant">#3949AB</color>
+    <!-- Primary colors - Muted blue-gray (Morandi style) -->
+    <color name="primary">#90A4AE</color>
+    <color name="primary_variant">#78909C</color>
     <color name="on_primary">#FFFFFF</color>
     
     <!-- Secondary colors - Muted teal -->
