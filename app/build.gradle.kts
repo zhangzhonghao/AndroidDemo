@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.material)
+    implementation("androidx.window:window:1.2.0")
     implementation(files("libs/AMap_Location_V11.1.001_20260402.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

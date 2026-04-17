@@ -46,11 +46,8 @@
         <activity android:name=".ai.VoiceCollectionActivity" />
         <activity android:name=".ai.PetActivity" />
 
-        <!-- 网络通信 -->
-        <activity android:name=".network.NetworkHttpActivity" />
-        <activity android:name=".network.NetworkJsonActivity" />
-        <activity android:name=".network.NetworkImageActivity" />
-        <activity android:name=".network.NetworkWebsocketActivity" />
+        <!-- UI -->
+        <activity android:name=".ui.bottomnav.BottomNavFoldableActivity" />
 
         <service android:name="com.amap.api.location.APSService"/>
 

@@ -16,6 +16,7 @@ import com.example.androiddemo.network.NetworkHttpActivity;
 import com.example.androiddemo.network.NetworkJsonActivity;
 import com.example.androiddemo.network.NetworkImageActivity;
 import com.example.androiddemo.network.NetworkWebsocketActivity;
+import com.example.androiddemo.ui.bottomnav.BottomNavFoldableActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,15 +48,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.btn_ai_pet) {
             intent = new Intent(this, PetActivity.class);
         }
-        // 网络通信
-        else if (id == R.id.btn_network_http) {
-            intent = new Intent(this, NetworkHttpActivity.class);
-        } else if (id == R.id.btn_network_json) {
-            intent = new Intent(this, NetworkJsonActivity.class);
-        } else if (id == R.id.btn_network_image) {
-            intent = new Intent(this, NetworkImageActivity.class);
-        } else if (id == R.id.btn_network_websocket) {
-            intent = new Intent(this, NetworkWebsocketActivity.class);
+        // UI
+        else if (id == R.id.btn_ui_bottom_nav_foldable) {
+            intent = new Intent(this, BottomNavFoldableActivity.class);
         }
 
         if (intent != null) {

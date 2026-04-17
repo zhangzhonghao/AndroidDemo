@@ -114,11 +114,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- 类型3: 网络通信 -->
+        <!-- 类型3: UI -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="网络通信"
+            android:text="UI"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="?attr/colorPrimary"
@@ -132,31 +132,10 @@
             android:background="@drawable/section_background">
 
             <Button
-                android:id="@+id/btn_network_http"
+                android:id="@+id/btn_ui_bottom_nav_foldable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="HTTP请求"
-                android:onClick="onFeatureClick" />
-
-            <Button
-                android:id="@+id/btn_network_json"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="JSON解析"
-                android:onClick="onFeatureClick" />
-
-            <Button
-                android:id="@+id/btn_network_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="图片加载"
-                android:onClick="onFeatureClick" />
-
-            <Button
-                android:id="@+id/btn_network_websocket"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="WebSocket"
+                android:text="底部菜单折叠屏适配"
                 android:onClick="onFeatureClick" />
         </LinearLayout>
 
