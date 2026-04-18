@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="万年历"
+        android:textSize="20sp"
+        android:textColor="@color/on_background"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/surface" />
+
+    <!-- 年份导航 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/surface_variant">
+
+        <Button
+            android:id="@+id/btn_prev_year"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="&lt;&lt;"
+            android:textSize="16sp"
+            android:background="@drawable/circle_button_background"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年"
+            android:textSize="18sp"
+            android:textColor="@color/on_surface"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/btn_next_year"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="&gt;&gt;"
+            android:textSize="16sp"
+            android:background="@drawable/circle_button_background" />
+
+    </LinearLayout>
+
+    <!-- 月份导航 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/surface">
+
+        <Button
+            android:id="@+id/btn_prev_month"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="&lt;"
+            android:textSize="18sp"
+            android:background="@drawable/circle_button_background"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一月"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface"
+            android:minWidth="80dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btn_next_month"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="&gt;"
+            android:textSize="18sp"
+            android:background="@drawable/circle_button_background"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <!-- 星期标题 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/surface_variant"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="日"
+            android:textSize="14sp"
+            android:textColor="@color/error"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一"
+            android:textSize="14sp"
+            android:textColor="@color/on_surface_variant"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="二"
+            android:textSize="14sp"
+            android:textColor="@color/on_surface_variant"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="三"
+            android:textSize="14sp"
+            android:textColor="@color/on_surface_variant"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="四"
+            android:textSize="14sp"
+            android:textColor="@color/on_surface_variant"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="五"
+            android:textSize="14sp"
+            android:textColor="@color/on_surface_variant"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="六"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- 日历网格 -->
+    <GridLayout
+        android:id="@+id/calendar_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="7"
+        android:rowCount="6"
+        android:padding="4dp"
+        android:background="@color/surface" />
+
+    <!-- 底部详情 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/surface_variant">
+
+        <!-- 选中日期详情 -->
+        <TextView
+            android:id="@+id/tv_selected_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择日期"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 农历信息 -->
+        <TextView
+            android:id="@+id/tv_lunar_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 节假日/节气信息 -->
+        <TextView
+            android:id="@+id/tv_holiday_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/error" />
+
+    </LinearLayout>
+
+</LinearLayout>

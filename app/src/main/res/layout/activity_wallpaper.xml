@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="壁纸设置" android:textSize="20sp" android:textStyle="bold" android:paddingBottom="16dp"/>
+    <ImageView android:id="@+id/iv_preview" android:layout_width="match_parent" android:layout_height="300dp" android:scaleType="centerCrop" android:background="#EEEEEE"/>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="选择图片" android:onClick="pickImage" android:layout_marginTop="16dp"/>
+    <Button android:id="@+id/btn_set_wallpaper" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="设为壁纸" android:onClick="setWallpaper" android:enabled="false" android:layout_marginTop="8dp"/>
+</LinearLayout>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="视频转GIF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="16dp" />
+
+        <!-- 视频选择按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_select_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="从相册选择"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_record_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="拍摄视频"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+        <!-- 视频预览区 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="视频预览"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_variant">
+
+                <ImageView
+                    android:id="@+id/iv_video_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/iv_play_icon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_media_play"
+                    android:alpha="0.7" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 视频信息 -->
+        <TextView
+            android:id="@+id/tv_video_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="时长: --  分辨率: --"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- 播放控制 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_play_pause"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="▶"
+                android:enabled="false" />
+
+            <TextView
+                android:id="@+id/tv_current_time"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekbar_progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false" />
+
+            <TextView
+                android:id="@+id/tv_total_time"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- 转换区间设置 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="转换区间"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- 起始时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="起始时间:"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seekbar_start_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:enabled="false" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- 结束时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="结束时间:"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seekbar_end_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:enabled="false" />
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- GIF参数设置 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GIF参数设置"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- 帧率设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="帧率 (fps):"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seekbar_fps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="20"
+                android:progress="10" />
+
+            <TextView
+                android:id="@+id/tv_fps_value"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- 尺寸设置 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="输出尺寸"
+            android:textSize="14sp"
+            android:paddingTop="4dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_gif_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/rb_size_original"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="原始"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_size_75"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="75%" />
+
+            <RadioButton
+                android:id="@+id/rb_size_50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50%" />
+
+            <RadioButton
+                android:id="@+id/rb_size_25"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="25%" />
+
+        </RadioGroup>
+
+        <!-- 质量设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="质量:"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seekbar_quality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="20"
+                android:progress="10" />
+
+            <TextView
+                android:id="@+id/tv_quality_value"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="中"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- 预估信息 -->
+        <TextView
+            android:id="@+id/tv_gif_estimate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="预估大小: --  帧数: --"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="16dp" />
+
+        <!-- GIF预览 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GIF预览"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_gif_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@color/surface_variant" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 进度条 -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tv_progress_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 操作按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_preview_gif"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="预览GIF"
+                android:enabled="false"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_convert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="转换为GIF"
+                android:enabled="false"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

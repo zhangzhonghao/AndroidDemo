@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="随机数历史" android:textSize="20sp" android:textStyle="bold" android:paddingBottom="16dp"/>
+    <TextView android:id="@+id/tv_empty" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="暂无历史记录" android:textSize="14sp" android:visibility="gone"/>
+    <ListView android:id="@+id/lv_history" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="清除历史" android:onClick="clearHistory" android:layout_marginTop="16dp"/>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:padding="24dp">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="震动测试器"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#2D2D2D" />
+
+    <!-- 状态文字 -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btn_short"
+        android:layout_marginBottom="60dp"
+        android:text="请选择震动模式"
+        android:textSize="22sp"
+        android:textColor="@android:color/white" />
+
+    <!-- 短震按钮 -->
+    <Button
+        android:id="@+id/btn_short"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btn_long"
+        android:layout_marginBottom="20dp"
+        android:text="短震 (100ms)"
+        android:textSize="16sp" />
+
+    <!-- 长震按钮 -->
+    <Button
+        android:id="@+id/btn_long"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:text="长震 (1000ms)"
+        android:textSize="16sp" />
+
+    <!-- 脉冲按钮 -->
+    <Button
+        android:id="@+id/btn_pulse"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_long"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="脉冲 (200ms x 3)"
+        android:textSize="16sp" />
+
+    <!-- 停止按钮 -->
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_pulse"
+        android:layout_marginTop="20dp"
+        android:text="停止震动"
+        android:textSize="16sp"
+        android:backgroundTint="#F44336" />
+
+</RelativeLayout>

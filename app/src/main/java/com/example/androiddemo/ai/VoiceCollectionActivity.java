@@ -39,10 +39,12 @@ public class VoiceCollectionActivity extends AppCompatActivity {
     private RecyclerView rvMessages;
     private EditText etInput;
     private Button btnSend;
-    private Button btnVoiceToggle;
+    private Button btnKeyboard;
+    private Button btnVoice;
     private Button btnVoiceRecord;
     private LinearLayout layoutInputBar;
-    private View layoutVoiceMode;
+    private LinearLayout layoutTextMode;
+    private LinearLayout layoutVoiceMode;
 
     // Data
     private final List<Message> messageList = new ArrayList<>();
@@ -75,13 +77,15 @@ public class VoiceCollectionActivity extends AppCompatActivity {
         rvMessages = findViewById(R.id.rv_messages);
         etInput = findViewById(R.id.et_input);
         btnSend = findViewById(R.id.btn_send);
-        btnVoiceToggle = findViewById(R.id.btn_voice_toggle);
+        btnKeyboard = findViewById(R.id.btn_keyboard);
+        btnVoice = findViewById(R.id.btn_voice);
         btnVoiceRecord = findViewById(R.id.btn_voice_record);
         layoutInputBar = findViewById(R.id.layout_input_bar);
+        layoutTextMode = findViewById(R.id.layout_text_mode);
         layoutVoiceMode = findViewById(R.id.layout_voice_mode);
         tvRecordingHint = findViewById(R.id.tv_recording_hint);
 
-        // 默认文字模式
+        // 默认文字模式：显示键盘按钮、文本输入框、发送按钮
         setTextInputMode();
     }
 
@@ -105,14 +109,11 @@ public class VoiceCollectionActivity extends AppCompatActivity {
             }
         });
 
-        // 切换语音/文字模式
-        btnVoiceToggle.setOnClickListener(v -> {
-            if (layoutVoiceMode.getVisibility() == View.VISIBLE) {
-                setTextInputMode();
-            } else {
-                setVoiceInputMode();
-            }
-        });
+        // 点击键盘按钮 → 切换到语音输入模式
+        btnKeyboard.setOnClickListener(v -> setVoiceInputMode());
+
+        // 点击语音按钮 → 切换到文字输入模式
+        btnVoice.setOnClickListener(v -> setTextInputMode());
 
         // 按住说话
         btnVoiceRecord.setOnTouchListener((v, event) -> {
@@ -133,16 +134,18 @@ public class VoiceCollectionActivity extends AppCompatActivity {
 
     // ========== 模式切换 ==========
 
+    // 文字输入模式：显示键盘按钮、文本输入框、发送按钮
     private void setTextInputMode() {
+        layoutTextMode.setVisibility(View.VISIBLE);
         layoutVoiceMode.setVisibility(View.GONE);
-        etInput.setVisibility(View.VISIBLE);
-        btnVoiceToggle.setText("语音");
+        // 文字模式下显示键盘按钮
+        btnKeyboard.setVisibility(View.VISIBLE);
     }
 
+    // 语音输入模式：显示语音按钮、按住说话按钮
     private void setVoiceInputMode() {
+        layoutTextMode.setVisibility(View.GONE);
         layoutVoiceMode.setVisibility(View.VISIBLE);
-        etInput.setVisibility(View.GONE);
-        btnVoiceToggle.setText("键盘");
     }
 
     // ========== 权限检查 ==========

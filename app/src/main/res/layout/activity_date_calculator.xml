@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 计算类型选择 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算类型"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_calculation_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_days_diff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="天数差"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_days_offset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="日期推算" />
+
+            <RadioButton
+                android:id="@+id/rb_day_of_week"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="星期/农历" />
+        </RadioGroup>
+
+        <!-- 天数差计算 -->
+        <LinearLayout
+            android:id="@+id/layout_days_diff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始日期"
+                android:textSize="14sp"
+                android:textColor="?attr/colorPrimary"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+
+            <DatePicker
+                android:id="@+id/dp_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="true"
+                android:spinnersShown="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束日期"
+                android:textSize="14sp"
+                android:textColor="?attr/colorPrimary"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+
+            <DatePicker
+                android:id="@+id/dp_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="true"
+                android:spinnersShown="false" />
+        </LinearLayout>
+
+        <!-- 日期推算 -->
+        <LinearLayout
+            android:id="@+id/layout_days_offset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="基准日期"
+                android:textSize="14sp"
+                android:textColor="?attr/colorPrimary"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+
+            <DatePicker
+                android:id="@+id/dp_base_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="true"
+                android:spinnersShown="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天数（负数为往前推）"
+                android:textSize="14sp"
+                android:textColor="?attr/colorPrimary"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_days_offset"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_edit_text"
+                android:gravity="center"
+                android:hint="例如：30（30天后）或 -7（7天前）"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <!-- 星期和农历显示 -->
+        <LinearLayout
+            android:id="@+id/layout_day_of_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择日期"
+                android:textSize="14sp"
+                android:textColor="?attr/colorPrimary"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+
+            <DatePicker
+                android:id="@+id/dp_base_date_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="true"
+                android:spinnersShown="false" />
+        </LinearLayout>
+
+        <!-- 计算按钮 -->
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="计算"
+            android:layout_marginTop="16dp" />
+
+        <!-- 结果显示 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择日期并计算"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 星期显示 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="星期"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_day_of_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="星期一"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 农历显示 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="农历日期"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_lunar_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在加载..."
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 快捷计算 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快捷计算"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_workday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="工作日"
+                android:textSize="12sp"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_weekend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="周末"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_month_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="月初"
+                android:textSize="12sp"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_month_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="月末"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_year_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="年初"
+                android:textSize="12sp"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_year_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="年末"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- 快捷计算结果 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_quick_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快捷计算结果"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

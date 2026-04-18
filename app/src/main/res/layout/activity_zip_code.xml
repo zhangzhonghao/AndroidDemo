@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="地区邮编查询" android:textSize="20sp" android:textStyle="bold" android:paddingBottom="16dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="输入省/市/区" android:textSize="14sp"/>
+    <EditText android:id="@+id/et_province" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="省（如：北京市）" android:inputType="text" android:layout_marginTop="8dp"/>
+    <EditText android:id="@+id/et_city" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="市（如：北京市）" android:inputType="text" android:layout_marginTop="8dp"/>
+    <EditText android:id="@+id/et_district" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="区（如：朝阳区）" android:inputType="text" android:layout_marginTop="8dp"/>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="查询" android:onClick="query" android:layout_marginTop="16dp"/>
+    <TextView android:id="@+id/tv_result" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:textSize="16sp" android:layout_marginTop="16dp"/>
+</LinearLayout>

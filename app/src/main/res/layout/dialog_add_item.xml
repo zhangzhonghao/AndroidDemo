@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="物品名称"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/et_item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="备注（可选）"
+        android:inputType="text"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="存放位置"
+        android:textSize="14sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinner_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

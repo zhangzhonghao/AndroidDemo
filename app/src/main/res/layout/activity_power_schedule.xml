@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="定时开关机" android:textSize="20sp" android:textStyle="bold" android:paddingBottom="16dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="定时开机" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+    <TimePicker android:id="@+id/tp_power_on" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button android:id="@+id/btn_set_power_on" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="设置开机"/>
+        <Button android:id="@+id/btn_cancel_power_on" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="取消开机"/>
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="定时关机" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="16dp"/>
+    <TimePicker android:id="@+id/tp_power_off" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button android:id="@+id/btn_set_power_off" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="设置关机"/>
+        <Button android:id="@+id/btn_cancel_power_off" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="取消关机"/>
+    </LinearLayout>
+</LinearLayout>

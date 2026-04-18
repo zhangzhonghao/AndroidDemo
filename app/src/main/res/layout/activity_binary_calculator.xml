@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进制计算器"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/et_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入十进制数字"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tv_binary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="二进制："
+        android:textSize="16sp"
+        android:paddingTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_octal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="八进制："
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_decimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="十进制："
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_hexadecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="十六进制："
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+</LinearLayout>

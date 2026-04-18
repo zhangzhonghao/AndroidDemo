@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="中文拼音转换"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="top"
+        android:hint="输入中文..."
+        android:background="#f0f0f0"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="转换"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="完整拼音："
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_full_pinyin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textIsSelectable="true"
+        android:background="#f0f0f0"
+        android:padding="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="首字母："
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_initials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textIsSelectable="true"
+        android:background="#f0f0f0"
+        android:padding="8dp" />
+
+</LinearLayout>

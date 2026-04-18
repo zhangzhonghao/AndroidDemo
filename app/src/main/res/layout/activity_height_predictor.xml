@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="父亲身高 (cm)"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_father_height"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="请输入父亲身高"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="母亲身高 (cm)"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_mother_height"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="请输入母亲身高"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            android:padding="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预测身高"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入父母身高"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="计算公式:\n男孩身高 = (父亲身高 + 母亲身高 + 13) ÷ 2\n女孩身高 = (父亲身高 + 母亲身高 - 13) ÷ 2\n\n注: 实际身高受遗传、营养、运动等多种因素影响，此结果仅供参考。"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="16dp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

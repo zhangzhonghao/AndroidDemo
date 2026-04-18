@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="纪念日管理"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="长按删除纪念日"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:paddingBottom="8dp" />
+
+    <ListView
+        android:id="@+id/lv_anniversaries"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_add_anniversary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加纪念日"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

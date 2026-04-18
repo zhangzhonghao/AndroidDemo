@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- 相机预览 -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 水印预览覆盖层 -->
+    <TextView
+        android:id="@+id/tv_watermark_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#80000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="返回"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="水印相机"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="设置"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:tint="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- 底部控制栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="bottom"
+        android:background="#CC000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- 相册选择 -->
+        <ImageButton
+            android:id="@+id/btn_gallery"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="从相册选择"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:tint="@android:color/white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- 拍照按钮 -->
+        <ImageButton
+            android:id="@+id/btn_capture"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="拍照"
+            android:src="@android:drawable/ic_menu_camera"
+            android:tint="@android:color/white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- 切换摄像头 -->
+        <ImageButton
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="切换摄像头"
+            android:src="@android:drawable/ic_menu_rotate"
+            android:tint="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- 加载指示器 -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

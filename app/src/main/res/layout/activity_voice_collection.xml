@@ -53,12 +53,14 @@
             android:gravity="center_vertical">
 
             <Button
-                android:id="@+id/btn_voice_toggle"
-                android:layout_width="60dp"
+                android:id="@+id/btn_keyboard"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="语音"
+                android:text="键盘"
                 android:textSize="12sp"
-                android:layout_marginEnd="8dp" />
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/et_input"
@@ -70,7 +72,8 @@
                 android:hint="输入文字..."
                 android:textSize="16sp"
                 android:paddingHorizontal="12dp"
-                android:paddingVertical="8dp"
+                android:paddingTop="8dp"
+        android:paddingBottom="8dp"
                 android:background="@drawable/edittext_background"
                 android:singleLine="false"
                 android:inputType="textMultiLine"
@@ -78,11 +81,11 @@
 
             <Button
                 android:id="@+id/btn_send"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="发送"
                 android:textSize="12sp"
-                android:layout_marginStart="8dp" />
+                android:paddingHorizontal="12dp" />
         </LinearLayout>
 
         <!-- 语音输入模式 -->
@@ -90,28 +93,40 @@
             android:id="@+id/layout_voice_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:gravity="center"
             android:visibility="gone">
 
-            <TextView
-                android:id="@+id/tv_recording_hint"
+            <Button
+                android:id="@+id/btn_voice"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="正在录音..."
-                android:textSize="13sp"
-                android:textColor="#666666"
-                android:visibility="invisible"
-                android:paddingBottom="6dp" />
+                android:layout_height="40dp"
+                android:text="语音"
+                android:textSize="12sp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="16dp" />
 
             <Button
                 android:id="@+id/btn_voice_record"
-                android:layout_width="200dp"
-                android:layout_height="56dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
                 android:text="按住说话"
-                android:textSize="16sp"
-                android:textColor="@color/white" />
+                android:textSize="12sp"
+                android:paddingHorizontal="12dp" />
         </LinearLayout>
+
+        <!-- 录音提示 -->
+        <TextView
+            android:id="@+id/tv_recording_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正在录音..."
+            android:textSize="13sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+            android:visibility="invisible" />
 
     </LinearLayout>
 

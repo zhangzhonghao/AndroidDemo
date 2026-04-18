@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入文本"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="top|start"
+            android:hint="请输入要计算哈希的文本"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="计算哈希值" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHA-1"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_sha1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textSize="12sp"
+            android:textIsSelectable="true"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHA-256"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_sha256"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textSize="12sp"
+            android:textIsSelectable="true"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHA-512"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_sha512"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textSize="12sp"
+            android:textIsSelectable="true"
+            android:fontFamily="monospace" />
+
+    </LinearLayout>
+</ScrollView>

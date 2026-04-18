@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#FF333333">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="摇晃退出"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:paddingBottom="32dp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="摇晃手机 3 次退出"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0 / 3"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:gravity="center"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="也可以点击屏幕直接退出"
+        android:textSize="14sp"
+        android:textColor="#AAAAAA"
+        android:gravity="center"
+        android:layout_marginTop="48dp" />
+
+</LinearLayout>

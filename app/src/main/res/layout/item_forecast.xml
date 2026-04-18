@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/section_background"
+    android:padding="12dp"
+    android:layout_marginEnd="8dp">
+
+    <TextView
+        android:id="@+id/tv_day_of_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="周一"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04/18"
+        android:textSize="12sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginTop="2dp" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25°"
+        android:textSize="18sp"
+        android:textColor="#F39C12"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="晴"
+        android:textSize="12sp"
+        android:textColor="#BDC3C7"
+        android:layout_marginTop="2dp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</LinearLayout>

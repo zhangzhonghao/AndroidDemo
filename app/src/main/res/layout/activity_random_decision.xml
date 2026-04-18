@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="随机决策器"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingBottom="8dp" />
+
+    <!-- 说明 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="输入多个选项，每行一个，点击「选择」随机抽取一个"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:paddingBottom="16dp" />
+
+    <!-- 选项输入 -->
+    <EditText
+        android:id="@+id/et_options"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="输入选项（每行一个）\n\n例如：\n吃饭\n睡觉\n打游戏"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="12dp"
+        android:background="@drawable/bg_edit_text"
+        android:minLines="5" />
+
+    <!-- 结果显示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edit_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结果"
+            android:textSize="14sp"
+            android:textColor="#888888" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="？"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="8dp" />
+
+    </LinearLayout>
+
+    <!-- 按钮 -->
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清空"
+        android:textSize="14sp"
+        style="?android:attr/borderlessButtonStyle" />
+
+</LinearLayout>

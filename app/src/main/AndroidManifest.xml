@@ -9,6 +9,20 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 存储权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- 番茄钟权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- WiFi 权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -45,6 +59,11 @@
         <!-- AI -->
         <activity android:name=".ai.VoiceCollectionActivity" />
         <activity android:name=".ai.PetActivity" />
+        <activity android:name=".ai.AilImageGenActivity" />
+        <activity android:name=".ai.AiChatActivity" />
+        <activity android:name=".ai.AiTtsActivity" />
+        <activity android:name=".ai.AiVisionActivity" />
+        <activity android:name=".ai.AiCodeActivity" />
 
         <!-- UI -->
         <activity android:name=".ui.bottomnav.BottomNavFoldableActivity" />
@@ -57,8 +76,77 @@
         <activity android:name=".trace.PerformanceTraceActivity" />
         <activity android:name=".trace.PerformanceMeasureActivity" />
 
+        <!-- 工具箱 -->
+        <activity android:name=".tools.BaseConverterActivity" />
+        <activity android:name=".tools.ToolsHomeActivity" />
+        <activity android:name=".tools.WifiPasswordActivity" />
+        <activity android:name=".tools.TranslatorActivity" />
+        <activity android:name=".tools.FlashlightActivity" />
+        <activity android:name=".tools.VibrationTestActivity" />
+        <activity android:name=".tools.FlashRhythmActivity" />
+        <activity android:name=".tools.CalculatorActivity" />
+        <activity android:name=".tools.QRScannerActivity" />
+        <activity android:name=".tools.QRGeneratorActivity" />
+        <activity android:name=".tools.QRPayActivity" />
+        <activity android:name=".tools.UnitConverterActivity" />
+        <activity android:name=".tools.CompassActivity" />
+        <activity android:name=".tools.WatermarkCameraActivity" />
+        <activity android:name=".tools.LevelMeterActivity" />
+        <activity android:name=".tools.StopwatchActivity" />
+        <activity android:name=".tools.SpeedTestActivity" />
+        <activity android:name=".tools.NoiseMeterActivity" />
+        <activity android:name=".tools.VolumeMeterActivity" />
+        <activity android:name=".tools.RulerActivity" />
+        <activity android:name=".tools.CalendarActivity" />
+        <activity android:name=".tools.LunarCalendarActivity" />
+        <activity android:name=".tools.WeatherActivity" />
+        <activity android:name=".tools.AppManagerActivity" />
+        <activity android:name=".tools.ImageCompressorActivity" />
+        <activity android:name=".tools.VideoToGifActivity" />
+        <activity android:name=".tools.TunerActivity" />
+        <activity android:name=".tools.MetronomeActivity" />
+        <activity android:name=".tools.PomodoroTimerActivity" />
+        <activity android:name=".tools.RandomGeneratorActivity" />
+        <activity android:name=".tools.RandomDecisionActivity" />
+        <activity android:name=".tools.BmiCalculatorActivity" />
+        <activity android:name=".tools.RelativeCalculatorActivity" />
+        <activity android:name=".tools.DateCalculatorActivity" />
+        <activity android:name=".tools.ScreenTestActivity" />
+        <activity android:name=".tools.TouchTestActivity" />
+        <activity android:name=".tools.OcrActivity" />
+        <activity android:name=".tools.DrawBoardActivity" />
+        <activity android:name=".tools.PdfReaderActivity" />
+        <activity android:name=".tools.SystemInfoActivity" />
+        <activity android:name=".tools.TodayInHistoryActivity" />
+        <activity android:name=".tools.MemeMakerActivity" />
+        <activity android:name=".tools.UsbDebugActivity" />
+        <activity android:name=".tools.FileEncryptActivity" />
+        <activity android:name=".tools.PatternLockActivity" />
+        <activity android:name=".tools.ScrollingTextActivity" />
+        <activity android:name=".tools.ColorPickerActivity" />
+        <activity android:name=".tools.ColorPickerScreenActivity" />
+        <activity android:name=".tools.GifMakerActivity" />
+        <activity android:name=".tools.CountdownChallengeActivity" />
+        <activity android:name=".tools.LedSignActivity" />
+
+        <!-- 安全中心 -->
+        <activity android:name=".tools.SecurityHomeActivity" />
+        <activity android:name=".tools.FraudAlertActivity" />
+        <activity android:name=".tools.SensitiveWordsActivity" />
+
+        <service android:name=".tools.PomodoroService" />
+
         <service android:name="com.amap.api.location.APSService"/>
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
     </application>
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UUID生成器"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_uuid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textIsSelectable="true"
+        android:padding="16dp"
+        android:background="#f0f0f0" />
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成新的UUID"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="复制UUID" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清空" />
+
+</LinearLayout>

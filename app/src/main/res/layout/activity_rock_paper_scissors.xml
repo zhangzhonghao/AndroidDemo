@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="石头剪刀布"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你"/>
+
+            <ImageView
+                android:id="@+id/iv_player"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_player_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="32dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电脑"/>
+
+            <ImageView
+                android:id="@+id/iv_computer"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_computer_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/btn_rock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="石头"/>
+
+        <Button
+            android:id="@+id/btn_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="布"
+            android:layout_marginStart="16dp"/>
+
+        <Button
+            android:id="@+id/btn_scissors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剪刀"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

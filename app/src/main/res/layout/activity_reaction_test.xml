@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="反应速度测试"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击「开始测试」，当屏幕变绿时尽快点击按钮。系统会进行5次测试取平均值。"
+        android:textSize="14sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_screen"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#757575"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="点击开始测试\n当屏幕变绿时尽快点击按钮"
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_reaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始测试"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重置"
+        android:layout_marginTop="8dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

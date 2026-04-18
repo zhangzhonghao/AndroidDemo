@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="色子滚轮"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击按钮摇色子"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <GridLayout
+        android:id="@+id/dice_container"
+        android:layout_width="340dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总计: 0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/btn_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="摇色子"
+        android:textSize="20sp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>

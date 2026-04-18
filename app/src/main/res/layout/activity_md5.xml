@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入文本"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="top|start"
+            android:hint="请输入要加密的文本"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_encrypt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="MD5加密" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结果"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tv_output"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="top|start"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:textIsSelectable="true"
+            android:fontFamily="monospace" />
+
+        <Button
+            android:id="@+id/btn_copy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="复制结果" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注意：MD5为不可逆加密，适用于密码存储和文件校验"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

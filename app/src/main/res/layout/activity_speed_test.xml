@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1A1A">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="秒表挑战"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#2D2D2D" />
+
+    <!-- 最佳成绩 -->
+    <TextView
+        android:id="@+id/tv_best_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="最佳: -- 毫秒"
+        android:textSize="16sp"
+        android:textColor="@color/primary"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#2D2D2D" />
+
+    <!-- 点击区域 -->
+    <FrameLayout
+        android:id="@+id/click_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edit_text"
+        android:layout_margin="16dp">
+
+        <!-- 中央状态文字 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击 START 开始测试"
+                android:textSize="32sp"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_current_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="48sp"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- 历史平均 -->
+    <TextView
+        android:id="@+id/tv_average_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="历史平均: -- 毫秒 (0 次)"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:padding="12dp" />
+
+    <!-- 开始按钮 -->
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:layout_margin="16dp" />
+
+</LinearLayout>

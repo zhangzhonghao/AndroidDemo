@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一笔画"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请从任意节点开始，点击节点形成一笔画"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:id="@+id/nodes_container"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:background="@color/black"
+        android:columnCount="3"
+        android:rowCount="3"/>
+
+    <Button
+        android:id="@+id/btn_new_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重新开始"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/edittext_background"
+    android:gravity="center_vertical">
+
+    <!-- APP图标 -->
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_image_placeholder"
+        android:contentDescription="APP图标" />
+
+    <!-- APP信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APP名称"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tv_package_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="com.example.package"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/tv_risk_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风险类型"
+                android:textSize="12sp"
+                android:textColor="#FF9800"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风险描述"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- 卸载按钮 -->
+    <Button
+        android:id="@+id/btn_uninstall"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="卸载"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/calculator_button_operator"
+        android:layout_marginStart="8dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp" />
+
+</LinearLayout>

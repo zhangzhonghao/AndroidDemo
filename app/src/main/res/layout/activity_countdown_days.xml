@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="倒计时"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingTop="16dp"
+        android:paddingBottom="32dp" />
+
+    <TextView
+        android:id="@+id/tv_target_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目标日期: 未设置"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_days_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="剩余 0 天"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_countdown_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00天 00时 00分 00秒"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        android:paddingBottom="48dp" />
+
+    <Button
+        android:id="@+id/btn_pick_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择目标日期" />
+
+</LinearLayout>

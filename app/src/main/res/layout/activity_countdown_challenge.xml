@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1A1A"
+    android:padding="16dp">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="倒计时挑战"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#2D2D2D" />
+
+    <!-- 说明文字 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="输入一个数字，系统会倒数并朗读每个数字"
+        android:textSize="14sp"
+        android:textColor="#AAAAAA"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- 数字输入区 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入数字 (1-100)"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@android:color/white"
+            android:textColorHint="#888888" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 开始按钮 -->
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始挑战"
+        android:layout_marginTop="16dp" />
+
+    <!-- 当前数字显示 -->
+    <TextView
+        android:id="@+id/tv_current_number"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textSize="120sp"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="32dp" />
+
+    <!-- 进度显示 -->
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="等待开始..."
+        android:textSize="16sp"
+        android:textColor="#AAAAAA"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- 控制按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="暂停"
+            android:enabled="false"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="停止"
+            android:enabled="false"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

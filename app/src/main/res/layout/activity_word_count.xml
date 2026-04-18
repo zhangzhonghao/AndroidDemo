@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字数统计"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/et_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="请输入要统计的文本"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:background="@drawable/bg_edit_text" />
+
+    <TextView
+        android:id="@+id/tv_char_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字符数（含空格）：0"
+        android:textSize="14sp"
+        android:paddingTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_word_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字数：0\n单词数（英文）：0"
+        android:textSize="14sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_line_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="行数：0"
+        android:textSize="14sp"
+        android:paddingTop="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="工具箱"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+        <Button
+            android:id="@+id/btn_flashlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手电筒"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_vibration_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="震动测试器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_qr_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="二维码扫描"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_qr_generator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="二维码生成器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_unit_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单位转换器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_compass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="指南针"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_watermark_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="水印相机"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_level_meter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="水平仪"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_stopwatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="秒表计时器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_noise_meter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="噪音计"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_volume_meter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="音量计"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_ruler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测量尺子"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="万年历"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_lunar_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="农历日历"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="天气查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_today_in_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="历史今天"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_color_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="颜色选择器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_color_picker_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="取色器（相机）"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_translator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="翻译官"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_app_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="应用管理"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_image_compressor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图片压缩"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_video_to_gif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="视频转GIF"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_tuner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="调音器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_metronome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="节拍器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_pomodoro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="番茄钟"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_random_generator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="随机数生成器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_random_number_generator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="随机数（简化版）"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_bmi_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_relative_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="亲戚称呼计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_speed_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="秒表挑战"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_date_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日期计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_draw_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手绘板"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_pdf_reader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PDF阅读器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_system_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="系统信息"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_touch_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="触屏测试"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_waste_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="垃圾分类查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_exchange_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="实时汇率"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_phone_locator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="号码归属地查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_ip_lookup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IP地址查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_history_today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="历史上的今天"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_random_lottery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="随机摇号"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_word_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="字数统计"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_binary_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进制计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_quick_shortcut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="快捷指令"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_device_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设备信息"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_base64_codec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Base64编码解码"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_url_codec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="URL编码解码"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_md5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MD5加密"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_hash_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="哈希值计算"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_qr_scan_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="二维码扫描历史"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_temperature_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="温度单位换算"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_length_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="长度单位换算"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_weight_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="重量单位换算"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_history_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="历史上的今天-详情"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_family_tree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="亲戚称呼-家庭树"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_flash_sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="闪购秒杀"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_screen_cast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机投屏"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_scroll_capture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="滚动截图"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_gif_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GIF预览"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_pdf_creator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PDF创建"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_qr_pay_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="收款码合集"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_exchange_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="汇率计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_relative_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="亲戚称呼-详细"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_history_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="历史上的今天-收藏"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_area_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单位换算-面积"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_fuel_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="油耗计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_blood_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="血型遗传"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_pregnancy_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="孕期计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_height_predictor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="儿童身高预测"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_calorie_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="卡路里计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_period_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="安全期计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_loan_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="贷款计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_compound_interest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="复利计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_advanced_base_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进制转换器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_color_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="颜色转换器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_tax_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个税计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_bonus_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="年终奖计算器"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="壁纸设置"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_app_clone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="应用双开"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_power_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="定时开关机"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_gps_converter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPS坐标转换"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_zip_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地区邮编查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_holiday_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="节假日查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_day_of_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="星期几查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_date_diff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日期差计算"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_random_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="随机数历史"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_password_vault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="密码本"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_text_diff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="文本比较"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_json_formatter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JSON格式化"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_regex_tester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正则测试"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_number_to_chinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数字金额转中文大写"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_world_capitals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="世界各国首都查询"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_id_card_validator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="身份证号码验证"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_phone_fortune"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机号码吉凶"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_car_plate_fortune"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="车牌号吉凶"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_horoscope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="每日星座运势"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_birthday_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生日密码"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_love_match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="缘分速配"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_blood_type_match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="血型配对指数"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_sleep_quality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="睡眠质量分析"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_stress_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="压力测试"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_attention_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注意力测试"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_reaction_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="反应速度测试"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_color_blind_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="色盲测试"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_mental_health"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="心理健康测试"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_quit_smoking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="戒烟倒计时"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_water_reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="喝水提醒"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_medicine_reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="吃药提醒"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_step_counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="运动记步"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_food_calories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="食物卡路里"
+            android:onClick="onToolClick" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="实用工具"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_lunar_new_year_countdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="农历新年倒计时"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_countdown_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="倒计时日"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_anniversary_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="纪念日管理"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_world_wonders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="世界奇观"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_country_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="国家信息"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_emergency_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="紧急求助"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_item_storage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物品收纳"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_password_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="密码管理器"
+            android:onClick="onToolClick" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="益智游戏"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_game_2048"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2048游戏"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_tetris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="俄罗斯方块"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_jigsaw_puzzle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="拼图游戏"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_memory_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="记忆翻牌"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_number_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数字华容道"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_one_stroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="一笔画"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_tic_tac_toe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="井字棋"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_guess_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="猜数字"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_dice_roller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="色子滚轮"
+            android:onClick="onToolClick" />
+
+        <Button
+            android:id="@+id/btn_rock_paper_scissors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="石头剪刀布"
+            android:onClick="onToolClick" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

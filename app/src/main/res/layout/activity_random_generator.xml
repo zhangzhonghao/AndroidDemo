@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="随机数生成器"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingBottom="8dp" />
+
+    <!-- Tab切换 -->
+    <RadioGroup
+        android:id="@+id/tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/tab_integer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="整数"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/tab_decimal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="小数" />
+
+        <RadioButton
+            android:id="@+id/tab_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="密码" />
+
+        <RadioButton
+            android:id="@+id/tab_draw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="抽签" />
+
+        <RadioButton
+            android:id="@+id/tab_coin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="硬币" />
+
+        <RadioButton
+            android:id="@+id/tab_dice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="骰子" />
+
+    </RadioGroup>
+
+    <!-- 结果显示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary" />
+
+    </LinearLayout>
+
+    <!-- 参数设置区 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 整数布局 -->
+            <LinearLayout
+                android:id="@+id/layout_integer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_min"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="最小值"
+                        android:inputType="number"
+                        android:defaultValue="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ~ "
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_max"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="最大值"
+                        android:inputType="number"
+                        android:defaultValue="100" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 小数布局 -->
+            <LinearLayout
+                android:id="@+id/layout_decimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="生成0-1之间的随机小数"
+                    android:textSize="14sp"
+                    android:textColor="#888888" />
+
+            </LinearLayout>
+
+            <!-- 密码布局 -->
+            <LinearLayout
+                android:id="@+id/layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_password_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="密码长度 (4-64)"
+                    android:inputType="number"
+                    android:defaultValue="16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="字符类型"
+                    android:textSize="14sp"
+                    android:textColor="#888888"
+                    android:paddingTop="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_uppercase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大写字母 (A-Z)"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/cb_lowercase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="小写字母 (a-z)"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/cb_digits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="数字 (0-9)"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/cb_symbols"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="符号 (!@#$%...)" />
+
+            </LinearLayout>
+
+            <!-- 抽签布局 -->
+            <LinearLayout
+                android:id="@+id/layout_draw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_names"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="输入名单（每行一个）"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:maxLines="6"
+                    android:gravity="top" />
+
+            </LinearLayout>
+
+            <!-- 硬币布局 -->
+            <LinearLayout
+                android:id="@+id/layout_coin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击「生成」抛硬币"
+                    android:textSize="14sp"
+                    android:textColor="#888888" />
+
+            </LinearLayout>
+
+            <!-- 骰子布局 -->
+            <LinearLayout
+                android:id="@+id/layout_dice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_dice_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="骰子数量 (1-10)"
+                    android:inputType="number"
+                    android:defaultValue="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- 按钮区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btn_generate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生成"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_clear_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="清除历史"
+            android:textSize="14sp"
+            style="?android:attr/borderlessButtonStyle" />
+
+    </LinearLayout>
+
+    <!-- 历史记录 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="历史记录"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:maxLines="5"
+        android:ellipsize="start" />
+
+</LinearLayout>

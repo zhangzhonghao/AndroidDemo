@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心理健康测试"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请根据最近一周的感受打分（0-5分）\n0=完全没有 5=一直如此"
+            android:textSize="14sp"
+            android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. 是否经常感到心情低落？"
+            android:textSize="14sp"
+            android:paddingTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_q1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="0-5分"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. 是否经常感到焦虑或紧张？"
+            android:textSize="14sp"
+            android:paddingTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_q2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="0-5分"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. 是否经常感到睡不好？"
+            android:textSize="14sp"
+            android:paddingTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_q3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="0-5分"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. 是否经常感到无法集中注意力？"
+            android:textSize="14sp"
+            android:paddingTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_q4"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="0-5分"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. 是否经常感到对生活失去兴趣？"
+            android:textSize="14sp"
+            android:paddingTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_q5"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="center"
+            android:hint="0-5分"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="计算心理健康指数"
+            android:layout_marginTop="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

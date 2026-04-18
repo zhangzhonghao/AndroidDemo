@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 单位制选择 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单位制"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_metric"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="公制 (cm/kg)"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_imperial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="英制 (ft/lb)" />
+        </RadioGroup>
+
+        <!-- 身高输入 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身高"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_height"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_text"
+                android:gravity="center"
+                android:hint="请输入身高"
+                android:inputType="numberDecimal"
+                android:textSize="18sp"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/tv_height_unit_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单位"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/rg_height_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rb_height_cm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cm"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rb_height_ft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ft" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 体重输入 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="体重"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_weight"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_text"
+                android:gravity="center"
+                android:hint="请输入体重"
+                android:inputType="numberDecimal"
+                android:textSize="18sp"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/tv_weight_unit_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单位"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/rg_weight_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rb_weight_kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kg"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rb_weight_lb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lb" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- BMI结果显示 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的BMI"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_bmi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textSize="56sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_bmi_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入身高体重"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- BMI指示条 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI 参考范围"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="偏瘦"
+                    android:textSize="12sp"
+                    android:textColor="#2196F3"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="正常"
+                    android:textSize="12sp"
+                    android:textColor="#4CAF50"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="超重"
+                    android:textSize="12sp"
+                    android:textColor="#FF9800"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="肥胖"
+                    android:textSize="12sp"
+                    android:textColor="#F44336"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:trackThickness="12dp"
+                app:trackCornerRadius="6dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+
+        <!-- BMI参考说明 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI分类标准：偏瘦(&lt;18.5) | 正常(18.5-24) | 超重(24-28) | 肥胖(≥28)"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <!-- 历史记录 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算历史"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:background="@drawable/bg_edit_text" />
+
+    </LinearLayout>
+</ScrollView>

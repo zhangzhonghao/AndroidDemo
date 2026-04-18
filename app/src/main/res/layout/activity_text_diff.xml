@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="文本比较" android:textSize="20sp" android:textStyle="bold" android:paddingBottom="16dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="文本1" android:textSize="14sp"/>
+        <EditText android:id="@+id/et_text1" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="输入第一个文本" android:minLines="4" android:gravity="top"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="文本2" android:textSize="14sp" android:layout_marginTop="8dp"/>
+        <EditText android:id="@+id/et_text2" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="输入第二个文本" android:minLines="4" android:gravity="top"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="比较差异" android:onClick="compare" android:layout_marginTop="16dp"/>
+        <TextView android:id="@+id/tv_diff" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:textSize="14sp" android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

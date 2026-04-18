@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="系统信息"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Android 信息 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android 系统"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_android_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Android 版本："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sdk_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SDK 版本："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_build_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build 版本："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_security_patch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="安全补丁："
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- CPU 信息 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CPU"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_cpu_abi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CPU 架构："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_cpu_cores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="核心数："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_cpu_freq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="当前频率："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_cpu_max_freq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="最大频率："
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 内存信息 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="内存"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_total_memory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="总内存："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_available_memory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="可用内存："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_used_memory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="已用内存："
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_memory"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="100" />
+        </LinearLayout>
+
+        <!-- 存储信息 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="存储"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_internal_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="内部存储："
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_internal"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/tv_external_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="外部存储："
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_external"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="100" />
+        </LinearLayout>
+
+        <!-- 屏幕信息 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="屏幕"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_screen_resolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分辨率："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_screen_density"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="屏幕密度："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_screen_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="屏幕尺寸："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_refresh_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="刷新率："
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 设备信息 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设备"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_device_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="型号："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_device_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="品牌："
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_device_manufacturer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="制造商："
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入食物名称"
+        android:textSize="14sp"
+        android:textColor="?attr/colorPrimary"
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/et_food"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_edit_text"
+        android:gravity="center"
+        android:hint="请输入食物名称（如：米饭、鸡蛋）"
+        android:textSize="18sp"
+        android:padding="12dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:text="请输入食物名称查询卡路里\n\n常见食物热量（每100克）：\n米饭：116千卡\n面条：137千卡\n鸡蛋：144千卡\n鸡胸肉：133千卡"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

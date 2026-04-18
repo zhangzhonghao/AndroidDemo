@@ -103,6 +103,34 @@
                 android:layout_height="wrap_content"
                 android:text="电子宠物"
                 android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_ai_image_gen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AI 图片生成"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_ai_tts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="语音合成"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_ai_vision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片识别"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_ai_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AI 写代码"
+                android:onClick="onFeatureClick" />
         </LinearLayout>
 
         <!-- 分割线 -->
@@ -148,7 +176,41 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- 类型4: 应用埋点 -->
+        <!-- 类型4: 工具箱 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工具箱"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="工具箱"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorOnSurface"
+            android:alpha="0.2"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 类型5: 应用埋点 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -198,6 +260,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="性能埋点"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorOnSurface"
+            android:alpha="0.2"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 类型6: 安全中心 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="安全中心"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_security_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="安全中心"
                 android:onClick="onFeatureClick" />
         </LinearLayout>
 

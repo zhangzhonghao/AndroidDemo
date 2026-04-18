@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="亲戚称呼计算器"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="16dp"
+            android:gravity="center" />
+
+        <!-- 我的性别选择 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的性别"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="男"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="女" />
+        </RadioGroup>
+
+        <!-- 亲戚关系类型 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="亲戚关系类型"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_relation_type"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp" />
+
+        <!-- 输入区域 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入关系描述"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="例如：妈妈的母亲 或 外婆的女儿"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="计算称呼"
+            android:layout_marginTop="12dp" />
+
+        <!-- 结果显示 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="称呼结果"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入亲戚关系描述\n例如：妈妈的母亲 或 外婆的女儿"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:minHeight="60dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 快捷查询 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快捷查询"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_query_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="妈妈的母亲"
+                android:textSize="12sp"
+                android:onClick="onQuickQueryClick"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_query_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="外婆的女儿"
+                android:textSize="12sp"
+                android:onClick="onQuickQueryClick"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/btn_query_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="奶奶的孙子"
+                android:textSize="12sp"
+                android:onClick="onQuickQueryClick"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_query_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="舅舅的外甥"
+                android:textSize="12sp"
+                android:onClick="onQuickQueryClick"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/btn_query_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="姑姑的侄子"
+                android:textSize="12sp"
+                android:onClick="onQuickQueryClick"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_query_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="姨的外甥女"
+                android:textSize="12sp"
+                android:onClick="onQuickQueryClick"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- 使用说明 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用说明：\n1. 选择您的性别\n2. 选择父系/母系亲属\n3. 输入亲戚关系描述（如：妈妈的母亲）\n4. 点击计算或使用快捷查询"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="16dp"
+            android:lineSpacingExtra="4dp" />
+
+    </LinearLayout>
+</ScrollView>

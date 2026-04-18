@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1A1A"
+    android:padding="16dp">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="闪光灯节奏器"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#2D2D2D" />
+
+    <!-- BPM 显示区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BPM"
+            android:textSize="16sp"
+            android:textColor="#888888" />
+
+        <TextView
+            android:id="@+id/tv_bpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120"
+            android:textSize="72sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <!-- BPM 调节按钮 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_bpm_minus"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="-"
+                android:textSize="24sp"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btn_bpm_plus"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- BPM 滑块 -->
+    <SeekBar
+        android:id="@+id/seekbar_bpm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:min="30"
+        android:max="240"
+        android:progress="120"
+        android:progressTint="@color/primary"
+        android:thumbTint="@color/primary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginStart="16dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="240"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginEnd="16dp" />
+
+    </LinearLayout>
+
+    <!-- 闪光灯闪烁指示器 -->
+    <View
+        android:id="@+id/flash_indicator"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_button_background" />
+
+    <!-- 节拍计数显示 -->
+    <TextView
+        android:id="@+id/tv_beat_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="节拍: 0"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <!-- 控制按钮 -->
+    <Button
+        android:id="@+id/btn_start_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="URL参数解析"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入URL，例：https://example.com?a=1&amp;b=2"
+        android:inputType="textUri" />
+
+    <Button
+        android:id="@+id/btn_parse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解析"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解析结果："
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textIsSelectable="true"
+        android:background="#f0f0f0"
+        android:padding="8dp" />
+
+</LinearLayout>

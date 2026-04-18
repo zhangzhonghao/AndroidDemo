@@ -36,4 +36,24 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Level meter colors -->
+    <color name="level_green">#2ECC71</color>
+    <color name="level_red">#E74C3C</color>
+
+    <!-- Noise meter colors -->
+    <color name="db_quiet">#2ECC71</color>
+    <color name="db_normal">#F1C40F</color>
+    <color name="db_loud">#E67E22</color>
+    <color name="db_very_loud">#E74C3C</color>
+    <color name="db_danger">#9B59B6</color>
+
+    <!-- Pomodoro timer colors -->
+    <color name="pomodoro_work">#E74C3C</color>
+    <color name="pomodoro_short_break">#27AE60</color>
+    <color name="pomodoro_long_break">#3498DB</color>
+
+    <!-- Speed test colors -->
+    <color name="green">#27AE60</color>
+    <color name="red">#E74C3C</color>
 </resources>

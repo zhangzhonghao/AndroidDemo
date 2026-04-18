@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A252F"
+    android:gravity="center_horizontal">
+
+    <!-- 顶部角度显示区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp">
+
+        <!-- X轴角度 -->
+        <TextView
+            android:id="@+id/tv_angle_x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="X: 0.0°"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#3498DB"
+            android:gravity="center" />
+
+        <!-- 水平状态 -->
+        <TextView
+            android:id="@+id/tv_level_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="未水平"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#E74C3C"
+            android:gravity="center" />
+
+        <!-- Y轴角度 -->
+        <TextView
+            android:id="@+id/tv_angle_y"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Y: 0.0°"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#3498DB"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- 水平仪视图 -->
+    <com.example.androiddemo.tools.LevelView
+        android:id="@+id/level_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="20dp" />
+
+    <!-- 底部控制区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="40dp">
+
+        <!-- 校准按钮 -->
+        <Button
+            android:id="@+id/btn_calibrate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="校准"
+            android:textSize="18sp"
+            android:onClick="onCalibrateClick"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- 间隔 -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp" />
+
+        <!-- 提示音开关 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提示音"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="10dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

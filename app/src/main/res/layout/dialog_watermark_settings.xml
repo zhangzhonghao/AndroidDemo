@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/section_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="水印设置"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:paddingBottom="16dp" />
+
+    <!-- 水印内容 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="水印内容"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp" />
+
+    <CheckBox
+        android:id="@+id/cb_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="日期时间" />
+
+    <CheckBox
+        android:id="@+id/cb_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="经纬度" />
+
+    <EditText
+        android:id="@+id/et_custom_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="自定义文字"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <!-- 水印位置 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="水印位置"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:text="左下"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 字体大小 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字体大小"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp" />
+
+    <SeekBar
+        android:id="@+id/sb_font_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="30"
+        android:progress="6" />
+
+    <!-- 透明度 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="透明度"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp" />
+
+    <SeekBar
+        android:id="@+id/sb_opacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100" />
+
+    <!-- 按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="24dp">
+
+        <View
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="应用" />
+
+    </LinearLayout>
+
+</LinearLayout>

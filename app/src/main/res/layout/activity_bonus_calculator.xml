@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="年终奖计算器" android:textSize="20sp" android:textStyle="bold" android:paddingBottom="16dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="输入年终奖金额" android:textSize="14sp"/>
+    <EditText android:id="@+id/et_bonus" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="如：24000" android:inputType="numberDecimal" android:layout_marginTop="8dp"/>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="计算" android:onClick="calculate" android:layout_marginTop="16dp"/>
+    <TextView android:id="@+id/tv_result" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:textSize="16sp" android:layout_marginTop="16dp"/>
+</LinearLayout>

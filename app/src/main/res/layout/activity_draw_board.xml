@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手绘板"
+        android:textSize="20sp"
+        android:textColor="@color/on_surface"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/surface" />
+
+    <!-- 绘画区域 -->
+    <com.example.androiddemo.tools.DrawBoardView
+        android:id="@+id/draw_board_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:background="@color/white" />
+
+    <!-- 工具栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@color/surface">
+
+        <!-- 颜色选择栏 -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <View
+                    android:id="@+id/color_black"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#000000"
+                    android:onClick="onColorClick" />
+
+                <View
+                    android:id="@+id/color_red"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#E74C3C"
+                    android:onClick="onColorClick" />
+
+                <View
+                    android:id="@+id/color_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#E67E22"
+                    android:onClick="onColorClick" />
+
+                <View
+                    android:id="@+id/color_yellow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#F1C40F"
+                    android:onClick="onColorClick" />
+
+                <View
+                    android:id="@+id/color_green"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#2ECC71"
+                    android:onClick="onColorClick" />
+
+                <View
+                    android:id="@+id/color_blue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#3498DB"
+                    android:onClick="onColorClick" />
+
+                <View
+                    android:id="@+id/color_purple"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#9B59B6"
+                    android:onClick="onColorClick" />
+
+                <View
+                    android:id="@+id/color_pink"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="#E91E63"
+                    android:onClick="onColorClick" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- 功能按钮栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/btn_eraser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="橡皮擦"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                android:onClick="onEraserClick" />
+
+            <Button
+                android:id="@+id/btn_undo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="撤销"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                android:onClick="onUndoClick" />
+
+            <Button
+                android:id="@+id/btn_redo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="重做"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                android:onClick="onRedoClick" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="清空"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                android:onClick="onClearClick" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="保存"
+                android:textSize="12sp"
+                android:layout_margin="4dp"
+                android:onClick="onSaveClick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

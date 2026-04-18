@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- 工作时长 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="工作时长（分钟）"
+            android:textSize="16sp" />
+
+        <NumberPicker
+            android:id="@+id/np_work_duration"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- 短休息时长 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="短休息（分钟）"
+            android:textSize="16sp" />
+
+        <NumberPicker
+            android:id="@+id/np_short_break"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- 长休息时长 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="长休息（分钟）"
+            android:textSize="16sp" />
+
+        <NumberPicker
+            android:id="@+id/np_long_break"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
