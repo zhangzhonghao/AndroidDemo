@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.androiddemo.auth.AuthManager;
+import com.example.androiddemo.auth.LoginActivity;
+
 import com.example.androiddemo.location.LocationGpsActivity;
 import com.example.androiddemo.location.LocationGeofenceActivity;
 import com.example.androiddemo.location.LocationDistanceActivity;
 import com.example.androiddemo.location.LocationMapActivity;
 import com.example.androiddemo.location.LocationNavigationActivity;
+import com.example.androiddemo.ai.AccelVoiceActivity;
 import com.example.androiddemo.ai.VoiceCollectionActivity;
 import com.example.androiddemo.ai.PetActivity;
 import com.example.androiddemo.ai.AilImageGenActivity;
@@ -35,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        AuthManager authManager = AuthManager.getInstance(this);
+        if (!authManager.isAuthenticated()) {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_main);
     }
 
@@ -57,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         // AI
         else if (id == R.id.btn_ai_voice) {
             intent = new Intent(this, VoiceCollectionActivity.class);
+        } else if (id == R.id.btn_ai_sensor_voice) {
+            intent = new Intent(this, AccelVoiceActivity.class);
         } else if (id == R.id.btn_ai_pet) {
             intent = new Intent(this, PetActivity.class);
         } else if (id == R.id.btn_ai_image_gen) {
@@ -94,5 +108,11 @@ public class MainActivity extends AppCompatActivity {
         if (intent != null) {
             startActivity(intent);
         }
+    }
+
+    public void onLogout(View view) {
+        AuthManager.getInstance(this).logout();
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
     }
 }

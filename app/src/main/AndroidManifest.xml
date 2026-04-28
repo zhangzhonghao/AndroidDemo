@@ -18,6 +18,9 @@
         android:maxSdkVersion="32" />
     <!-- 番茄钟权限 -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 传感器权限 -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- WiFi 权限 -->
@@ -42,12 +45,20 @@
         <!-- 主页面 -->
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Auth -->
+        <activity
+            android:name=".auth.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
 
         <!-- 定位 -->
         <activity android:name=".location.LocationGpsActivity" />
@@ -58,6 +69,7 @@
 
         <!-- AI -->
         <activity android:name=".ai.VoiceCollectionActivity" />
+        <activity android:name=".ai.AccelVoiceActivity" />
         <activity android:name=".ai.PetActivity" />
         <activity android:name=".ai.AilImageGenActivity" />
         <activity android:name=".ai.AiChatActivity" />
@@ -128,6 +140,155 @@
         <activity android:name=".tools.GifMakerActivity" />
         <activity android:name=".tools.CountdownChallengeActivity" />
         <activity android:name=".tools.LedSignActivity" />
+
+        <!-- 未注册工具 -->
+        <activity android:name=".tools.AccountBookActivity" />
+        <activity android:name=".tools.AdvancedBaseConverterActivity" />
+        <activity android:name=".tools.AnniversaryActivity" />
+        <activity android:name=".tools.AnniversaryManagerActivity" />
+        <activity android:name=".tools.AppCloneActivity" />
+        <activity android:name=".tools.AreaConverterActivity" />
+        <activity android:name=".tools.AsciiArtActivity" />
+        <activity android:name=".tools.AttentionTestActivity" />
+        <activity android:name=".tools.AvatarGeneratorActivity" />
+        <activity android:name=".tools.BarcodeScannerActivity" />
+        <activity android:name=".tools.Base64CodecActivity" />
+        <activity android:name=".tools.BaseCodecsActivity" />
+        <activity android:name=".tools.BatchRenameActivity" />
+        <activity android:name=".tools.BinaryCalculatorActivity" />
+        <activity android:name=".tools.BirthdayCodeActivity" />
+        <activity android:name=".tools.BloodTypeActivity" />
+        <activity android:name=".tools.BloodTypeMatchActivity" />
+        <activity android:name=".tools.BonusCalculatorActivity" />
+        <activity android:name=".tools.BrainTeaserActivity" />
+        <activity android:name=".tools.CaesarCipherActivity" />
+        <activity android:name=".tools.CalorieCalculatorActivity" />
+        <activity android:name=".tools.CarPlateFortuneActivity" />
+        <activity android:name=".tools.CharRiddleActivity" />
+        <activity android:name=".tools.ChineseConvertActivity" />
+        <activity android:name=".tools.ColorBlindTestActivity" />
+        <activity android:name=".tools.ColorConverterActivity" />
+        <activity android:name=".tools.CompoundInterestActivity" />
+        <activity android:name=".tools.CountdownActivity" />
+        <activity android:name=".tools.CountdownDaysActivity" />
+        <activity android:name=".tools.CountryInfoActivity" />
+        <activity android:name=".tools.CoupletActivity" />
+        <activity android:name=".tools.CurrencyConverterActivity" />
+        <activity android:name=".tools.DailySentenceActivity" />
+        <activity android:name=".tools.DateDiffActivity" />
+        <activity android:name=".tools.DayOfWeekActivity" />
+        <activity android:name=".tools.DeviceInfoActivity" />
+        <activity android:name=".tools.DiceRollerActivity" />
+        <activity android:name=".tools.DigitalRainActivity" />
+        <activity android:name=".tools.DreamInterpretationActivity" />
+        <activity android:name=".tools.EmergencyContactActivity" />
+        <activity android:name=".tools.ExchangeCalculatorActivity" />
+        <activity android:name=".tools.ExchangeRateActivity" />
+        <activity android:name=".tools.FamilyTreeActivity" />
+        <activity android:name=".tools.FlashSaleActivity" />
+        <activity android:name=".tools.FoodCaloriesActivity" />
+        <activity android:name=".tools.FuelCalculatorActivity" />
+        <activity android:name=".tools.FullscreenClockActivity" />
+        <activity android:name=".tools.FullscreenStopwatchActivity" />
+        <activity android:name=".tools.Game2048Activity" />
+        <activity android:name=".tools.GifPreviewActivity" />
+        <activity android:name=".tools.GpsConverterActivity" />
+        <activity android:name=".tools.GuessNumberActivity" />
+        <activity android:name=".tools.HashCalculatorActivity" />
+        <activity android:name=".tools.HeightPredictorActivity" />
+        <activity android:name=".tools.HistoryDetailActivity" />
+        <activity android:name=".tools.HistoryFavoriteActivity" />
+        <activity android:name=".tools.HistoryTodayActivity" />
+        <activity android:name=".tools.HolidayCountdownActivity" />
+        <activity android:name=".tools.HolidayQueryActivity" />
+        <activity android:name=".tools.HoroscopeActivity" />
+        <activity android:name=".tools.HtmlEntityActivity" />
+        <activity android:name=".tools.IdCardValidatorActivity" />
+        <activity android:name=".tools.IdiomChainActivity" />
+        <activity android:name=".tools.IpLookupActivity" />
+        <activity android:name=".tools.ItemStorageActivity" />
+        <activity android:name=".tools.JigsawPuzzleActivity" />
+        <activity android:name=".tools.JsonFormatterActivity" />
+        <activity android:name=".tools.LengthConverterActivity" />
+        <activity android:name=".tools.LoanCalculatorActivity" />
+        <activity android:name=".tools.LoveMatchActivity" />
+        <activity android:name=".tools.LunarNewYearCountdownActivity" />
+        <activity android:name=".tools.LyricsSearchActivity" />
+        <activity android:name=".tools.Md5Activity" />
+        <activity android:name=".tools.MedicineReminderActivity" />
+        <activity android:name=".tools.MemoryCardActivity" />
+        <activity android:name=".tools.MentalHealthActivity" />
+        <activity android:name=".tools.MorseCodeActivity" />
+        <activity android:name=".tools.MudTextActivity" />
+        <activity android:name=".tools.NameScoringActivity" />
+        <activity android:name=".tools.NumberSliderActivity" />
+        <activity android:name=".tools.NumberToChineseActivity" />
+        <activity android:name=".tools.OneStrokeActivity" />
+        <activity android:name=".tools.PasswordGeneratorActivity" />
+        <activity android:name=".tools.PasswordManagerActivity" />
+        <activity android:name=".tools.PasswordVaultActivity" />
+        <activity android:name=".tools.PdfCreatorActivity" />
+        <activity android:name=".tools.PeriodCalculatorActivity" />
+        <activity android:name=".tools.PhoneFortuneActivity" />
+        <activity android:name=".tools.PhoneLocatorActivity" />
+        <activity android:name=".tools.PinyinActivity" />
+        <activity android:name=".tools.PinyinInitialsActivity" />
+        <activity android:name=".tools.PoetryActivity" />
+        <activity android:name=".tools.PowerScheduleActivity" />
+        <activity android:name=".tools.PregnancyCalculatorActivity" />
+        <activity android:name=".tools.QrPayCollectionActivity" />
+        <activity android:name=".tools.QrScanHistoryActivity" />
+        <activity android:name=".tools.QuickShortcutActivity" />
+        <activity android:name=".tools.QuitSmokingActivity" />
+        <activity android:name=".tools.RailFenceActivity" />
+        <activity android:name=".tools.RandomHistoryActivity" />
+        <activity android:name=".tools.RandomJokeActivity" />
+        <activity android:name=".tools.RandomLotteryActivity" />
+        <activity android:name=".tools.RandomNumberGeneratorActivity" />
+        <activity android:name=".tools.RandomQuoteActivity" />
+        <activity android:name=".tools.RandomStringActivity" />
+        <activity android:name=".tools.ReactionTestActivity" />
+        <activity android:name=".tools.RegexTesterActivity" />
+        <activity android:name=".tools.RelativeDetailActivity" />
+        <activity android:name=".tools.RiddleActivity" />
+        <activity android:name=".tools.RockPaperScissorsActivity" />
+        <activity android:name=".tools.ScreenCastActivity" />
+        <activity android:name=".tools.ScreenTrickActivity" />
+        <activity android:name=".tools.ScrollCaptureActivity" />
+        <activity android:name=".tools.ShakeExitActivity" />
+        <activity android:name=".tools.SleepQualityActivity" />
+        <activity android:name=".tools.SolarTermsActivity" />
+        <activity android:name=".tools.StarryBackgroundActivity" />
+        <activity android:name=".tools.StepCounterActivity" />
+        <activity android:name=".tools.StickerScreenActivity" />
+        <activity android:name=".tools.StressTestActivity" />
+        <activity android:name=".tools.TaxCalculatorActivity" />
+        <activity android:name=".tools.TemperatureConverterActivity" />
+        <activity android:name=".tools.TetrisActivity" />
+        <activity android:name=".tools.TextDiffActivity" />
+        <activity android:name=".tools.TextToImageActivity" />
+        <activity android:name=".tools.TextToSpeechActivity" />
+        <activity android:name=".tools.TicTacToeActivity" />
+        <activity android:name=".tools.TimestampActivity" />
+        <activity android:name=".tools.TomorrowActivity" />
+        <activity android:name=".tools.ToxicSoupActivity" />
+        <activity android:name=".tools.TwoPartSayingActivity" />
+        <activity android:name=".tools.UUEncodeActivity" />
+        <activity android:name=".tools.UnicodeActivity" />
+        <activity android:name=".tools.UrlCodecActivity" />
+        <activity android:name=".tools.UrlParamsActivity" />
+        <activity android:name=".tools.UuidGeneratorActivity" />
+        <activity android:name=".tools.WallpaperActivity" />
+        <activity android:name=".tools.WasteSortActivity" />
+        <activity android:name=".tools.WaterReminderActivity" />
+        <activity android:name=".tools.WeightConverterActivity" />
+        <activity android:name=".tools.WhiteNoiseActivity" />
+        <activity android:name=".tools.WordCountActivity" />
+        <activity android:name=".tools.WorldCapitalsActivity" />
+        <activity android:name=".tools.WorldClockActivity" />
+        <activity android:name=".tools.WorldTimezonesActivity" />
+        <activity android:name=".tools.WorldWondersActivity" />
+        <activity android:name=".tools.ZipCodeActivity" />
 
         <!-- 安全中心 -->
         <activity android:name=".tools.SecurityHomeActivity" />
