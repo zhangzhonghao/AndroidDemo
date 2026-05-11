@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="传感器"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_compass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="指北针"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_level_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="量角器"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_noise_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="噪音计"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_volume_meter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分贝仪"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_tuner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="调音师"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_metronome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="节拍器"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

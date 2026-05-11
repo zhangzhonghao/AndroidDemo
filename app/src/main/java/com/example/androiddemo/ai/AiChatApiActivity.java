@@ -8,6 +8,7 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.androiddemo.R;
+import com.example.androiddemo.ai.MiniMaxApiService.StreamingCallback;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -31,7 +33,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class VoiceCollectionActivity extends AppCompatActivity {
+public class AiChatApiActivity extends AppCompatActivity {
 
     private static final int REQUEST_AUDIO_PERMISSION = 1002;
 
@@ -47,7 +49,7 @@ public class VoiceCollectionActivity extends AppCompatActivity {
     private LinearLayout layoutVoiceMode;
 
     // Data
-    private final List<Message> messageList = new ArrayList<>();
+    private final List<VoiceMessage> messageList = new ArrayList<>();
     private MessageAdapter adapter;
 
     // Media
@@ -63,10 +65,184 @@ public class VoiceCollectionActivity extends AppCompatActivity {
     private Runnable updateRecordingTimeRunnable;
     private TextView tvRecordingHint;
 
+    // MiniMax API 服务
+    private MiniMaxApiService miniMaxApi;
+    private VoiceMessage pendingAiMessage;  // 正在流式接收的AI消息
+
+    // ========== MiniMax API 流式对话 ==========
+
+    /**
+     * 发送消息到 MiniMax API 并处理流式响应
+     */
+    private void sendToMiniMaxApi(String userMessage) {
+        // 添加一条 AI 消息占位，用于后续流式更新
+        pendingAiMessage = new VoiceMessage(VoiceMessage.TYPE_TEXT, false, "", null, null);
+        messageList.add(pendingAiMessage);
+        int position = messageList.size() - 1;
+        adapter.notifyItemInserted(position);
+        scrollToBottom();
+
+        // 调用 MiniMax API 流式对话
+        miniMaxApi.sendStreamChat(userMessage, new StreamingCallback() {
+            @Override
+            public void onStart() {
+                Log.d("VoiceCollection", "开始接收 AI 流式响应");
+            }
+
+            @Override
+            public void onDelta(String text) {
+                // 流式更新消息内容（追加文本）
+                if (pendingAiMessage != null) {
+                    pendingAiMessage.text = (pendingAiMessage.text == null ? "" : pendingAiMessage.text) + text;
+                    adapter.notifyItemChanged(position, "text_update");
+                    // 使用 rvMessages.post() 延迟滚动到当前布局周期完成后执行
+                    // 避免 notifyItemChanged 触发的测量-布局时序冲突导致抖动
+                    rvMessages.post(() -> {
+                        if (!messageList.isEmpty()) {
+                            int lastPosition = messageList.size() - 1;
+                            rvMessages.scrollToPosition(lastPosition);
+                            // scrollToPosition aligns item TOP with screen TOP.
+                            // After layout, scroll down to align item bottom with screen bottom.
+                            rvMessages.post(() -> {
+                                RecyclerView.ViewHolder vh = rvMessages.findViewHolderForAdapterPosition(lastPosition);
+                                if (vh != null) {
+                                    int itemBottom = vh.itemView.getBottom();
+                                    int recyclerBottom = rvMessages.getBottom();
+                                    int delta = itemBottom - recyclerBottom;
+                                    if (delta > 0) {
+                                        rvMessages.scrollBy(0, delta);
+                                    }
+                                }
+                            });
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onComplete(String fullText) {
+                Log.d("VoiceCollection", "AI 响应完成: " + fullText);
+                pendingAiMessage = null;
+            }
+
+            @Override
+            public void onError(String errorMessage) {
+                // 显示错误消息
+                if (pendingAiMessage != null) {
+                    pendingAiMessage.text = "抱歉，发生了错误：" + errorMessage;
+                    adapter.notifyItemChanged(position, "text_update");
+                    scrollToBottom();
+                    pendingAiMessage = null;
+                }
+                Toast.makeText(AiChatApiActivity.this, "AI 响应错误: " + errorMessage, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    /**
+     * 处理语音消息（实际项目中应先进行语音转文字再发送）
+     * 暂时模拟回复，后续可接入语音识别和TTS
+     */
+    private void handleVoiceMessage() {
+        // 暂时模拟 AI 回复
+        handler.postDelayed(() -> {
+            addAiMessage("收到你的语音，AI 语音回复功能正在开发中...");
+        }, 800);
+    }
+
+    // ========== 讯飞语音识别 (IAT) ==========
+
+    private XfyunIatService xfyunIatService;
+
+    /**
+     * 开始语音识别流程
+     * 1. 将 M4A 转换为 PCM
+     * 2. 调用讯飞 IAT 进行语音转文字
+     * 3. 转写完成后调用 sendToMiniMaxApi() 进行 AI 对话
+     */
+    private void startVoiceRecognition(String m4aPath) {
+        // 显示识别中提示
+        Toast.makeText(this, "正在识别语音...", Toast.LENGTH_SHORT).show();
+
+        // 初始化讯飞 IAT 服务
+        if (xfyunIatService == null) {
+            xfyunIatService = new XfyunIatService();
+        }
+
+        // 创建 PCM 文件路径
+        File audioDir = new File(getCacheDir(), "voice");
+        if (!audioDir.exists()) audioDir.mkdirs();
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String pcmPath = new File(audioDir, "voice_" + timestamp + ".pcm").getAbsolutePath();
+
+        // 将 M4A 转换为 PCM
+        XfyunIatService.convertM4aToPcm(m4aPath, pcmPath, new XfyunIatService.ConversionCallback() {
+            @Override
+            public void onComplete(String pcmPath) {
+                Log.d("VoiceCollection", "PCM 转换完成: " + pcmPath);
+                // 开始讯飞语音识别
+                recognizeWithXfyun(pcmPath);
+            }
+
+            @Override
+            public void onError(String errorMessage) {
+                Log.e("VoiceCollection", "PCM 转换失败: " + errorMessage);
+                Toast.makeText(AiChatApiActivity.this, "语音转换失败: " + errorMessage, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    /**
+     * 调用讯飞 IAT 进行语音识别
+     */
+    private void recognizeWithXfyun(String pcmPath) {
+        xfyunIatService.recognize(pcmPath, new XfyunIatService.IatCallback() {
+            @Override
+            public void onStart() {
+                Log.d("VoiceCollection", "开始讯飞语音识别");
+            }
+
+            @Override
+            public void onResult(String text) {
+                // 部分识别结果，可以更新 UI
+                Log.d("VoiceCollection", "部分识别结果: " + text);
+            }
+
+            @Override
+            public void onComplete(String fullText) {
+                Log.d("VoiceCollection", "识别完成，最终文字: " + fullText);
+
+                // 删除临时 PCM 文件
+                new File(pcmPath).delete();
+
+                // 转写完成后，显示为文字气泡并调用 sendToMiniMaxApi() 进行 AI 对话
+                if (fullText != null && !fullText.trim().isEmpty() && !fullText.equals("未识别到文字")) {
+                    // 手动输入使用 trim()，语音输入也应保持一致
+                    String trimmedText = fullText.trim();
+                    // 添加用户文字消息（和打字输入一样）
+                    addUserMessage(trimmedText);
+                    // 调用 AI 对话
+                    sendToMiniMaxApi(trimmedText);
+                } else {
+                    Toast.makeText(AiChatApiActivity.this, "未识别到语音内容", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onError(String errorMessage) {
+                Log.e("VoiceCollection", "讯飞识别错误: " + errorMessage);
+                Toast.makeText(AiChatApiActivity.this, "语音识别失败: " + errorMessage, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_voice_collection);
+        setContentView(R.layout.activity_ai_chat);
+
+        // 初始化 MiniMax API 服务
+        miniMaxApi = new MiniMaxApiService();
 
         initViews();
         setupRecyclerView();
@@ -93,6 +269,8 @@ public class VoiceCollectionActivity extends AppCompatActivity {
         adapter = new MessageAdapter(messageList, this::playAudio, this::stopPlaying);
         rvMessages.setLayoutManager(new LinearLayoutManager(this));
         rvMessages.setAdapter(adapter);
+        // 禁用 ItemAnimator，避免动画导致的中间布局状态
+        rvMessages.setItemAnimator(null);
 
         // 添加一条欢迎消息
         addAiMessage("你好！我是语音助手，可以输入文字或切换到语音输入。");
@@ -105,7 +283,7 @@ public class VoiceCollectionActivity extends AppCompatActivity {
             if (!text.isEmpty()) {
                 addUserMessage(text);
                 etInput.setText("");
-                simulateAiResponse(text);
+                sendToMiniMaxApi(text);
             }
         });
 
@@ -244,8 +422,8 @@ public class VoiceCollectionActivity extends AppCompatActivity {
                     new File(currentAudioPath).delete();
                     currentAudioPath = null;
                 } else {
-                    addUserVoiceMessage(currentAudioPath, (int) duration);
-                    simulateAiResponse(null);
+                    // 语音识别后自动触发 AI 对话
+                    startVoiceRecognition(currentAudioPath);
                 }
             }
         }
@@ -335,28 +513,28 @@ public class VoiceCollectionActivity extends AppCompatActivity {
     // ========== 消息处理 ==========
 
     private void addUserMessage(String text) {
-        Message msg = new Message(Message.TYPE_TEXT, true, text, null, null);
+        VoiceMessage msg = new VoiceMessage(VoiceMessage.TYPE_TEXT, true, text, null, null);
         messageList.add(msg);
         adapter.notifyItemInserted(messageList.size() - 1);
         scrollToBottom();
     }
 
     private void addUserVoiceMessage(String audioPath, int duration) {
-        Message msg = new Message(Message.TYPE_VOICE, true, null, audioPath, duration);
+        VoiceMessage msg = new VoiceMessage(VoiceMessage.TYPE_VOICE, true, null, audioPath, duration);
         messageList.add(msg);
         adapter.notifyItemInserted(messageList.size() - 1);
         scrollToBottom();
     }
 
     private void addAiMessage(String text) {
-        Message msg = new Message(Message.TYPE_TEXT, false, text, null, null);
+        VoiceMessage msg = new VoiceMessage(VoiceMessage.TYPE_TEXT, false, text, null, null);
         messageList.add(msg);
         adapter.notifyItemInserted(messageList.size() - 1);
         scrollToBottom();
     }
 
     private void addAiVoiceMessage(String audioPath, int duration) {
-        Message msg = new Message(Message.TYPE_VOICE, false, null, audioPath, duration);
+        VoiceMessage msg = new VoiceMessage(VoiceMessage.TYPE_VOICE, false, null, audioPath, duration);
         messageList.add(msg);
         adapter.notifyItemInserted(messageList.size() - 1);
         scrollToBottom();
@@ -375,7 +553,23 @@ public class VoiceCollectionActivity extends AppCompatActivity {
 
     private void scrollToBottom() {
         if (!messageList.isEmpty()) {
-            rvMessages.smoothScrollToPosition(messageList.size() - 1);
+            rvMessages.post(() -> {
+                int lastPosition = messageList.size() - 1;
+                RecyclerView.ViewHolder vh = rvMessages.findViewHolderForAdapterPosition(lastPosition);
+                if (vh != null) {
+                    // scrollToPosition aligns item TOP with screen TOP.
+                    // When item height < screen height, item bottom is above screen bottom.
+                    // We need to scroll down to align item bottom with screen bottom.
+                    int itemBottom = vh.itemView.getBottom();
+                    int recyclerBottom = rvMessages.getBottom();
+                    int delta = itemBottom - recyclerBottom;
+                    if (delta > 0) {
+                        rvMessages.scrollBy(0, delta);
+                    }
+                } else {
+                    rvMessages.smoothScrollToPosition(lastPosition);
+                }
+            });
         }
     }
 
@@ -385,27 +579,6 @@ public class VoiceCollectionActivity extends AppCompatActivity {
         stopPlaying();
         if (isRecording) {
             cancelRecording();
-        }
-    }
-
-    // ========== Message 数据类 ==========
-
-    public static class Message {
-        public static final int TYPE_TEXT = 0;
-        public static final int TYPE_VOICE = 1;
-
-        public final int type;        // TYPE_TEXT / TYPE_VOICE
-        public final boolean isUser;  // true=用户发送，false=AI接收
-        public final String text;    // 文字内容（type=TYPE_TEXT 时有值）
-        public final String audioPath; // 音频路径（type=TYPE_VOICE 时有值）
-        public final Integer duration; // 录音时长秒数（type=TYPE_VOICE 时有值）
-
-        public Message(int type, boolean isUser, String text, String audioPath, Integer duration) {
-            this.type = type;
-            this.isUser = isUser;
-            this.text = text;
-            this.audioPath = audioPath;
-            this.duration = duration;
         }
     }
 }

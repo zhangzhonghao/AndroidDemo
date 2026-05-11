@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="游戏"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_game_2048"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2048"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_tic_tac_toe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="九宫格"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_random_lottery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="抽奖"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_tetris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="俄罗斯方块"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_jigsaw_puzzle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拼图"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_memory_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="记忆卡片"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_number_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="数字华容道"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_one_stroke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="一笔画"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_guess_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="猜数字"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_dice_roller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="掷骸子"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_rock_paper_scissors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="猜拳"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

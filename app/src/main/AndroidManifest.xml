@@ -70,9 +70,10 @@
         <!-- AI -->
         <activity android:name=".ai.VoiceCollectionActivity" />
         <activity android:name=".ai.AccelVoiceActivity" />
+        <activity android:name=".ai.AiChatApiActivity" />
+        <activity android:name=".ai.AiChatActivity" />
         <activity android:name=".ai.PetActivity" />
         <activity android:name=".ai.AilImageGenActivity" />
-        <activity android:name=".ai.AiChatActivity" />
         <activity android:name=".ai.AiTtsActivity" />
         <activity android:name=".ai.AiVisionActivity" />
         <activity android:name=".ai.AiCodeActivity" />
@@ -88,9 +89,18 @@
         <activity android:name=".trace.PerformanceTraceActivity" />
         <activity android:name=".trace.PerformanceMeasureActivity" />
 
+        <!-- 7个分类首页 -->
+        <activity android:name=".life.LifeServiceHomeActivity" />
+        <activity android:name=".health.HealthHomeActivity" />
+        <activity android:name=".game.GameHomeActivity" />
+        <activity android:name=".sensor.SensorHomeActivity" />
+        <activity android:name=".efficiency.EfficiencyHomeActivity" />
+        <activity android:name=".finance.FinanceHomeActivity" />
+        <activity android:name=".tools.ToolsHomeActivity" />
+        <activity android:name=".basic.BasicToolsHomeActivity" />
+
         <!-- 工具箱 -->
         <activity android:name=".tools.BaseConverterActivity" />
-        <activity android:name=".tools.ToolsHomeActivity" />
         <activity android:name=".tools.WifiPasswordActivity" />
         <activity android:name=".tools.TranslatorActivity" />
         <activity android:name=".tools.FlashlightActivity" />

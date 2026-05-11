@@ -94,7 +94,14 @@
                 android:id="@+id/btn_ai_voice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="语音采集"
+                android:text="AI对话API版"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_ai_voice_sdk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AI对话SDK版"
                 android:onClick="onFeatureClick" />
 
             <Button
@@ -183,11 +190,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- 类型4: 工具箱 -->
+        <!-- 类型4: 7个分类入口（替代原来的工具箱） -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="工具箱"
+            android:text="工具"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="?attr/colorPrimary"
@@ -201,10 +208,59 @@
             android:background="@drawable/section_background">
 
             <Button
+                android:id="@+id/btn_life_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="生活服务"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="健康"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="游戏"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_sensor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="传感器"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_efficiency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="效率"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_finance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="财务"
+                android:onClick="onFeatureClick" />
+
+            <Button
                 android:id="@+id/btn_tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="工具箱"
+                android:text="工具"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="基础工具"
                 android:onClick="onFeatureClick" />
         </LinearLayout>
 
@@ -217,11 +273,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- 类型5: 应用埋点 -->
+        <!-- 类型5: 埋点（应用埋点改名） -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="应用埋点"
+            android:text="埋点"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="?attr/colorPrimary"

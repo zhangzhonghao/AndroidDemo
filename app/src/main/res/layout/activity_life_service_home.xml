@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生活服务"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_translator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="翻译"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="日历"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_lunar_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="农历"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="天气"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_ip_lookup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IP查询"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_holiday_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="节假日查询"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_today_in_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="今日历史"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_history_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="历史今天"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_history_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="历史详情"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_history_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="历史收藏"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_random_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="历史随机"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_world_capitals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="世界首都"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_phone_fortune"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="手机号吉凶"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_car_plate_fortune"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="车牌吉凶"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_horoscope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="星座运势"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_day_of_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="星期几查询"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_date_diff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="日期间隔"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_text_diff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="文本差异对比"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_json_formatter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JSON格式化"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_regex_tester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="正则测试"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_number_to_chinese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="数字转中文大写"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_qr_scan_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="扫码历史"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_pdf_reader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PDF阅读"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_pdf_creator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PDF创建"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_screen_cast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="屏幕投射"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_scroll_capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="长截图"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_gif_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GIF预览"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_phone_locator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="手机定位"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_zip_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="邮编查询"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_id_card_validator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="身份证验证"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_exchange_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="汇率查询"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_exchange_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="兑换计算"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

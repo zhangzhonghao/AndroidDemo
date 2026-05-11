@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="基础工具"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_basic_flashlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="手电筒"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_vibration_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="振动测试"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="计算器"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_qr_scanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QR扫描"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_qr_generator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QR生成"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_unit_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="单位转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_app_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="应用管理"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_image_compressor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片压缩"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_tuner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="调音师"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_metronome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="节拍器"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_color_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="颜色选择"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_color_picker_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="屏幕取色"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_touch_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="触屏测试"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_device_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设备信息"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_system_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="系统信息"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_quick_shortcut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="快速快捷方式"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_password_vault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="密码库"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_password_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="密码管理器"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="壁纸"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_app_clone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="应用双开"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_power_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="定时开关"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_gps_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GPS坐标转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_item_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="物品收纳"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_binary_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="二进制计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_base_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="进制转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_color_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="颜色转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_word_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="字数统计"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_random_generator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="随机生成器"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_random_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="随机数生成"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_random_lottery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="随机抽奖"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_date_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="日期计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_family_tree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="家谱"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_relative_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="亲戚详情"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_love_match"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="姻缘匹配"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_birthday_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="生日密码"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_base64_codec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Base64编解码"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_url_codec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="URL编解码"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_hash_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="哈希计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_length_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="长度转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_weight_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="重量转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_area_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="面积转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_temperature_converter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="温度转换"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_loan_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="贷款计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_compound_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="复利计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_basic_bonus_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="奖金计算"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

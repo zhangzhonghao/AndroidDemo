@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="健康"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/section_background">
+
+            <Button
+                android:id="@+id/btn_bmi_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BMI"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_relative_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="亲戚计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_countdown_challenge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="倒计时挑战"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_waste_sort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="垃圾分类"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_step_counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="计步器"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_food_calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="食物热量"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_blood_type_match"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="血型配对"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_sleep_quality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="睡眠质量"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_stress_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="心理压力测试"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_attention_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="注意力测试"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_reaction_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="反应测试"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_quit_smoking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="戒烟助手"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_water_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="饮水提醒"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_pregnancy_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="怀孕计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_height_predictor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="身高预测"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_calorie_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="卡路里计算"
+                android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_period_calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="月经周期"
+                android:onClick="onFeatureClick" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

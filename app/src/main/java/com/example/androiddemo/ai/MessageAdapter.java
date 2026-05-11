@@ -19,7 +19,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private static final int VIEW_TYPE_USER_VOICE = 2;
     private static final int VIEW_TYPE_AI_VOICE = 3;
 
-    private final List<VoiceCollectionActivity.Message> messages;
+    private final List<VoiceMessage> messages;
     private final OnPlayClickListener playListener;
     private final OnStopClickListener stopListener;
     private final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
@@ -32,7 +32,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         void onStopClick();
     }
 
-    public MessageAdapter(List<VoiceCollectionActivity.Message> messages,
+    public MessageAdapter(List<VoiceMessage> messages,
                          OnPlayClickListener playListener,
                          OnStopClickListener stopListener) {
         this.messages = messages;
@@ -42,8 +42,8 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     @Override
     public int getItemViewType(int position) {
-        VoiceCollectionActivity.Message msg = messages.get(position);
-        if (msg.type == VoiceCollectionActivity.Message.TYPE_TEXT) {
+        VoiceMessage msg = messages.get(position);
+        if (msg.type == VoiceMessage.TYPE_TEXT) {
             return msg.isUser ? VIEW_TYPE_USER_TEXT : VIEW_TYPE_AI_TEXT;
         } else {
             return msg.isUser ? VIEW_TYPE_USER_VOICE : VIEW_TYPE_AI_VOICE;
@@ -68,8 +68,18 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position, @NonNull List<Object> payloads) {
+        if (!payloads.isEmpty() && holder instanceof TextViewHolder) {
+            // 带 payload 的局部更新，只刷新文本，不触发整个 item 重新布局
+            ((TextViewHolder) holder).updateText(messages.get(position).text);
+        } else {
+            super.onBindViewHolder(holder, position, payloads);
+        }
+    }
+
+    @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        VoiceCollectionActivity.Message msg = messages.get(position);
+        VoiceMessage msg = messages.get(position);
 
         if (holder instanceof TextViewHolder) {
             ((TextViewHolder) holder).bind(msg);
@@ -97,9 +107,13 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             this.tvTime = itemView.findViewById(R.id.tv_time);
         }
 
-        void bind(VoiceCollectionActivity.Message msg) {
+        void bind(VoiceMessage msg) {
             tvText.setText(msg.text);
             tvTime.setText(TIME_FORMAT.format(new java.util.Date()));
+        }
+
+        void updateText(String text) {
+            tvText.setText(text);
         }
     }
 
@@ -117,7 +131,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             this.ivPlay = itemView.findViewById(R.id.iv_play);
         }
 
-        void bind(VoiceCollectionActivity.Message msg) {
+        void bind(VoiceMessage msg) {
             tvDuration.setText(msg.duration + "″");
             ivPlay.setOnClickListener(v -> {
                 if (playListener != null) {
