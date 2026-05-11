@@ -22,6 +22,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.androiddemo.R;
 import com.example.androiddemo.ai.MiniMaxApiService.StreamingCallback;
+import com.example.androiddemo.ai.PcmAudioRecorder;
+import com.example.androiddemo.ai.XfyunIatService;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,6 +57,14 @@ public class AiChatActivity extends AppCompatActivity {
     // MiniMax API 服务
     private MiniMaxApiService miniMaxApi;
     private VoiceMessage pendingAiMessage;  // 正在流式接收的AI消息
+
+    // 语音录制
+    private PcmAudioRecorder pcmRecorder;
+    private String currentPcmFilePath;
+    private boolean isRecordingVoice = false;
+
+    // 讯飞语音识别
+    private XfyunIatService xfyunIatService;
 
     // ========== MiniMax API 流式对话 ==========
 
@@ -153,6 +163,10 @@ public class AiChatActivity extends AppCompatActivity {
 
         // 默认文字模式：显示键盘按钮、文本输入框、发送按钮
         setTextInputMode();
+
+        // 初始化语音录制和识别服务
+        pcmRecorder = new PcmAudioRecorder();
+        xfyunIatService = new XfyunIatService();
     }
 
     private void setupRecyclerView() {
@@ -183,13 +197,24 @@ public class AiChatActivity extends AppCompatActivity {
         // 点击语音按钮 → 切换到文字输入模式
         btnVoice.setOnClickListener(v -> setTextInputMode());
 
-        // 按住说话 - 模拟语音输入（实际项目应接入语音识别 SDK）
+        // 按住说话 - 语音录制与识别
         btnVoiceRecord.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    Toast.makeText(this, "语音识别功能已移除，请使用文字输入", Toast.LENGTH_SHORT).show();
+                    // 检查录音权限
+                    if (!checkAudioPermission()) {
+                        return true;
+                    }
+                    // 开始录音
+                    startVoiceRecording();
                     break;
                 case MotionEvent.ACTION_UP:
+                    // 停止录音并识别
+                    stopVoiceRecording();
+                    break;
+                case MotionEvent.ACTION_CANCEL:
+                    // 取消录音
+                    cancelVoiceRecording();
                     break;
             }
             return true;
@@ -210,6 +235,118 @@ public class AiChatActivity extends AppCompatActivity {
     private void setVoiceInputMode() {
         layoutTextMode.setVisibility(View.GONE);
         layoutVoiceMode.setVisibility(View.VISIBLE);
+    }
+
+    // ========== 语音录制与识别 ==========
+
+    private void startVoiceRecording() {
+        if (pcmRecorder.isRecording()) {
+            pcmRecorder.stopRecording();
+        }
+
+        // 生成 PCM 文件路径
+        currentPcmFilePath = PcmAudioRecorder.generateFilePath(getCacheDir());
+
+        // 更新 UI
+        tvRecordingHint.setText("正在录音...");
+        btnVoiceRecord.setText("松开结束");
+        isRecordingVoice = true;
+
+        pcmRecorder.startRecording(currentPcmFilePath, new PcmAudioRecorder.RecordCallback() {
+            @Override
+            public void onStart() {
+                runOnUiThread(() -> {
+                    Toast.makeText(AiChatActivity.this, "开始录音", Toast.LENGTH_SHORT).show();
+                });
+            }
+
+            @Override
+            public void onFrameData(byte[] data, int frameIndex) {
+                // 可以在这里更新音量 UI
+            }
+
+            @Override
+            public void onComplete(String filePath, int totalFrames) {
+                Log.d("VoiceCollection", "录音完成: " + filePath + ", 共 " + totalFrames + " 帧");
+            }
+
+            @Override
+            public void onError(String errorMessage) {
+                runOnUiThread(() -> {
+                    Toast.makeText(AiChatActivity.this, "录音错误: " + errorMessage, Toast.LENGTH_LONG).show();
+                    resetVoiceButton();
+                });
+            }
+        });
+    }
+
+    private void stopVoiceRecording() {
+        if (!isRecordingVoice) return;
+
+        isRecordingVoice = false;
+        pcmRecorder.stopRecording();
+
+        // 更新 UI
+        tvRecordingHint.setText("正在识别...");
+        btnVoiceRecord.setText("识别中...");
+        btnVoiceRecord.setEnabled(false);
+
+        // 发送到讯飞进行语音识别
+        if (currentPcmFilePath != null) {
+            xfyunIatService.recognize(currentPcmFilePath, new XfyunIatService.IatCallback() {
+                @Override
+                public void onStart() {
+                    Log.d("VoiceCollection", "开始语音识别");
+                }
+
+                @Override
+                public void onResult(String text) {
+                    // 部分结果，可以实时显示
+                    runOnUiThread(() -> {
+                        tvRecordingHint.setText("识别中: " + text);
+                    });
+                }
+
+                @Override
+                public void onComplete(String fullText) {
+                    runOnUiThread(() -> {
+                        if (fullText != null && !fullText.isEmpty() && !"未识别到文字".equals(fullText)) {
+                            Toast.makeText(AiChatActivity.this, "识别结果: " + fullText, Toast.LENGTH_SHORT).show();
+                            // 自动发送识别结果
+                            addUserMessage(fullText);
+                            sendToMiniMaxApi(fullText);
+                        } else {
+                            Toast.makeText(AiChatActivity.this, "未识别到语音内容", Toast.LENGTH_SHORT).show();
+                        }
+                        resetVoiceButton();
+                    });
+                }
+
+                @Override
+                public void onError(String errorMessage) {
+                    runOnUiThread(() -> {
+                        Toast.makeText(AiChatActivity.this, "语音识别失败: " + errorMessage, Toast.LENGTH_LONG).show();
+                        resetVoiceButton();
+                    });
+                }
+            });
+        } else {
+            resetVoiceButton();
+        }
+    }
+
+    private void cancelVoiceRecording() {
+        isRecordingVoice = false;
+        if (pcmRecorder != null) {
+            pcmRecorder.stopRecording();
+        }
+        resetVoiceButton();
+    }
+
+    private void resetVoiceButton() {
+        tvRecordingHint.setText("按住说话");
+        btnVoiceRecord.setText("按住说话");
+        btnVoiceRecord.setEnabled(true);
     }
 
     // ========== 权限检查 ==========
@@ -327,5 +464,11 @@ public class AiChatActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         stopPlaying();
+        if (pcmRecorder != null && pcmRecorder.isRecording()) {
+            pcmRecorder.stopRecording();
+        }
+        if (xfyunIatService != null) {
+            xfyunIatService.cancel();
+        }
     }
 }
