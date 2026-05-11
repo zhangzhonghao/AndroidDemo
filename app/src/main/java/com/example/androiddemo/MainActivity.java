@@ -10,7 +10,6 @@ import com.example.androiddemo.location.LocationGeofenceActivity;
 import com.example.androiddemo.location.LocationDistanceActivity;
 import com.example.androiddemo.location.LocationMapActivity;
 import com.example.androiddemo.location.LocationNavigationActivity;
-import com.example.androiddemo.ai.VoiceCollectionActivity;
 import com.example.androiddemo.ai.AiChatActivity;
 import com.example.androiddemo.ai.AiChatApiActivity;
 import com.example.androiddemo.ai.PetActivity;
@@ -18,10 +17,6 @@ import com.example.androiddemo.ai.AilImageGenActivity;
 import com.example.androiddemo.ai.AiCodeActivity;
 import com.example.androiddemo.ai.AiTtsActivity;
 import com.example.androiddemo.ai.AiVisionActivity;
-import com.example.androiddemo.network.NetworkHttpActivity;
-import com.example.androiddemo.network.NetworkJsonActivity;
-import com.example.androiddemo.network.NetworkImageActivity;
-import com.example.androiddemo.network.NetworkWebsocketActivity;
 import com.example.androiddemo.ui.bottomnav.BottomNavFoldableActivity;
 import com.example.androiddemo.life.LifeServiceHomeActivity;
 import com.example.androiddemo.health.HealthHomeActivity;
@@ -64,13 +59,9 @@ public class MainActivity extends AppCompatActivity {
         }
         // AI
         else if (id == R.id.btn_ai_voice) {
-            intent = new Intent(this, VoiceCollectionActivity.class);
-        } else if (id == R.id.btn_ai_sensor_voice) {
-            intent = new Intent(this, AccelVoiceActivity.class);
+            intent = new Intent(this, AiChatApiActivity.class);
         } else if (id == R.id.btn_ai_voice_sdk) {
             intent = new Intent(this, AiChatActivity.class);
-        } else if (id == R.id.btn_ai_api_chat) {
-            intent = new Intent(this, AiChatApiActivity.class);
         } else if (id == R.id.btn_ai_pet) {
             intent = new Intent(this, PetActivity.class);
         } else if (id == R.id.btn_ai_image_gen) {

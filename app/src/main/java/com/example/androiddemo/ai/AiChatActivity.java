@@ -2,7 +2,6 @@ package com.example.androiddemo.ai;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,7 +11,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,11 +24,8 @@ import com.example.androiddemo.R;
 import com.example.androiddemo.ai.MiniMaxApiService.StreamingCallback;
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class AiChatActivity extends AppCompatActivity {
 
@@ -46,6 +41,7 @@ public class AiChatActivity extends AppCompatActivity {
     private LinearLayout layoutInputBar;
     private LinearLayout layoutTextMode;
     private LinearLayout layoutVoiceMode;
+    private TextView tvRecordingHint;
 
     // Data
     private final List<VoiceMessage> messageList = new ArrayList<>();
@@ -56,23 +52,9 @@ public class AiChatActivity extends AppCompatActivity {
     private boolean isPlaying = false;
     private Handler handler = new Handler(Looper.getMainLooper());
 
-    // 语音模式计时
-    private Runnable updateRecordingTimeRunnable;
-    private TextView tvRecordingHint;
-
     // MiniMax API 服务
     private MiniMaxApiService miniMaxApi;
     private VoiceMessage pendingAiMessage;  // 正在流式接收的AI消息
-
-    // ========== PCM 录音和 SparkChain SDK 语音识别 ==========
-
-    // PCM 录音器（直接录制 16k 16bit 单声道 PCM）
-    private PcmAudioRecorder pcmAudioRecorder;
-    private String currentPcmPath;
-    private long recordingStartTime;
-
-    // SparkChain SDK 语音识别服务
-    private SparkChainIatService sparkChainIatService;
 
     // ========== MiniMax API 流式对话 ==========
 
@@ -144,143 +126,10 @@ public class AiChatActivity extends AppCompatActivity {
         });
     }
 
-    // ========== 讯飞 SparkChain SDK 语音识别 (IAT) ==========
-
-    /**
-     * 使用 SparkChain SDK 进行语音识别
-     * 直接接收 PCM 数据进行实时识别
-     */
-    private void startVoiceRecognitionWithSdk() {
-        // 显示识别中提示
-        Toast.makeText(this, "正在识别语音...", Toast.LENGTH_SHORT).show();
-
-        // 初始化 SparkChain SDK 语音识别服务
-        if (sparkChainIatService == null) {
-            sparkChainIatService = new SparkChainIatService();
-        }
-
-        // 生成 PCM 文件路径
-        currentPcmPath = PcmAudioRecorder.generateFilePath(getCacheDir());
-
-        // 创建 PCM 录音器
-        pcmAudioRecorder = new PcmAudioRecorder();
-
-        // 启动录音和识别
-        pcmAudioRecorder.startRecording(currentPcmPath, new PcmAudioRecorder.RecordCallback() {
-            @Override
-            public void onStart() {
-                Log.d("VoiceCollection", "开始 PCM 录音");
-                runOnUiThread(() -> {
-                    btnVoiceRecord.setText("松开结束");
-                    btnVoiceRecord.setBackgroundColor(getColor(R.color.purple_700));
-                    tvRecordingHint.setVisibility(View.VISIBLE);
-                    tvRecordingHint.setText("正在录音...");
-                });
-            }
-
-            @Override
-            public void onFrameData(byte[] data, int frameIndex) {
-                // 每帧数据（40ms）直接写入 SDK
-                if (sparkChainIatService != null && sparkChainIatService.isRecognizing()) {
-                    sparkChainIatService.writeAudio(data);
-                }
-            }
-
-            @Override
-            public void onComplete(String filePath, int totalFrames) {
-                Log.d("VoiceCollection", "PCM 录音完成: " + filePath + ", 共 " + totalFrames + " 帧");
-                // 停止识别（不等结果）
-                if (sparkChainIatService != null) {
-                    sparkChainIatService.stopRecognize(true);
-                }
-            }
-
-            @Override
-            public void onError(String errorMessage) {
-                Log.e("VoiceCollection", "录音错误: " + errorMessage);
-                runOnUiThread(() -> {
-                    Toast.makeText(AiChatActivity.this, "录音错误: " + errorMessage, Toast.LENGTH_LONG).show();
-                    resetVoiceButton();
-                });
-            }
-        });
-
-        // 启动语音识别
-        sparkChainIatService.startRecognize(new SparkChainIatService.IatCallback() {
-            @Override
-            public void onStart() {
-                Log.d("VoiceCollection", "开始讯飞 SparkChain SDK 语音识别");
-            }
-
-            @Override
-            public void onResult(String text) {
-                // 部分识别结果，可以更新 UI
-                Log.d("VoiceCollection", "部分识别结果: " + text);
-            }
-
-            @Override
-            public void onComplete(String fullText) {
-                Log.d("VoiceCollection", "识别完成，最终文字: " + fullText);
-
-                // 删除临时 PCM 文件
-                if (currentPcmPath != null) {
-                    new File(currentPcmPath).delete();
-                }
-
-                // 转写完成后，显示为文字气泡并调用 sendToMiniMaxApi() 进行 AI 对话
-                if (fullText != null && !fullText.trim().isEmpty() && !fullText.equals("未识别到文字")) {
-                    String trimmedText = fullText.trim();
-                    runOnUiThread(() -> {
-                        // 添加用户文字消息（和打字输入一样）
-                        addUserMessage(trimmedText);
-                        // 调用 AI 对话
-                        sendToMiniMaxApi(trimmedText);
-                    });
-                } else {
-                    runOnUiThread(() -> Toast.makeText(AiChatActivity.this, "未识别到语音内容", Toast.LENGTH_SHORT).show());
-                }
-
-                runOnUiThread(() -> resetVoiceButton());
-            }
-
-            @Override
-            public void onError(String errorMessage) {
-                Log.e("VoiceCollection", "讯飞识别错误: " + errorMessage);
-                runOnUiThread(() -> {
-                    Toast.makeText(AiChatActivity.this, "语音识别失败: " + errorMessage, Toast.LENGTH_LONG).show();
-                    resetVoiceButton();
-                });
-
-                // 删除临时 PCM 文件
-                if (currentPcmPath != null) {
-                    new File(currentPcmPath).delete();
-                }
-            }
-        });
-    }
-
-    /**
-     * 停止录音和识别
-     */
-    private void stopVoiceRecognition() {
-        // 停止 PCM 录音
-        if (pcmAudioRecorder != null && pcmAudioRecorder.isRecording()) {
-            pcmAudioRecorder.stopRecording();
-        }
-
-        // 停止 SDK 识别（等最终结果）
-        if (sparkChainIatService != null && sparkChainIatService.isRecognizing()) {
-            sparkChainIatService.stopRecognize(false);
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ai_chat);
-
-        // 初始化 SparkChain SDK
-        SparkChainManager.init(this);
 
         // 初始化 MiniMax API 服务
         miniMaxApi = new MiniMaxApiService();
@@ -334,17 +183,13 @@ public class AiChatActivity extends AppCompatActivity {
         // 点击语音按钮 → 切换到文字输入模式
         btnVoice.setOnClickListener(v -> setTextInputMode());
 
-        // 按住说话
+        // 按住说话 - 模拟语音输入（实际项目应接入语音识别 SDK）
         btnVoiceRecord.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    startRecording();
+                    Toast.makeText(this, "语音识别功能已移除，请使用文字输入", Toast.LENGTH_SHORT).show();
                     break;
                 case MotionEvent.ACTION_UP:
-                    stopRecording();
-                    break;
-                case MotionEvent.ACTION_CANCEL:
-                    cancelRecording();
                     break;
             }
             return true;
@@ -391,77 +236,6 @@ public class AiChatActivity extends AppCompatActivity {
                 Toast.makeText(this, "录音权限被拒绝，无法使用语音功能", Toast.LENGTH_LONG).show();
             }
         }
-    }
-
-    // ========== 录音相关（SDK 版使用 PCM 录音器）==========
-
-    private void startRecording() {
-        if (!checkAudioPermission()) return;
-
-        recordingStartTime = System.currentTimeMillis();
-
-        // 更新录音时长显示
-        updateRecordingTimeRunnable = new Runnable() {
-            @Override
-            public void run() {
-                if (pcmAudioRecorder != null && pcmAudioRecorder.isRecording()) {
-                    long seconds = (System.currentTimeMillis() - recordingStartTime) / 1000;
-                    tvRecordingHint.setText("正在录音... " + seconds + "秒");
-                    handler.postDelayed(this, 1000);
-                }
-            }
-        };
-        handler.post(updateRecordingTimeRunnable);
-
-        // 使用 SparkChain SDK 进行语音识别（内部会启动 PCM 录音）
-        startVoiceRecognitionWithSdk();
-    }
-
-    private void stopRecording() {
-        handler.removeCallbacks(updateRecordingTimeRunnable);
-
-        long duration = (System.currentTimeMillis() - recordingStartTime) / 1000;
-        if (duration < 1) {
-            Toast.makeText(this, "录音时间太短", Toast.LENGTH_SHORT).show();
-            // 取消识别
-            if (pcmAudioRecorder != null && pcmAudioRecorder.isRecording()) {
-                pcmAudioRecorder.stopRecording();
-            }
-            if (sparkChainIatService != null) {
-                sparkChainIatService.stopRecognize(true);
-            }
-            resetVoiceButton();
-        } else {
-            // 停止录音和识别
-            stopVoiceRecognition();
-        }
-    }
-
-    private void cancelRecording() {
-        handler.removeCallbacks(updateRecordingTimeRunnable);
-
-        if (pcmAudioRecorder != null && pcmAudioRecorder.isRecording()) {
-            pcmAudioRecorder.stopRecording();
-        }
-
-        if (sparkChainIatService != null) {
-            sparkChainIatService.stopRecognize(true);
-        }
-
-        // 删除临时文件
-        if (currentPcmPath != null) {
-            new File(currentPcmPath).delete();
-            currentPcmPath = null;
-        }
-
-        resetVoiceButton();
-    }
-
-    private void resetVoiceButton() {
-        btnVoiceRecord.setText("按住说话");
-        btnVoiceRecord.setBackgroundColor(getColor(R.color.purple_500));
-        tvRecordingHint.setVisibility(View.INVISIBLE);
-        tvRecordingHint.setText("");
     }
 
     // ========== 音频播放 ==========
@@ -520,36 +294,11 @@ public class AiChatActivity extends AppCompatActivity {
         scrollToBottom();
     }
 
-    private void addUserVoiceMessage(String audioPath, int duration) {
-        VoiceMessage msg = new VoiceMessage(VoiceMessage.TYPE_VOICE, true, null, audioPath, duration);
-        messageList.add(msg);
-        adapter.notifyItemInserted(messageList.size() - 1);
-        scrollToBottom();
-    }
-
     private void addAiMessage(String text) {
         VoiceMessage msg = new VoiceMessage(VoiceMessage.TYPE_TEXT, false, text, null, null);
         messageList.add(msg);
         adapter.notifyItemInserted(messageList.size() - 1);
         scrollToBottom();
-    }
-
-    private void addAiVoiceMessage(String audioPath, int duration) {
-        VoiceMessage msg = new VoiceMessage(VoiceMessage.TYPE_VOICE, false, null, audioPath, duration);
-        messageList.add(msg);
-        adapter.notifyItemInserted(messageList.size() - 1);
-        scrollToBottom();
-    }
-
-    private void simulateAiResponse(String userInput) {
-        // 模拟 AI 回复（无实际 AI 能力，纯演示）
-        handler.postDelayed(() -> {
-            if (userInput != null) {
-                addAiMessage("收到你的消息：「" + userInput + "」，AI 功能正在开发中...");
-            } else {
-                addAiMessage("收到你的语音，AI 语音回复功能正在开发中...");
-            }
-        }, 800);
     }
 
     private void scrollToBottom() {
@@ -578,12 +327,5 @@ public class AiChatActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         stopPlaying();
-        // 停止录音和识别
-        if (pcmAudioRecorder != null && pcmAudioRecorder.isRecording()) {
-            pcmAudioRecorder.stopRecording();
-        }
-        if (sparkChainIatService != null) {
-            sparkChainIatService.release();
-        }
     }
 }

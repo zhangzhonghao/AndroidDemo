@@ -55,6 +55,9 @@ dependencies {
     implementation("androidx.window:window:1.2.0")
     implementation(files("libs/AMap_Location_V11.1.001_20260402.jar"))
 
+    // OkHttp for WebSocket
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
     // CameraX
     val cameraxVersion = "1.3.4"
     implementation("androidx.camera:camera-core:$cameraxVersion")
