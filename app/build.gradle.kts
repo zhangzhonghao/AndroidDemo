@@ -55,12 +55,6 @@ dependencies {
     implementation("androidx.window:window:1.2.0")
     implementation(files("libs/AMap_Location_V11.1.001_20260402.jar"))
 
-    // Auth dependencies
-    implementation(libs.playServicesAuth)
-    implementation(libs.biometric)
-    implementation(libs.securityCrypto)
-    implementation(libs.lifecycleRuntime)
-
     // CameraX
     val cameraxVersion = "1.3.4"
     implementation("androidx.camera:camera-core:$cameraxVersion")

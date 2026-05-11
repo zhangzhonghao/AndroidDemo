@@ -105,13 +105,6 @@
                 android:onClick="onFeatureClick" />
 
             <Button
-                android:id="@+id/btn_ai_sensor_voice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="传感器语音"
-                android:onClick="onFeatureClick" />
-
-            <Button
                 android:id="@+id/btn_ai_pet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -359,23 +352,6 @@
                 android:text="安全中心"
                 android:onClick="onFeatureClick" />
         </LinearLayout>
-
-        <!-- 分割线 -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?attr/colorOnSurface"
-            android:alpha="0.2"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- 退出登录 -->
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="退出登录"
-            android:onClick="onLogout" />
 
     </LinearLayout>
 </ScrollView>

@@ -5,15 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androiddemo.auth.AuthManager;
-import com.example.androiddemo.auth.LoginActivity;
-
 import com.example.androiddemo.location.LocationGpsActivity;
 import com.example.androiddemo.location.LocationGeofenceActivity;
 import com.example.androiddemo.location.LocationDistanceActivity;
 import com.example.androiddemo.location.LocationMapActivity;
 import com.example.androiddemo.location.LocationNavigationActivity;
-import com.example.androiddemo.ai.AccelVoiceActivity;
 import com.example.androiddemo.ai.VoiceCollectionActivity;
 import com.example.androiddemo.ai.AiChatActivity;
 import com.example.androiddemo.ai.AiChatApiActivity;
@@ -47,14 +43,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        AuthManager authManager = AuthManager.getInstance(this);
-        if (!authManager.isAuthenticated()) {
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
-            return;
-        }
-
         setContentView(R.layout.activity_main);
     }
 
@@ -136,11 +124,5 @@ public class MainActivity extends AppCompatActivity {
         if (intent != null) {
             startActivity(intent);
         }
-    }
-
-    public void onLogout(View view) {
-        AuthManager.getInstance(this).logout();
-        startActivity(new Intent(this, LoginActivity.class));
-        finish();
     }
 }
