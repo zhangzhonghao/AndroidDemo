@@ -64,6 +64,7 @@
         <activity android:name=".ai.AiTtsActivity" />
         <activity android:name=".ai.AiVisionActivity" />
         <activity android:name=".ai.AiCodeActivity" />
+        <activity android:name=".ai.SmartQaActivity" />
 
         <!-- UI -->
         <activity android:name=".ui.bottomnav.BottomNavFoldableActivity" />

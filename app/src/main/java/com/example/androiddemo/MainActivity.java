@@ -17,6 +17,7 @@ import com.example.androiddemo.ai.AilImageGenActivity;
 import com.example.androiddemo.ai.AiCodeActivity;
 import com.example.androiddemo.ai.AiTtsActivity;
 import com.example.androiddemo.ai.AiVisionActivity;
+import com.example.androiddemo.ai.SmartQaActivity;
 import com.example.androiddemo.ui.bottomnav.BottomNavFoldableActivity;
 import com.example.androiddemo.life.LifeServiceHomeActivity;
 import com.example.androiddemo.health.HealthHomeActivity;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(this, AiVisionActivity.class);
         } else if (id == R.id.btn_ai_code) {
             intent = new Intent(this, AiCodeActivity.class);
+        } else if (id == R.id.btn_ai_smart_qa) {
+            intent = new Intent(this, SmartQaActivity.class);
         }
         // UI
         else if (id == R.id.btn_ui_bottom_nav_foldable) {

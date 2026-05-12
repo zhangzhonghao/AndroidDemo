@@ -138,6 +138,13 @@
                 android:layout_height="wrap_content"
                 android:text="AI 写代码"
                 android:onClick="onFeatureClick" />
+
+            <Button
+                android:id="@+id/btn_ai_smart_qa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="智能问答"
+                android:onClick="onFeatureClick" />
         </LinearLayout>
 
         <!-- 分割线 -->

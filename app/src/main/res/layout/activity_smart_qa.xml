@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="智能问答"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 对话记录面板 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        android:background="#F5F5F5" />
+
+    <!-- 底部输入栏：三控件同行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#EEEEEE"
+        android:padding="8dp">
+
+        <!-- 模式切换按钮（固定大小） -->
+        <Button
+            android:id="@+id/btn_mode_toggle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="语音"
+            android:textSize="12sp"
+            android:padding="0dp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- 文本输入框（填充剩余宽度） -->
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dp"
+            android:maxHeight="120dp"
+            android:hint="输入文字..."
+            android:textSize="16sp"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/edittext_background"
+            android:singleLine="false"
+            android:inputType="textMultiLine"
+            android:imeOptions="actionSend" />
+
+        <!-- 语音录音按钮（填充剩余宽度，默认隐藏） -->
+        <Button
+            android:id="@+id/btn_voice_record"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="按住说话"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- 发送/暂停按钮（固定大小） -->
+        <Button
+            android:id="@+id/btn_send_pause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="发送"
+            android:textSize="12sp"
+            android:padding="0dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

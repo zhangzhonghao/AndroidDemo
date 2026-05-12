@@ -20,6 +20,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "MINIMAX_API_KEY", "\"${project.findProperty("MINIMAX_API_KEY") ?: ""}\"")
+        buildConfigField("String", "DEEPSEEK_API_KEY", "\"${project.findProperty("DEEPSEEK_API_KEY") ?: ""}\"")
     }
 
     signingConfigs {
@@ -55,8 +56,9 @@ dependencies {
     implementation("androidx.window:window:1.2.0")
     implementation(files("libs/AMap_Location_V11.1.001_20260402.jar"))
 
-    // OkHttp for WebSocket
+    // OkHttp for WebSocket and SSE
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:okhttp-sse:4.12.0")
 
     // CameraX
     val cameraxVersion = "1.3.4"
