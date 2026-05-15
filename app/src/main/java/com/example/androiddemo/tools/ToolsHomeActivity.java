@@ -52,6 +52,8 @@ public class ToolsHomeActivity extends AppCompatActivity {
             intent = new Intent(this, QRGeneratorActivity.class);
         } else if (id == R.id.btn_document_scanner) {
             intent = new Intent(this, DocumentScannerActivity.class);
+        } else if (id == R.id.btn_mlkit_doc_scanner) {
+            intent = new Intent(this, MlKitDocScannerActivity.class);
         } else if (id == R.id.btn_app_manager) {
             intent = new Intent(this, AppManagerActivity.class);
         } else if (id == R.id.btn_image_compressor) {

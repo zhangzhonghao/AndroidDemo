@@ -70,6 +70,13 @@
             android:onClick="onToolClick" />
 
         <Button
+            android:id="@+id/btn_mlkit_doc_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ML Kit"
+            android:onClick="onToolClick" />
+
+        <Button
             android:id="@+id/btn_unit_converter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

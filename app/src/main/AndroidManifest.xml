@@ -126,6 +126,8 @@
 
         <!-- 文档扫描 -->
         <activity android:name=".tools.DocumentScannerActivity" />
+        <!-- ML Kit 文档扫描 -->
+        <activity android:name=".tools.MlKitDocScannerActivity" />
         <activity
             android:name=".tools.DocumentCameraActivity"
             android:screenOrientation="portrait"
