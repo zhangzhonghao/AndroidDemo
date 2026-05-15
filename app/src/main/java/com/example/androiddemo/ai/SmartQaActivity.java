@@ -81,7 +81,7 @@ public class SmartQaActivity extends AppCompatActivity {
 
     // Voice recording
     private PcmAudioRecorder pcmRecorder;
-    private XfyunIatService xfyunIatService;
+    private SparkChainIatService sparkChainIatService;
     private String currentPcmFilePath;
     private boolean isRecordingVoice = false;
     private boolean sparkChainAvailable = true;
@@ -99,6 +99,7 @@ public class SmartQaActivity extends AppCompatActivity {
         initViews();
         setupRecyclerView();
         setupListeners();
+        SparkChainManager.init(this);
         initSparkChain();
 
         // 不要欢迎消息——需求说退出清空，再进入空白
@@ -111,8 +112,8 @@ public class SmartQaActivity extends AppCompatActivity {
         if (pcmRecorder != null && pcmRecorder.isRecording()) {
             pcmRecorder.stopRecording();
         }
-        if (xfyunIatService != null) {
-            xfyunIatService.cancel();
+        if (sparkChainIatService != null) {
+            sparkChainIatService.release();
         }
     }
 
@@ -195,14 +196,7 @@ public class SmartQaActivity extends AppCompatActivity {
 
     private void initSparkChain() {
         pcmRecorder = new PcmAudioRecorder();
-        try {
-            xfyunIatService = new XfyunIatService();
-        } catch (Exception e) {
-            Log.e(TAG, "SparkChain 初始化失败", e);
-            sparkChainAvailable = false;
-            btnVoiceRecord.setEnabled(false);
-            btnVoiceRecord.setAlpha(0.4f);
-        }
+        sparkChainIatService = new SparkChainIatService();
     }
 
     // ========== 模式切换 ==========
@@ -484,6 +478,52 @@ public class SmartQaActivity extends AppCompatActivity {
         btnVoiceRecord.setText("松开结束");
         btnVoiceRecord.setEnabled(true);
 
+        // 先启动语音识别
+        sparkChainIatService.startRecognize(new SparkChainIatService.IatCallback() {
+            @Override
+            public void onStart() {
+                Log.d(TAG, "开始 SparkChain 语音识别");
+            }
+
+            @Override
+            public void onResult(String text) {
+                Log.d(TAG, "部分识别结果: " + text);
+            }
+
+            @Override
+            public void onComplete(String fullText) {
+                Log.d(TAG, "识别完成: " + fullText);
+                // 删除临时 PCM 文件
+                if (currentPcmFilePath != null) {
+                    new java.io.File(currentPcmFilePath).delete();
+                }
+                runOnUiThread(() -> {
+                    resetVoiceButton();
+                    autoSendVoiceText(fullText);
+                });
+            }
+
+            @Override
+            public void onError(String errorMessage) {
+                Log.e(TAG, "识别错误: " + errorMessage);
+                // 删除临时 PCM 文件
+                if (currentPcmFilePath != null) {
+                    new java.io.File(currentPcmFilePath).delete();
+                }
+                runOnUiThread(() -> {
+                    Toast.makeText(SmartQaActivity.this,
+                            "语音识别失败: " + errorMessage, Toast.LENGTH_LONG).show();
+                    resetVoiceButton();
+                    sparkChainAvailable = false;
+                    btnVoiceRecord.setEnabled(false);
+                    btnVoiceRecord.setAlpha(0.4f);
+                    Toast.makeText(SmartQaActivity.this,
+                            "语音服务暂不可用，请使用文本模式", Toast.LENGTH_SHORT).show();
+                });
+            }
+        });
+
+        // 启动 PCM 录音，边录边传
         pcmRecorder.startRecording(currentPcmFilePath, new PcmAudioRecorder.RecordCallback() {
             @Override
             public void onStart() {
@@ -492,7 +532,10 @@ public class SmartQaActivity extends AppCompatActivity {
 
             @Override
             public void onFrameData(byte[] data, int frameIndex) {
-                // 可在此更新音量指示
+                // 实时将音频数据写入识别服务
+                if (sparkChainIatService != null && sparkChainIatService.isRecognizing()) {
+                    sparkChainIatService.writeAudio(data);
+                }
             }
 
             @Override
@@ -514,6 +557,7 @@ public class SmartQaActivity extends AppCompatActivity {
         if (!isRecordingVoice) return;
         isRecordingVoice = false;
 
+        // 先停止 PCM 录音
         if (pcmRecorder != null && pcmRecorder.isRecording()) {
             pcmRecorder.stopRecording();
         }
@@ -521,44 +565,9 @@ public class SmartQaActivity extends AppCompatActivity {
         btnVoiceRecord.setText("识别中...");
         btnVoiceRecord.setEnabled(false);
 
-        // 发送到 SparkChain/Xfyun 进行语音识别
-        if (currentPcmFilePath != null && xfyunIatService != null) {
-            xfyunIatService.recognize(currentPcmFilePath, new XfyunIatService.IatCallback() {
-                @Override
-                public void onStart() {
-                    Log.d(TAG, "开始语音识别");
-                }
-
-                @Override
-                public void onResult(String text) {
-                    runOnUiThread(() -> {
-                        btnVoiceRecord.setText("识别中...");
-                    });
-                }
-
-                @Override
-                public void onComplete(String fullText) {
-                    runOnUiThread(() -> {
-                        resetVoiceButton();
-                        autoSendVoiceText(fullText);
-                    });
-                }
-
-                @Override
-                public void onError(String errorMessage) {
-                    runOnUiThread(() -> {
-                        Toast.makeText(SmartQaActivity.this,
-                                "语音识别失败: " + errorMessage, Toast.LENGTH_LONG).show();
-                        resetVoiceButton();
-                        // SparkChain 初始化失败检测
-                        sparkChainAvailable = false;
-                        btnVoiceRecord.setEnabled(false);
-                        btnVoiceRecord.setAlpha(0.4f);
-                        Toast.makeText(SmartQaActivity.this,
-                                "语音服务暂不可用，请使用文本模式", Toast.LENGTH_SHORT).show();
-                    });
-                }
-            });
+        // 停止识别，等待最终结果（cancel=false，让 SDK 返回最终识别结果）
+        if (sparkChainIatService != null && sparkChainIatService.isRecognizing()) {
+            sparkChainIatService.stopRecognize(false);
         } else {
             resetVoiceButton();
         }

@@ -124,6 +124,13 @@
         <activity android:name=".tools.ColorPickerActivity" />
         <activity android:name=".tools.ColorPickerScreenActivity" />
 
+        <!-- 文档扫描 -->
+        <activity android:name=".tools.DocumentScannerActivity" />
+        <activity
+            android:name=".tools.DocumentCameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AndroidDemo.Fullscreen" />
+
         <!-- 安全中心 -->
         <activity android:name=".tools.SecurityHomeActivity" />
         <activity android:name=".tools.FraudAlertActivity" />

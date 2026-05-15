@@ -56,4 +56,9 @@
     <!-- Speed test colors -->
     <color name="green">#27AE60</color>
     <color name="red">#E74C3C</color>
+
+    <!-- Document scanner colors -->
+    <color name="scanner_blue">#2196F3</color>
+    <color name="polygonViewCircleStrokeColor">#ff59a9ff</color>
+    <color name="polygonViewCircleBackground">#90e5f8ff</color>
 </resources>

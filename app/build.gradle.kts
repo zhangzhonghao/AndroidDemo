@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.material)
     implementation("androidx.window:window:1.2.0")
     implementation(files("libs/AMap_Location_V11.1.001_20260402.jar"))
+    implementation(files("libs/SparkChain.aar"))
 
     // OkHttp for WebSocket and SSE
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
@@ -66,6 +67,12 @@ dependencies {
     implementation("androidx.camera:camera-camera2:$cameraxVersion")
     implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
     implementation("androidx.camera:camera-view:$cameraxVersion")
+
+    // OpenCV for document edge detection
+    implementation("org.opencv:opencv:4.12.0")
+
+    // Coroutines for image processing
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
     // ML Kit Barcode Scanning
     implementation("com.google.mlkit:barcode-scanning:17.2.0")

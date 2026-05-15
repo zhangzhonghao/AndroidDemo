@@ -63,6 +63,13 @@
             android:onClick="onToolClick" />
 
         <Button
+            android:id="@+id/btn_document_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="文档扫描"
+            android:onClick="onToolClick" />
+
+        <Button
             android:id="@+id/btn_unit_converter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
