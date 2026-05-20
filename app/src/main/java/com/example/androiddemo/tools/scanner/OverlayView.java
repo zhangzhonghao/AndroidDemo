@@ -4,15 +4,20 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+
+import org.opencv.core.Point;
 
 public class OverlayView extends View {
 
     private final Paint paint;
     private final Paint debugPaint;
     private RectF rect;
+    private Path polygonPath;
+    private Point[] polygonPoints;
     private String debugText = "";
     private int analysisCount = 0;
     private int detectCount = 0;
@@ -44,6 +49,40 @@ public class OverlayView extends View {
         } else {
             rect = null;
         }
+        polygonPath = null;
+        polygonPoints = null;
+        invalidate();
+    }
+
+    public void setPolygon(Point[] points) {
+        if (points == null || points.length != 4) {
+            setRect(null);
+            return;
+        }
+
+        Path path = new Path();
+        path.moveTo((float) points[0].x, (float) points[0].y);
+        for (int i = 1; i < points.length; i++) {
+            path.lineTo((float) points[i].x, (float) points[i].y);
+        }
+        path.close();
+        polygonPath = path;
+        polygonPoints = new Point[points.length];
+        for (int i = 0; i < points.length; i++) {
+            polygonPoints[i] = new Point(points[i].x, points[i].y);
+        }
+
+        float minX = Float.MAX_VALUE, minY = Float.MAX_VALUE;
+        float maxX = Float.MIN_VALUE, maxY = Float.MIN_VALUE;
+        for (Point point : points) {
+            float x = (float) point.x;
+            float y = (float) point.y;
+            if (x < minX) minX = x;
+            if (y < minY) minY = y;
+            if (x > maxX) maxX = x;
+            if (y > maxY) maxY = y;
+        }
+        rect = new RectF(minX, minY, maxX, maxY);
         invalidate();
     }
 
@@ -57,6 +96,16 @@ public class OverlayView extends View {
     public RectF getRect() {
         if (rect != null) return rect;
         return getDefaultRect();
+    }
+
+    public Point[] getPolygon() {
+        if (polygonPoints == null) return null;
+
+        Point[] copy = new Point[polygonPoints.length];
+        for (int i = 0; i < polygonPoints.length; i++) {
+            copy[i] = new Point(polygonPoints[i].x, polygonPoints[i].y);
+        }
+        return copy;
     }
 
     public RectF getDefaultRect() {
@@ -81,7 +130,11 @@ public class OverlayView extends View {
             return;
         }
 
-        canvas.drawRect(rect, paint);
+        if (polygonPath != null) {
+            canvas.drawPath(polygonPath, paint);
+        } else {
+            canvas.drawRect(rect, paint);
+        }
     }
 
     private void drawDefaultGuideRect(Canvas canvas) {
