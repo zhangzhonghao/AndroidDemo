@@ -9,6 +9,8 @@ import android.net.NetworkCapabilities;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -33,6 +35,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
@@ -86,6 +89,15 @@ public class SmartQaActivity extends AppCompatActivity {
     private boolean isRecordingVoice = false;
     private boolean sparkChainAvailable = true;
 
+    // System TTS
+    private TextToSpeech textToSpeech;
+    private boolean isTtsReady = false;
+    private boolean isTtsSpeaking = false;
+    private VoiceMessage activeTtsMessage;
+    private VoiceMessage pendingTtsMessage;
+    private int ttsGeneration = 0;
+    private int activeTtsGeneration = 0;
+
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
 
     // ========== Lifecycle ==========
@@ -115,6 +127,12 @@ public class SmartQaActivity extends AppCompatActivity {
         if (sparkChainIatService != null) {
             sparkChainIatService.release();
         }
+        pendingTtsMessage = null;
+        stopTts();
+        if (textToSpeech != null) {
+            textToSpeech.shutdown();
+            textToSpeech = null;
+        }
     }
 
     // ========== Init ==========
@@ -139,11 +157,81 @@ public class SmartQaActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView() {
-        adapter = new MessageAdapter(messageList, null, null);
+        adapter = new MessageAdapter(messageList, null, null,
+                this::toggleAiTextTts,
+                message -> activeTtsMessage == message && isTtsSpeaking);
         rvMessages.setLayoutManager(new LinearLayoutManager(this));
         rvMessages.setAdapter(adapter);
         // 禁用 ItemAnimator 防止流式抖动
         rvMessages.setItemAnimator(null);
+    }
+
+    private void initTextToSpeech() {
+        textToSpeech = new TextToSpeech(this, status -> {
+            if (status != TextToSpeech.SUCCESS || textToSpeech == null) {
+                isTtsReady = false;
+                if (pendingTtsMessage != null) {
+                    pendingTtsMessage = null;
+                    showSnackbar("系统 TTS 不可用");
+                }
+                textToSpeech = null;
+                return;
+            }
+
+            int result = textToSpeech.setLanguage(Locale.getDefault());
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                result = textToSpeech.setLanguage(Locale.CHINESE);
+            }
+            isTtsReady = result != TextToSpeech.LANG_MISSING_DATA
+                    && result != TextToSpeech.LANG_NOT_SUPPORTED;
+            if (!isTtsReady) {
+                if (pendingTtsMessage != null) {
+                    pendingTtsMessage = null;
+                    showSnackbar("系统 TTS 不支持当前语言");
+                }
+                releaseTextToSpeech();
+                return;
+            }
+            textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                @Override
+                public void onStart(String utteranceId) {
+                    mainHandler.post(() -> {
+                        isTtsSpeaking = true;
+                        notifyTtsMessageChanged(activeTtsMessage);
+                    });
+                }
+
+                @Override
+                public void onDone(String utteranceId) {
+                    if (utteranceId != null && utteranceId.endsWith("_end")) {
+                        int generation = parseTtsGeneration(utteranceId);
+                        mainHandler.post(() -> finishTtsPlayback(activeTtsMessage, generation));
+                    }
+                }
+
+                @Override
+                public void onError(String utteranceId) {
+                    int generation = parseTtsGeneration(utteranceId);
+                    mainHandler.post(() -> {
+                        showSnackbar("朗读失败");
+                        finishTtsPlayback(activeTtsMessage, generation);
+                    });
+                }
+            });
+            VoiceMessage messageToRead = pendingTtsMessage;
+            pendingTtsMessage = null;
+            if (messageToRead != null) {
+                mainHandler.post(() -> speakAiText(messageToRead));
+            }
+        });
+    }
+
+    private void releaseTextToSpeech() {
+        if (textToSpeech != null) {
+            textToSpeech.shutdown();
+            textToSpeech = null;
+        }
     }
 
     private void setupListeners() {
@@ -423,7 +511,11 @@ public class SmartQaActivity extends AppCompatActivity {
     private void appendAiText(String segment) {
         if (segment == null || segment.isEmpty() || "null".equals(segment)) return;
         if (pendingAiMessage != null) {
-            pendingAiMessage.text = (pendingAiMessage.text == null ? "" : pendingAiMessage.text) + segment;
+            String currentText = pendingAiMessage.text;
+            if (currentText == null || "...".equals(currentText)) {
+                currentText = "";
+            }
+            pendingAiMessage.text = currentText + segment;
             adapter.notifyItemChanged(pendingAiPosition, "text_update");
             scrollToBottom();
         }
@@ -463,6 +555,127 @@ public class SmartQaActivity extends AppCompatActivity {
             btnSendPause.setText("发送");
             btnSendPause.setEnabled(true);
         }
+    }
+
+    // ========== 系统 TTS 朗读 ==========
+
+    private void toggleAiTextTts(VoiceMessage message) {
+        if (message == null || TextUtils.isEmpty(message.text)) {
+            return;
+        }
+        if (activeTtsMessage == message && isTtsSpeaking) {
+            stopTts();
+            return;
+        }
+        if (textToSpeech == null) {
+            pendingTtsMessage = message;
+            initTextToSpeech();
+            showSnackbar("正在初始化系统 TTS");
+            return;
+        }
+        speakAiText(message);
+    }
+
+    private void speakAiText(VoiceMessage message) {
+        if (textToSpeech == null || !isTtsReady) {
+            showSnackbar("系统 TTS 准备中，请稍后再试");
+            return;
+        }
+
+        VoiceMessage previousMessage = activeTtsMessage;
+        textToSpeech.stop();
+        isTtsSpeaking = true;
+        activeTtsMessage = message;
+        ttsGeneration++;
+        activeTtsGeneration = ttsGeneration;
+        notifyTtsMessageChanged(previousMessage);
+        notifyTtsMessageChanged(activeTtsMessage);
+
+        List<String> chunks = splitTextForTts(message.text);
+        if (chunks.isEmpty()) {
+            finishTtsPlayback(message, activeTtsGeneration);
+            return;
+        }
+
+        String utteranceBase = "smart_qa_tts_" + ttsGeneration;
+        for (int i = 0; i < chunks.size(); i++) {
+            Bundle params = new Bundle();
+            String suffix = i == chunks.size() - 1 ? "_end" : "_" + i;
+            int queueMode = i == 0 ? TextToSpeech.QUEUE_FLUSH : TextToSpeech.QUEUE_ADD;
+            int speakResult = textToSpeech.speak(chunks.get(i), queueMode, params, utteranceBase + suffix);
+            if (speakResult == TextToSpeech.ERROR) {
+                showSnackbar("朗读失败");
+                finishTtsPlayback(message, activeTtsGeneration);
+                return;
+            }
+        }
+    }
+
+    private void stopTts() {
+        VoiceMessage previousMessage = activeTtsMessage;
+        if (textToSpeech != null) {
+            textToSpeech.stop();
+        }
+        isTtsSpeaking = false;
+        activeTtsMessage = null;
+        activeTtsGeneration = 0;
+        notifyTtsMessageChanged(previousMessage);
+    }
+
+    private void finishTtsPlayback(VoiceMessage message, int generation) {
+        if (activeTtsMessage != message || activeTtsGeneration != generation) {
+            return;
+        }
+        isTtsSpeaking = false;
+        activeTtsMessage = null;
+        activeTtsGeneration = 0;
+        notifyTtsMessageChanged(message);
+    }
+
+    private int parseTtsGeneration(String utteranceId) {
+        if (utteranceId == null) {
+            return -1;
+        }
+        String prefix = "smart_qa_tts_";
+        if (!utteranceId.startsWith(prefix)) {
+            return -1;
+        }
+        int end = utteranceId.indexOf('_', prefix.length());
+        if (end < 0) {
+            return -1;
+        }
+        try {
+            return Integer.parseInt(utteranceId.substring(prefix.length(), end));
+        } catch (NumberFormatException e) {
+            return -1;
+        }
+    }
+
+    private void notifyTtsMessageChanged(VoiceMessage message) {
+        if (message == null || adapter == null) {
+            return;
+        }
+        int index = messageList.indexOf(message);
+        if (index >= 0) {
+            adapter.notifyItemChanged(index, "tts_state");
+        }
+    }
+
+    private List<String> splitTextForTts(String text) {
+        List<String> chunks = new ArrayList<>();
+        if (text == null) {
+            return chunks;
+        }
+        String normalized = text.trim();
+        int maxLength = TextToSpeech.getMaxSpeechInputLength() - 100;
+        if (maxLength <= 0) {
+            maxLength = 3900;
+        }
+        for (int start = 0; start < normalized.length(); start += maxLength) {
+            int end = Math.min(start + maxLength, normalized.length());
+            chunks.add(normalized.substring(start, end));
+        }
+        return chunks;
     }
 
     // ========== 语音录制 ==========

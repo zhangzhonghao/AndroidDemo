@@ -10,6 +10,7 @@ import com.example.androiddemo.tools.VibrationTestActivity;
 import com.example.androiddemo.tools.CalculatorActivity;
 import com.example.androiddemo.tools.QRScannerActivity;
 import com.example.androiddemo.tools.QRGeneratorActivity;
+import com.example.androiddemo.tools.NgtaActivity;
 import com.example.androiddemo.tools.UnitConverterActivity;
 import com.example.androiddemo.tools.AppManagerActivity;
 import com.example.androiddemo.tools.ImageCompressorActivity;
@@ -77,6 +78,8 @@ public class BasicToolsHomeActivity extends AppCompatActivity {
             intent = new Intent(this, QRScannerActivity.class);
         } else if (id == R.id.btn_basic_qr_generator) {
             intent = new Intent(this, QRGeneratorActivity.class);
+        } else if (id == R.id.btn_basic_ngta) {
+            intent = new Intent(this, NgtaActivity.class);
         } else if (id == R.id.btn_basic_unit_converter) {
             intent = new Intent(this, UnitConverterActivity.class);
         } else if (id == R.id.btn_basic_app_manager) {

@@ -63,6 +63,13 @@
                 android:onClick="onFeatureClick" />
 
             <Button
+                android:id="@+id/btn_basic_ngta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NGTA 卡片读写"
+                android:onClick="onFeatureClick" />
+
+            <Button
                 android:id="@+id/btn_basic_unit_converter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

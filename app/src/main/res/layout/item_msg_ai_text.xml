@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:gravity="start"
     android:paddingTop="4dp"
-        android:paddingBottom="4dp">
+    android:paddingBottom="4dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -23,8 +23,20 @@
             android:background="@drawable/bg_bubble_ai"
             android:paddingHorizontal="14dp"
             android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+            android:paddingBottom="10dp"
             android:textIsSelectable="true" />
+
+        <ImageButton
+            android:id="@+id/btn_tts"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="2dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="朗读答案"
+            android:padding="6dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_volume_sound"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_time"

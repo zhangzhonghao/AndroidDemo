@@ -50,6 +50,8 @@ public class ToolsHomeActivity extends AppCompatActivity {
             intent = new Intent(this, TranslatorActivity.class);
         } else if (id == R.id.btn_qr_generator) {
             intent = new Intent(this, QRGeneratorActivity.class);
+        } else if (id == R.id.btn_ngta) {
+            intent = new Intent(this, NgtaActivity.class);
         } else if (id == R.id.btn_document_scanner) {
             intent = new Intent(this, DocumentScannerActivity.class);
         } else if (id == R.id.btn_mlkit_doc_scanner) {

@@ -63,6 +63,13 @@
             android:onClick="onToolClick" />
 
         <Button
+            android:id="@+id/btn_ngta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NGTA 卡片读写"
+            android:onClick="onToolClick" />
+
+        <Button
             android:id="@+id/btn_document_scanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

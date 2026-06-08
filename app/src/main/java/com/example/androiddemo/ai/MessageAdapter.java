@@ -3,6 +3,7 @@ package com.example.androiddemo.ai;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,6 +23,8 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private final List<VoiceMessage> messages;
     private final OnPlayClickListener playListener;
     private final OnStopClickListener stopListener;
+    private final OnAiTextTtsClickListener aiTextTtsClickListener;
+    private final AiTextSpeakingStateProvider aiTextSpeakingStateProvider;
     private final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
     public interface OnPlayClickListener {
@@ -32,12 +35,30 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         void onStopClick();
     }
 
+    public interface OnAiTextTtsClickListener {
+        void onAiTextTtsClick(VoiceMessage message);
+    }
+
+    public interface AiTextSpeakingStateProvider {
+        boolean isSpeaking(VoiceMessage message);
+    }
+
     public MessageAdapter(List<VoiceMessage> messages,
                          OnPlayClickListener playListener,
                          OnStopClickListener stopListener) {
+        this(messages, playListener, stopListener, null, null);
+    }
+
+    public MessageAdapter(List<VoiceMessage> messages,
+                         OnPlayClickListener playListener,
+                         OnStopClickListener stopListener,
+                         OnAiTextTtsClickListener aiTextTtsClickListener,
+                         AiTextSpeakingStateProvider aiTextSpeakingStateProvider) {
         this.messages = messages;
         this.playListener = playListener;
         this.stopListener = stopListener;
+        this.aiTextTtsClickListener = aiTextTtsClickListener;
+        this.aiTextSpeakingStateProvider = aiTextSpeakingStateProvider;
     }
 
     @Override
@@ -71,7 +92,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position, @NonNull List<Object> payloads) {
         if (!payloads.isEmpty() && holder instanceof TextViewHolder) {
             // 带 payload 的局部更新，只刷新文本，不触发整个 item 重新布局
-            ((TextViewHolder) holder).updateText(messages.get(position).text);
+            ((TextViewHolder) holder).updateText(messages.get(position));
         } else {
             super.onBindViewHolder(holder, position, payloads);
         }
@@ -95,25 +116,53 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     // ========== 文字消息 ViewHolder ==========
 
-    static class TextViewHolder extends RecyclerView.ViewHolder {
+    class TextViewHolder extends RecyclerView.ViewHolder {
         private static final SimpleDateFormat TIME_FORMAT =
                 new SimpleDateFormat("HH:mm", Locale.getDefault());
         private final TextView tvText;
         private final TextView tvTime;
+        private final ImageButton btnTts;
+        private final boolean isUser;
 
         TextViewHolder(View itemView, boolean isUser) {
             super(itemView);
+            this.isUser = isUser;
             this.tvText = itemView.findViewById(R.id.tv_text);
             this.tvTime = itemView.findViewById(R.id.tv_time);
+            this.btnTts = itemView.findViewById(R.id.btn_tts);
         }
 
         void bind(VoiceMessage msg) {
             tvText.setText(msg.text);
             tvTime.setText(TIME_FORMAT.format(new java.util.Date()));
+            bindTtsButton(msg);
         }
 
-        void updateText(String text) {
-            tvText.setText(text);
+        void updateText(VoiceMessage msg) {
+            tvText.setText(msg.text);
+            bindTtsButton(msg);
+        }
+
+        private void bindTtsButton(VoiceMessage msg) {
+            if (btnTts == null) {
+                return;
+            }
+            boolean canRead = !isUser
+                    && aiTextTtsClickListener != null
+                    && msg.text != null
+                    && !msg.text.trim().isEmpty()
+                    && !"...".equals(msg.text.trim());
+            if (!canRead) {
+                btnTts.setVisibility(View.GONE);
+                btnTts.setOnClickListener(null);
+                return;
+            }
+            boolean isSpeaking = aiTextSpeakingStateProvider != null
+                    && aiTextSpeakingStateProvider.isSpeaking(msg);
+            btnTts.setVisibility(View.VISIBLE);
+            btnTts.setImageResource(isSpeaking ? R.drawable.ic_stop : R.drawable.ic_volume_sound);
+            btnTts.setContentDescription(isSpeaking ? "停止朗读" : "朗读答案");
+            btnTts.setOnClickListener(v -> aiTextTtsClickListener.onAiTextTtsClick(msg));
         }
     }
 

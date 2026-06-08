@@ -23,6 +23,17 @@
     <!-- WiFi 权限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- NGTA/NFC 卡片读写权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -94,6 +105,7 @@
         <activity android:name=".tools.CalculatorActivity" />
         <activity android:name=".tools.QRScannerActivity" />
         <activity android:name=".tools.QRGeneratorActivity" />
+        <activity android:name=".tools.NgtaActivity" />
         <activity android:name=".tools.UnitConverterActivity" />
         <activity android:name=".tools.CompassActivity" />
         <activity android:name=".tools.WatermarkCameraActivity" />
