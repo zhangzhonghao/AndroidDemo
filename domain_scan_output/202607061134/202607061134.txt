@@ -1,0 +1,546 @@
+# 残留域名安全审计报告
+# 生成时间: 2026-07-06 11:34:36
+# 项目路径: /Users/zhangzhonghao/Developer/AndroidDemo
+# 扫描文件数: 2638
+# 扫描压缩包数: 4
+# 扫描二进制文件数: 2129
+# 跳过大文件数: 0
+# 压缩包解析错误数: 0
+# 文本解码错误数: 0
+# 达到最大递归深度次数: 0
+# 唯一域名数: 141
+# 发现项数: 529
+# 风险分布: HIGH=423, MEDIUM=33, LOW=2, INFO=71
+# 默认跳过目录: .agents, .codex, .codex_skill_work, .git, .gradle, .idea, .kotlin, .m2, .pycache, .pycache_codex, .pytest_cache, .scanner_tmp, .tmp, __pycache__, build, coverage, dist, domain_scan_output, logs, node_modules, out, output, outputs, reports, target, temp, tmp
+# 严格 TLD 过滤: 开启
+# 公开 TLD 白名单: /Users/zhangzhonghao/.codex/skills/domain_residue_auditor_zh/references/public_tlds.txt (504 条)
+
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- a.apilocate.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- abroad-lzd.apilocate.amap.com -- 疑似 API/服务端点; 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- apilocate.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- apistore.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- arestapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- mpsapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- restsdk.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- tsapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- yuntuapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- abroad-lzd.apilocate.opnavi.com -- 疑似 API/服务端点; 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- apistore.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- arestapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- mpsapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- sg-apilocate.opnavi.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- sg-restapi.opnavi.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- tsapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- yuntuapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/api/location/AMapLocation.class -- lbs.amap.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/b$a.class -- aloc-gnss-eph.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/c.class -- aloc-gnss-eph.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/c/c.class -- aps.testing.amap.com -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/c/c.class -- cgicol.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/e/a/c/b.class -- aps.testing.amap.com -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/e/d.class -- 0aloc-offline.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/e/d.class -- pre-aloc-offline.amap.com -- 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/fusion/c/f.class -- aloc-modeldata.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/fusion/c/g.class -- aloc-modeldata.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/fusion/original/specific/c.class -- gnss-eph.oss-cn-hangzhou.aliyuncs.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/g/d/b.class -- aps.testing.amap.com -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/g/d/b.class -- cgicol.amap.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/g/d/b.class -- cgicol.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/a$1.class -- shanjing.cn-hangzhou.oss-pub.aliyun-inc.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/a$2.class -- shanjing.cn-hangzhou.oss-pub.aliyun-inc.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/algo/a/j.class -- www.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/algo/d.class -- aloc-gnss-eph.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/d.class -- aloc-gnss-eph.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class -- 1dualstack-m5.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class -- aps.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class -- aps.oversea.amap.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class -- aps.testing.amap.com -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class -- m5.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class -- maps.testing.amap.com -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/cloud/LocationCloudRequester.class -- aloc-control-plus.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/network/FileLoader.class -- www.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/network/gateway/LocalGateway.class -- control.aps.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/rtk/EphemerisManager.class -- aloc-gnss-eph.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/Aps.class -- a.apilocate.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/Aps.class -- apilocate.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/config/Const.class -- lbs.amap.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/trans/AMapDnsManager.class -- httpdns.apilocate.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/trans/LocNetManager.class -- arestapi.amap.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class -- a.apilocate.amap.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class -- abroad.apilocate.amap.com -- 明文 HTTP; 疑似 API/服务端点; 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class -- apilocate.amap.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class -- arestapi.amap.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class -- httpdns.apilocate.amap.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/ReportUtil.class -- abroad.apilocate.amap.com -- 明文 HTTP; 疑似 API/服务端点; 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- abroad.apilocate.amap.com -- 疑似 API/服务端点; 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- aloc-control-plus.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- aloc-modeldata.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- aloc-offline.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- apilocate-pre-test.amap.com -- 疑似 API/服务端点; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- apilocate.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- aps.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- cgicol.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class -- dualstack-a.apilocate.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/k2.class -- adiu.amap.com -- 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/l0$d.class -- dualstack-arestapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/l0$d.class -- restsdk.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/m0.class -- restsdk.amap.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/r0.class -- dualstack-arestapi.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/r0.class -- restsdk.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/u1.class -- restsdk.amap.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/u1.class -- restsdk.amap.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/AndroidManifest.xml -- schemas.android.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] app/libs/SparkChain.aar!/classes.jar!/iflb/b.class -- dev.voicecloud.cn -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/classes.jar!/iflb/c.class -- dev.voicecloud.cn -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/classes.jar!/iflb/d.class -- dev.voicecloud.cn -- 明文 HTTP; 疑似测试/预发/本地域名残留; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- aee-api-gp.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- aee.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- android.googlesource.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- api-eu.iflyaisol.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- api-sgp.iflyaisol.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- api.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- avatar-hci.xfyousheng.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- cbm01.cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- cn-east-1.ws-api.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- cn-huabei-1-lg.xf-yun.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- cn-huabei-1-lg.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- cn-huadong-1.xf-yun.com -- 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- curl.haxx.se -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- data.rel.ro -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- emb-cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- eu-central-1.aicloudapi.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- eu.aicloudapi.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- evo-gen.xfyun.cn -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- iat-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- iat-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- iat-niche-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- iat.cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- iat.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- ist-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- itrans.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- its-api-sea.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- its-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- ivw-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- last.response.audio -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- ntrans.xfyun.cn -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- office-api-ast-dx.iflyaisol.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- office-api-ist-dx.iflyaisol.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- office-api-personal-dx.iflyaisol.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- opentrain.xfyousheng.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- ost-api-sg.xf-yun.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- ost-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- raasr.xfyun.cn -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- rtasr.xfyun.cn -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- spark-api.cn-huabei-1.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- spark-api.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- sparkbot.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- tts-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- tts-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- upload-ost-api.xfyun.cn -- 疑似 API/服务端点; 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- ws-api-dx.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- www.winimage.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- xns.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- zwapi.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libspark.so -- android.googlesource.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/arm64-v8a/libspark.so -- data.rel.ro -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- 0f.io -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- aee-api-gp.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- aee.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- android.googlesource.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- api-eu.iflyaisol.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- api-sgp.iflyaisol.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- api.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- avatar-hci.xfyousheng.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- cbm01.cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- cn-east-1.ws-api.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- cn-huabei-1-lg.xf-yun.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- cn-huabei-1-lg.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- cn-huadong-1.xf-yun.com -- 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- curl.haxx.se -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- data.rel.ro -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- emb-cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- eu-central-1.aicloudapi.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- eu.aicloudapi.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- evo-gen.xfyun.cn -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- iat-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- iat-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- iat-niche-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- iat.cn-huabei-1.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- iat.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- ist-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- itrans.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- its-api-sea.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- its-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- ivw-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- last.response.audio -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- ntrans.xfyun.cn -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- office-api-ast-dx.iflyaisol.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- office-api-ist-dx.iflyaisol.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- office-api-personal-dx.iflyaisol.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- opentrain.xfyousheng.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- ost-api-sg.xf-yun.com -- 明文 HTTP; 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- ost-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- raasr.xfyun.cn -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- rtasr.xfyun.cn -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- spark-api.cn-huabei-1.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- spark-api.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- sparkbot.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- tts-api-sg.xf-yun.com -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- tts-api.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- upload-ost-api.xfyun.cn -- 疑似 API/服务端点; 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- ws-api-dx.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- www.winimage.com -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- xns.xf-yun.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- zwapi.xfyun.cn -- 疑似 API/服务端点; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libspark.so -- android.googlesource.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/libs/SparkChain.aar!/jni/armeabi-v7a/libspark.so -- data.rel.ro -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[HIGH] app/proguard-rules.pro -- developer.android.com -- 明文 HTTP; 疑似测试/预发/本地域名残留
+[HIGH] app/src/androidTest/java/com/example/androiddemo/ExampleInstrumentedTest.java -- d.android.com -- 明文 HTTP; 疑似测试/预发/本地域名残留
+[HIGH] app/src/main/AndroidManifest.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/java/com/example/androiddemo/tools/AccountBookActivity.java -- dialog.show -- 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点
+[HIGH] app/src/main/java/com/example/androiddemo/tools/CountdownActivity.java -- dialog.show -- 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点
+[HIGH] app/src/main/java/com/example/androiddemo/tools/CountdownDaysActivity.java -- datepickerdialog.show -- 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点
+[HIGH] app/src/main/java/com/example/androiddemo/tools/PeriodCalculatorActivity.java -- dialog.show -- 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点
+[HIGH] app/src/main/java/com/example/androiddemo/tools/PregnancyCalculatorActivity.java -- dialog.show -- 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点
+[HIGH] app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java -- dialog.show -- 疑似统计/崩溃/广告/日志/追踪域名; 疑似上传/回调/采集端点
+[HIGH] app/src/main/res/color/bottom_nav_item_color.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/bg_bubble_ai.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/bg_bubble_bottom.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/bg_bubble_top.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/bg_bubble_user.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/bg_edit_text.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/bg_grass.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/calculator_button_equals.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/calculator_button_number.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/calculator_button_operator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/circle.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/circle_button_background.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/edittext_background.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/filter_chip_normal.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/filter_chip_selected.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/game_tile_background.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_aircon.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_check_circle.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_fire.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_forest.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_image_placeholder.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_launcher_background.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_launcher_foreground.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_pause.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_play_voice.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_rain.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_security_shield.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_settings.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_skip_next.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_stop.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_timer.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_traffic.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_volume_sound.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_warning.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_waterfall.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_wave.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/ic_wind.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/qr_scan_frame.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/section_background.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/drawable/shutter_button_bg.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_account_book.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_advanced_base_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_ai_chat.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_ai_code.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_ai_image_gen.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_ai_tts.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_ai_vision.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_anniversary_manager.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_app_clone.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_app_manager.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_area_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_attention_test.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_base64_codec.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_basic_tools_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_binary_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_birthday_code.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_blood_type.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_blood_type_match.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_bmi_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_bonus_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_bottom_nav_foldable.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_calendar.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_calorie_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_car_plate_fortune.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_color_blind_test.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_color_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_color_picker.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_color_picker_screen.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_compass.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_compound_interest.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_countdown.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_countdown_challenge.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_countdown_days.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_country_info.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_date_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_date_diff.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_day_of_week.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_device_info.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_dice_roller.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_document_camera.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_document_scanner.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_draw_board.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_efficiency_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_emergency_contact.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_exchange_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_exchange_rate.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_family_tree.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_feature.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_finance_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_flash_sale.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_flashlight.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_food_calories.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_fraud_alert.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_fuel_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_game_2048.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_game_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_gif_preview.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_gps_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_guess_number.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_hash_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_health_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_height_predictor.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_history_detail.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_history_favorite.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_history_today.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_holiday_query.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_horoscope.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_id_card_validator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_image_compressor.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_ip_lookup.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_item_storage.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_jigsaw_puzzle.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_json_formatter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_length_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_level_meter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_life_service_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_loan_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_location_gps.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_love_match.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_lunar_calendar.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_lunar_new_year_countdown.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_main.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_md5.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_medicine_reminder.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_memory_card.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_mental_health.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_metronome.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_mlkit_doc_scanner.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_noise_meter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_number_slider.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_number_to_chinese.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_one_stroke.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_password_manager.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_password_vault.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_pdf_creator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_pdf_reader.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_performance_measure.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_period_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_pet.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_phone_fortune.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_phone_locator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_pomodoro_timer.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_power_schedule.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_pregnancy_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_qr_generator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_qr_pay_collection.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_qr_scan_history.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_qr_scanner.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_quick_shortcut.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_quit_smoking.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_random_generator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_random_history.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_random_lottery.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_random_number_generator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_reaction_test.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_regex_tester.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_relative_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_relative_detail.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_rock_paper_scissors.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_ruler.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_screen_cast.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_scroll_capture.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_security_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_sensitive_words.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_sensor_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_sleep_quality.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_smart_qa.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_speed_test.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_step_counter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_stopwatch.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_stress_test.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_system_info.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_tax_calculator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_temperature_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_tetris.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_text_diff.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_tic_tac_toe.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_today_in_history.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_tools_home.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_touch_test.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_trace_crash.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_trace_custom.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_trace_lag.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_trace_performance.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_trace_white_screen.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_translator.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_tuner.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_unit_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_url_codec.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_vibration_test.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_video_to_gif.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_volume_meter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_wallpaper.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_waste_sort.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_water_reminder.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_watermark_camera.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_weather.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_weight_converter.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_white_noise.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_word_count.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_world_capitals.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_world_wonders.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/activity_zip_code.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_add_anniversary.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_add_contact.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_add_item.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_add_password.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_add_record.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_pomodoro_settings.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_timer_input.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/dialog_watermark_settings.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_account_record.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_app_info.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_forecast.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_fraud_app.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_holiday_countdown.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_image_thumbnail.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_msg_ai_text.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_msg_ai_voice.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_msg_user_text.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_msg_user_voice.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_today_in_history.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/item_world_clock_city.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/layout/view_dog_with_bubble.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/menu/bottom_nav_menu.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/values-night/themes.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/main/res/values/themes.xml -- schemas.android.com -- 明文 HTTP
+[HIGH] app/src/test/java/com/example/androiddemo/ExampleUnitTest.java -- d.android.com -- 明文 HTTP; 疑似测试/预发/本地域名残留
+[HIGH] gradle/wrapper/gradle-wrapper.jar!/META-INF/LICENSE -- www.apache.org -- 明文 HTTP; 三方包或嵌套包内发现; 归属压缩依赖包
+[HIGH] gradle/wrapper/gradle-wrapper.jar!/org/gradle/wrapper/Install.class -- gradle.org -- 疑似统计/崩溃/广告/日志/追踪域名; 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现
+[MEDIUM] .DS_Store -- gradlew.ba -- 疑似统计/崩溃/广告/日志/追踪域名
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- d.is.autonavi.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- m5.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- render-prod-backup-tile.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- render-prod-tile.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- render.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url -- wb.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- d.is.autonavi.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- m5.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- render-prod.opnavi.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url -- wb.amap.com -- 三方包或嵌套包内发现; 归属压缩依赖包
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/AiCodeActivity.java -- api.minimaxi.com -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/AiTtsActivity.java -- api.minimaxi.com -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/AiVisionActivity.java -- api.minimaxi.com -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/AilImageGenActivity.java -- api.minimaxi.com -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/MiniMaxApiService.java -- api.minimaxi.com -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/SmartQaActivity.java -- api.deepseek.com -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/XfyunIatService.java -- iat-api.xfyun.cn -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/ai/XfyunIatService.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/java/com/example/androiddemo/tools/CountdownChallengeActivity.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/java/com/example/androiddemo/tools/TodayInHistoryActivity.java -- api.apihubs.cn -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/tools/TranslatorActivity.java -- api.mymemory.translated.net -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java -- api.openweathermap.org -- 疑似 API/服务端点
+[MEDIUM] app/src/main/java/com/example/androiddemo/trace/CrashTraceActivity.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/java/com/example/androiddemo/trace/CustomTraceActivity.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/java/com/example/androiddemo/trace/LagTraceActivity.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/java/com/example/androiddemo/trace/PerformanceTraceActivity.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/java/com/example/androiddemo/trace/WhiteScreenTraceActivity.java -- locale.us -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/res/xml/backup_rules.xml -- developer.android.com -- 疑似测试/预发/本地域名残留
+[MEDIUM] app/src/main/res/xml/data_extraction_rules.xml -- developer.android.com -- 疑似测试/预发/本地域名残留
+[MEDIUM] gradle/gradle-daemon-jvm.properties -- api.foojay.io -- 疑似 API/服务端点
+[MEDIUM] gradle/wrapper/gradle-wrapper.properties -- services.gradle.org -- 疑似统计/崩溃/广告/日志/追踪域名
+[LOW] app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so -- example.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现; 示例域名
+[LOW] app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so -- example.com -- 三方包或嵌套包内发现; 归属压缩依赖包; 二进制文件静态字符串中发现; 示例域名
+[INFO] CLAUDE.md -- mirrors.aliyun.com -- 待人工确认
+[INFO] app/build.gradle.kts -- proguard-rules.pro -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/ai/AiVisionActivity.java -- builder.show -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/ai/AiVisionActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/ai/AilImageGenActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/ai/DogView.java -- paint.align.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/BmiCalculatorActivity.java -- record.date -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/BmiCalculatorActivity.java -- this.date -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/CalendarActivity.java -- gravity.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java -- color.blue -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java -- color.green -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java -- color.red -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java -- color.blue -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java -- color.green -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java -- color.red -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java -- manifest.permission.camera -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ColorPickerView.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/CompassView.java -- paint.align.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/DateCalculatorActivity.java -- this.day -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/DocumentCameraActivity.java -- viewrect.top -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/DocumentScannerActivity.java -- gravity.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/DocumentScannerActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/DrawBoardActivity.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/DrawBoardActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/DrawBoardView.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/FlashlightActivity.java -- manifest.permission.camera -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ImageCompressorActivity.java -- manifest.permission.camera -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/ImageCompressorActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/LevelView.java -- paint.align.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/LunarCalendarActivity.java -- gravity.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java -- recordtype.contact -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java -- recordtype.email -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java -- unit.link -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java -- www.google.com -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/NoiseMeterView.java -- paint.align.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/PomodoroService.java -- builder.build -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/QRGeneratorActivity.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/QRGeneratorActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/QRScannerActivity.java -- manifest.permission.camera -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/QuickShortcutActivity.java -- www.baidu.com -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/RegexTesterActivity.java -- matcher.group -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/RulerActivity.java -- builder.show -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/RulerView.java -- paint.align.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/TetrisActivity.java -- color.blue -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/TetrisActivity.java -- color.red -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java -- color.red -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java -- insetscontroller.show -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java -- paint.align.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/TunerView.java -- paint.align.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/VideoToGifActivity.java -- manifest.permission.camera -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/VideoToGifActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/VideoToGifActivity.java -- mediastore.video.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java -- gravity.top -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java -- manifest.permission.camera -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java -- mediastore.images.media -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java -- forecastitem.date -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java -- item.date -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java -- openweathermap.org -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/WhiteNoiseService.java -- builder.build -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/scanner/NativeClass.java -- candidaterect.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/scanner/NativeClass.java -- existingrect.center -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/tools/scanner/OverlayView.java -- color.black -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/trace/LagTraceActivity.java -- methodandargscaller.run -- 待人工确认
+[INFO] app/src/main/java/com/example/androiddemo/trace/WhiteScreenTraceActivity.java -- methodandargscaller.run -- 待人工确认
+[INFO] app/src/main/res/drawable/circle.xml -- github.com -- 待人工确认
+[INFO] gradlew -- github.com -- 待人工确认
+[INFO] gradlew -- www.apache.org -- 待人工确认
+[INFO] gradlew.bat -- www.apache.org -- 待人工确认

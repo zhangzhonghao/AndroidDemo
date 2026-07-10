@@ -3,7 +3,6 @@ package com.example.androiddemo.ai;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,8 +24,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private final OnStopClickListener stopListener;
     private final OnAiTextTtsClickListener aiTextTtsClickListener;
     private final AiTextSpeakingStateProvider aiTextSpeakingStateProvider;
-    private final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
-
     public interface OnPlayClickListener {
         void onPlayClick(String audioPath);
     }
@@ -77,9 +74,15 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         switch (viewType) {
             case VIEW_TYPE_USER_TEXT:
-                return new TextViewHolder(inflater.inflate(R.layout.item_msg_user_text, parent, false), true);
+                int userTextLayout = aiTextTtsClickListener == null
+                        ? R.layout.item_msg_user_text
+                        : R.layout.item_smart_qa_user_text;
+                return new TextViewHolder(inflater.inflate(userTextLayout, parent, false), true);
             case VIEW_TYPE_AI_TEXT:
-                return new TextViewHolder(inflater.inflate(R.layout.item_msg_ai_text, parent, false), false);
+                int aiTextLayout = aiTextTtsClickListener == null
+                        ? R.layout.item_msg_ai_text
+                        : R.layout.item_smart_qa_ai_text;
+                return new TextViewHolder(inflater.inflate(aiTextLayout, parent, false), false);
             case VIEW_TYPE_USER_VOICE:
                 return new VoiceViewHolder(inflater.inflate(R.layout.item_msg_user_voice, parent, false), true);
             case VIEW_TYPE_AI_VOICE:
@@ -121,7 +124,9 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 new SimpleDateFormat("HH:mm", Locale.getDefault());
         private final TextView tvText;
         private final TextView tvTime;
-        private final ImageButton btnTts;
+        private final View ttsControl;
+        private final ImageView ivTts;
+        private final TextView tvTtsState;
         private final boolean isUser;
 
         TextViewHolder(View itemView, boolean isUser) {
@@ -129,12 +134,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             this.isUser = isUser;
             this.tvText = itemView.findViewById(R.id.tv_text);
             this.tvTime = itemView.findViewById(R.id.tv_time);
-            this.btnTts = itemView.findViewById(R.id.btn_tts);
+            this.ttsControl = itemView.findViewById(R.id.tts_control);
+            this.ivTts = itemView.findViewById(R.id.iv_tts);
+            this.tvTtsState = itemView.findViewById(R.id.tv_tts_state);
         }
 
         void bind(VoiceMessage msg) {
             tvText.setText(msg.text);
-            tvTime.setText(TIME_FORMAT.format(new java.util.Date()));
+            tvTime.setText(TIME_FORMAT.format(new java.util.Date(msg.timestamp)));
             bindTtsButton(msg);
         }
 
@@ -144,7 +151,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
 
         private void bindTtsButton(VoiceMessage msg) {
-            if (btnTts == null) {
+            if (ttsControl == null || ivTts == null || tvTtsState == null) {
                 return;
             }
             boolean canRead = !isUser
@@ -153,16 +160,19 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     && !msg.text.trim().isEmpty()
                     && !"...".equals(msg.text.trim());
             if (!canRead) {
-                btnTts.setVisibility(View.GONE);
-                btnTts.setOnClickListener(null);
+                ttsControl.setVisibility(View.GONE);
+                ttsControl.setOnClickListener(null);
                 return;
             }
             boolean isSpeaking = aiTextSpeakingStateProvider != null
                     && aiTextSpeakingStateProvider.isSpeaking(msg);
-            btnTts.setVisibility(View.VISIBLE);
-            btnTts.setImageResource(isSpeaking ? R.drawable.ic_stop : R.drawable.ic_volume_sound);
-            btnTts.setContentDescription(isSpeaking ? "停止朗读" : "朗读答案");
-            btnTts.setOnClickListener(v -> aiTextTtsClickListener.onAiTextTtsClick(msg));
+            ttsControl.setVisibility(View.VISIBLE);
+            ivTts.setImageResource(isSpeaking
+                    ? R.drawable.ic_smart_qa_stop
+                    : R.drawable.ic_smart_qa_volume);
+            tvTtsState.setText(isSpeaking ? "播放中" : "朗读");
+            ttsControl.setContentDescription(isSpeaking ? "停止朗读" : "朗读答案");
+            ttsControl.setOnClickListener(v -> aiTextTtsClickListener.onAiTextTtsClick(msg));
         }
     }
 

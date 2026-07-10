@@ -13,6 +13,7 @@ public class VoiceMessage {
     public String text;          // 文字内容（type=TYPE_TEXT 时有值），流式更新时可变
     public final String audioPath; // 音频路径（type=TYPE_VOICE 时有值）
     public final Integer duration; // 录音时长秒数（type=TYPE_VOICE 时有值）
+    public final long timestamp;  // 消息创建时间
 
     public VoiceMessage(int type, boolean isUser, String text, String audioPath, Integer duration) {
         this.type = type;
@@ -20,5 +21,6 @@ public class VoiceMessage {
         this.text = text;
         this.audioPath = audioPath;
         this.duration = duration;
+        this.timestamp = System.currentTimeMillis();
     }
 }

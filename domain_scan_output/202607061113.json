@@ -1,0 +1,5168 @@
+{
+  "生成时间": "2026-07-06 11:13:49",
+  "项目路径": "/Users/zhangzhonghao/Developer/AndroidDemo",
+  "汇总": {
+    "扫描文件数": 2714,
+    "扫描压缩包数": 5,
+    "扫描二进制文件数": 2205,
+    "跳过大文件数": 0,
+    "压缩包解析错误数": 1,
+    "文本解码错误数": 0,
+    "达到最大递归深度次数": 0,
+    "唯一域名数": 174,
+    "发现项数": 574,
+    "风险分布": {
+      "HIGH": 433,
+      "MEDIUM": 37,
+      "LOW": 2,
+      "INFO": 102
+    }
+  },
+  "扫描选项": {
+    "skip_dirs": [
+      ".agents",
+      ".codex",
+      ".codex_skill_work",
+      ".git",
+      ".gradle",
+      ".idea",
+      ".kotlin",
+      ".scanner_tmp",
+      ".tmp",
+      "build",
+      "dist",
+      "domain_scan_output",
+      "node_modules",
+      "out",
+      "output",
+      "outputs",
+      "target",
+      "temp",
+      "tmp"
+    ],
+    "max_depth": 10,
+    "max_file_size_mb": 100,
+    "allow_any_tld": false
+  },
+  "发现项": [
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/datetime.cpython-39.pyc",
+      "domain": "www.cl.cam.ac.uk",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/datetime.cpython-39.pyc",
+      "domain": "www.iana.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/datetime.cpython-39.pyc",
+      "domain": "www.phys.uu.nl",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/datetime.cpython-39.pyc",
+      "domain": "www.w3.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/functools.cpython-39.pyc",
+      "domain": "en.wikipedia.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/functools.cpython-39.pyc",
+      "domain": "www.python.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.cpython-39.pyc",
+      "domain": "json.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.cpython-39.pyc",
+      "domain": "json.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.cpython-39.pyc",
+      "domain": "json.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/weakref.cpython-39.pyc",
+      "domain": "www.python.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "a.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "abroad-lzd.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "apistore.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "arestapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "mpsapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "restsdk.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "tsapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "yuntuapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "abroad-lzd.apilocate.opnavi.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "apistore.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "arestapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "mpsapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "sg-apilocate.opnavi.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "sg-restapi.opnavi.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "tsapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "yuntuapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/api/location/AMapLocation.class",
+      "domain": "lbs.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/b$a.class",
+      "domain": "aloc-gnss-eph.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/c.class",
+      "domain": "aloc-gnss-eph.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/c/c.class",
+      "domain": "aps.testing.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/a/c/c.class",
+      "domain": "cgicol.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/e/a/c/b.class",
+      "domain": "aps.testing.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/e/d.class",
+      "domain": "0aloc-offline.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/e/d.class",
+      "domain": "pre-aloc-offline.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/fusion/c/f.class",
+      "domain": "aloc-modeldata.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/fusion/c/g.class",
+      "domain": "aloc-modeldata.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/fusion/original/specific/c.class",
+      "domain": "gnss-eph.oss-cn-hangzhou.aliyuncs.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/g/d/b.class",
+      "domain": "aps.testing.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/g/d/b.class",
+      "domain": "cgicol.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/g/d/b.class",
+      "domain": "cgicol.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/a$1.class",
+      "domain": "shanjing.cn-hangzhou.oss-pub.aliyun-inc.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/a$2.class",
+      "domain": "shanjing.cn-hangzhou.oss-pub.aliyun-inc.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/algo/a/j.class",
+      "domain": "www.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/algo/d.class",
+      "domain": "aloc-gnss-eph.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/gnss/d.class",
+      "domain": "aloc-gnss-eph.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class",
+      "domain": "1dualstack-m5.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class",
+      "domain": "aps.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class",
+      "domain": "aps.oversea.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class",
+      "domain": "aps.testing.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class",
+      "domain": "m5.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/protocol/a/a.class",
+      "domain": "maps.testing.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/cloud/LocationCloudRequester.class",
+      "domain": "aloc-control-plus.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/network/FileLoader.class",
+      "domain": "www.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/network/gateway/LocalGateway.class",
+      "domain": "control.aps.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/amap/location/support/rtk/EphemerisManager.class",
+      "domain": "aloc-gnss-eph.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/Aps.class",
+      "domain": "a.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/Aps.class",
+      "domain": "apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/config/Const.class",
+      "domain": "lbs.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/trans/AMapDnsManager.class",
+      "domain": "httpdns.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/trans/LocNetManager.class",
+      "domain": "arestapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class",
+      "domain": "a.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class",
+      "domain": "abroad.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class",
+      "domain": "apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class",
+      "domain": "arestapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/CoreUtil.class",
+      "domain": "httpdns.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/ReportUtil.class",
+      "domain": "abroad.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "abroad.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "aloc-control-plus.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "aloc-modeldata.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "aloc-offline.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "apilocate-pre-test.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "aps.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "cgicol.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/autonavi/aps/amapapi/utils/UrlUtil.class",
+      "domain": "dualstack-a.apilocate.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/k2.class",
+      "domain": "adiu.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/l0$d.class",
+      "domain": "dualstack-arestapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/l0$d.class",
+      "domain": "restsdk.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/m0.class",
+      "domain": "restsdk.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/r0.class",
+      "domain": "dualstack-arestapi.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/r0.class",
+      "domain": "restsdk.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/u1.class",
+      "domain": "restsdk.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/com/loc/u1.class",
+      "domain": "restsdk.amap.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/AndroidManifest.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/classes.jar!/iflb/b.class",
+      "domain": "dev.voicecloud.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/classes.jar!/iflb/c.class",
+      "domain": "dev.voicecloud.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/classes.jar!/iflb/d.class",
+      "domain": "dev.voicecloud.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "aee-api-gp.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "aee.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "android.googlesource.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "api-eu.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "api-sgp.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "api.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "avatar-hci.xfyousheng.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "cbm01.cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "cn-east-1.ws-api.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "cn-huabei-1-lg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "cn-huabei-1-lg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "cn-huadong-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "curl.haxx.se",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "data.rel.ro",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "emb-cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "eu-central-1.aicloudapi.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "eu.aicloudapi.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "evo-gen.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "iat-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "iat-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "iat-niche-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "iat.cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "iat.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "ist-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "itrans.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "its-api-sea.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "its-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "ivw-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "last.response.audio",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "ntrans.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "office-api-ast-dx.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "office-api-ist-dx.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "office-api-personal-dx.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "opentrain.xfyousheng.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "ost-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "ost-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "raasr.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "rtasr.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "spark-api.cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "spark-api.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "sparkbot.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "tts-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "tts-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "upload-ost-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "ws-api-dx.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "www.winimage.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "xns.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "zwapi.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libspark.so",
+      "domain": "android.googlesource.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libspark.so",
+      "domain": "data.rel.ro",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "0f.io",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "aee-api-gp.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "aee.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "android.googlesource.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "api-eu.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "api-sgp.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "api.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "avatar-hci.xfyousheng.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "cbm01.cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "cn-east-1.ws-api.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "cn-huabei-1-lg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "cn-huabei-1-lg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "cn-huadong-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "curl.haxx.se",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "data.rel.ro",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "emb-cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "eu-central-1.aicloudapi.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "eu.aicloudapi.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "evo-gen.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "iat-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "iat-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "iat-niche-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "iat.cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "iat.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "ist-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "itrans.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "its-api-sea.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "its-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "ivw-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "last.response.audio",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "ntrans.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "office-api-ast-dx.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "office-api-ist-dx.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "office-api-personal-dx.iflyaisol.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "opentrain.xfyousheng.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "ost-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "ost-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "raasr.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "rtasr.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "spark-api.cn-huabei-1.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "spark-api.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "sparkbot.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "tts-api-sg.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "tts-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "upload-ost-api.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "ws-api-dx.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "www.winimage.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "xns.xf-yun.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "zwapi.xfyun.cn",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似 API/服务端点",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libspark.so",
+      "domain": "android.googlesource.com",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libspark.so",
+      "domain": "data.rel.ro",
+      "risk": "HIGH",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": "app/proguard-rules.pro",
+      "domain": "developer.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/androidTest/java/com/example/androiddemo/ExampleInstrumentedTest.java",
+      "domain": "d.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/AndroidManifest.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/AccountBookActivity.java",
+      "domain": "dialog.show",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/CountdownActivity.java",
+      "domain": "dialog.show",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/CountdownDaysActivity.java",
+      "domain": "datepickerdialog.show",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/PeriodCalculatorActivity.java",
+      "domain": "dialog.show",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/PregnancyCalculatorActivity.java",
+      "domain": "dialog.show",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java",
+      "domain": "dialog.show",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": "app/src/main/res/color/bottom_nav_item_color.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/bg_bubble_ai.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/bg_bubble_bottom.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/bg_bubble_top.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/bg_bubble_user.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/bg_edit_text.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/bg_grass.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/calculator_button_equals.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/calculator_button_number.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/calculator_button_operator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/circle.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/circle_button_background.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/edittext_background.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/filter_chip_normal.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/filter_chip_selected.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/game_tile_background.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_aircon.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_check_circle.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_fire.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_forest.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_image_placeholder.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_launcher_background.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_pause.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_play_voice.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_rain.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_security_shield.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_settings.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_skip_next.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_stop.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_timer.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_traffic.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_volume_sound.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_warning.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_waterfall.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_wave.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/ic_wind.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/qr_scan_frame.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/section_background.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/shutter_button_bg.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_account_book.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_advanced_base_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_ai_chat.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_ai_code.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_ai_image_gen.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_ai_tts.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_ai_vision.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_anniversary_manager.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_app_clone.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_app_manager.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_area_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_attention_test.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_base64_codec.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_basic_tools_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_binary_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_birthday_code.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_blood_type.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_blood_type_match.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_bmi_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_bonus_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_bottom_nav_foldable.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_calendar.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_calorie_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_car_plate_fortune.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_color_blind_test.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_color_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_color_picker.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_color_picker_screen.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_compass.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_compound_interest.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_countdown.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_countdown_challenge.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_countdown_days.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_country_info.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_date_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_date_diff.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_day_of_week.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_device_info.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_dice_roller.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_document_camera.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_document_scanner.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_draw_board.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_efficiency_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_emergency_contact.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_exchange_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_exchange_rate.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_family_tree.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_feature.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_finance_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_flash_sale.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_flashlight.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_food_calories.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_fraud_alert.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_fuel_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_game_2048.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_game_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_gif_preview.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_gps_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_guess_number.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_hash_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_health_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_height_predictor.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_history_detail.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_history_favorite.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_history_today.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_holiday_query.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_horoscope.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_id_card_validator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_image_compressor.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_ip_lookup.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_item_storage.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_jigsaw_puzzle.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_json_formatter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_length_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_level_meter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_life_service_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_loan_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_location_gps.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_love_match.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_lunar_calendar.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_lunar_new_year_countdown.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_main.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_md5.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_medicine_reminder.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_memory_card.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_mental_health.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_metronome.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_mlkit_doc_scanner.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_noise_meter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_number_slider.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_number_to_chinese.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_one_stroke.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_password_manager.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_password_vault.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_pdf_creator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_pdf_reader.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_performance_measure.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_period_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_pet.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_phone_fortune.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_phone_locator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_pomodoro_timer.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_power_schedule.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_pregnancy_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_qr_generator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_qr_pay_collection.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_qr_scan_history.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_qr_scanner.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_quick_shortcut.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_quit_smoking.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_random_generator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_random_history.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_random_lottery.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_random_number_generator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_reaction_test.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_regex_tester.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_relative_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_relative_detail.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_rock_paper_scissors.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_ruler.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_screen_cast.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_scroll_capture.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_security_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_sensitive_words.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_sensor_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_sleep_quality.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_smart_qa.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_speed_test.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_step_counter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_stopwatch.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_stress_test.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_system_info.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_tax_calculator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_temperature_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_tetris.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_text_diff.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_tic_tac_toe.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_today_in_history.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_tools_home.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_touch_test.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_trace_crash.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_trace_custom.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_trace_lag.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_trace_performance.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_trace_white_screen.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_translator.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_tuner.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_unit_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_url_codec.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_vibration_test.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_video_to_gif.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_volume_meter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_wallpaper.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_waste_sort.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_water_reminder.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_watermark_camera.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_weather.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_weight_converter.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_white_noise.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_word_count.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_world_capitals.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_world_wonders.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/activity_zip_code.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_add_anniversary.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_add_contact.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_add_item.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_add_password.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_add_record.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_pomodoro_settings.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_timer_input.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/dialog_watermark_settings.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_account_record.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_app_info.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_forecast.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_fraud_app.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_holiday_countdown.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_image_thumbnail.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_msg_ai_text.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_msg_ai_voice.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_msg_user_text.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_msg_user_voice.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_today_in_history.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/item_world_clock_city.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/layout/view_dog_with_bubble.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/menu/bottom_nav_menu.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/values-night/themes.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/main/res/values/themes.xml",
+      "domain": "schemas.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP"
+      ]
+    },
+    {
+      "source": "app/src/test/java/com/example/androiddemo/ExampleUnitTest.java",
+      "domain": "d.android.com",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "gradle/wrapper/gradle-wrapper.jar!/META-INF/LICENSE",
+      "domain": "www.apache.org",
+      "risk": "HIGH",
+      "reasons": [
+        "明文 HTTP",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "gradle/wrapper/gradle-wrapper.jar!/org/gradle/wrapper/Install.class",
+      "domain": "gradle.org",
+      "risk": "HIGH",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名",
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现"
+      ]
+    },
+    {
+      "source": ".DS_Store",
+      "domain": "gradlew.ba",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/_collections_abc.cpython-39.pyc",
+      "domain": "collections.abc",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/collections/__init__.cpython-39.pyc",
+      "domain": "collections.abc",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.cpython-39.pyc",
+      "domain": "thread.run",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/typing.cpython-39.pyc",
+      "domain": "collections.abc",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似上传/回调/采集端点"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "d.is.autonavi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "m5.amap.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "render-prod-backup-tile.amap.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "render-prod-tile.amap.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "render.amap.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/Localizable.url",
+      "domain": "wb.amap.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "d.is.autonavi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "m5.amap.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "render-prod.opnavi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/libs/AMap_Location_V11.1.001_20260402.jar!/assets/Localizable/servers/oversea/Localizable.url",
+      "domain": "wb.amap.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/AiCodeActivity.java",
+      "domain": "api.minimaxi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/AiTtsActivity.java",
+      "domain": "api.minimaxi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/AiVisionActivity.java",
+      "domain": "api.minimaxi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/AilImageGenActivity.java",
+      "domain": "api.minimaxi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/MiniMaxApiService.java",
+      "domain": "api.minimaxi.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/SmartQaActivity.java",
+      "domain": "api.deepseek.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/XfyunIatService.java",
+      "domain": "iat-api.xfyun.cn",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/XfyunIatService.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/CountdownChallengeActivity.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TodayInHistoryActivity.java",
+      "domain": "api.apihubs.cn",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TranslatorActivity.java",
+      "domain": "api.mymemory.translated.net",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java",
+      "domain": "api.openweathermap.org",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/trace/CrashTraceActivity.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/trace/CustomTraceActivity.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/trace/LagTraceActivity.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/trace/PerformanceTraceActivity.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/trace/WhiteScreenTraceActivity.java",
+      "domain": "locale.us",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/res/xml/backup_rules.xml",
+      "domain": "developer.android.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "app/src/main/res/xml/data_extraction_rules.xml",
+      "domain": "developer.android.com",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似测试/预发/本地域名残留"
+      ]
+    },
+    {
+      "source": "gradle/gradle-daemon-jvm.properties",
+      "domain": "api.foojay.io",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似 API/服务端点"
+      ]
+    },
+    {
+      "source": "gradle/wrapper/gradle-wrapper.properties",
+      "domain": "services.gradle.org",
+      "risk": "MEDIUM",
+      "reasons": [
+        "疑似统计/崩溃/广告/日志/追踪域名"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/arm64-v8a/libSparkChain.so",
+      "domain": "example.com",
+      "risk": "LOW",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现",
+        "示例域名"
+      ]
+    },
+    {
+      "source": "app/libs/SparkChain.aar!/jni/armeabi-v7a/libSparkChain.so",
+      "domain": "example.com",
+      "risk": "LOW",
+      "reasons": [
+        "三方包或嵌套包内发现",
+        "归属压缩依赖包",
+        "二进制文件静态字符串中发现",
+        "示例域名"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/_sitebuiltins.cpython-39.pyc",
+      "domain": "pydoc.help",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/bz2.cpython-39.pyc",
+      "domain": "gmail.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/codecs.cpython-39.pyc",
+      "domain": "lemburg.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/codecs.cpython-39.pyc",
+      "domain": "self.stream",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/encodings/__init__.cpython-39.pyc",
+      "domain": "lemburg.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/encodings/latin_1.cpython-39.pyc",
+      "domain": "lemburg.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/encodings/utf_16_le.cpython-39.pyc",
+      "domain": "lemburg.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/encodings/utf_8.cpython-39.pyc",
+      "domain": "lemburg.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.cpython-39.pyc",
+      "domain": "guaranteed.fr",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.cpython-39.pyc",
+      "domain": "lfw.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/inspect.cpython-39.pyc",
+      "domain": "sprymix.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/io.cpython-39.pyc",
+      "domain": "gmail.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/io.cpython-39.pyc",
+      "domain": "pitrou.net",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/io.cpython-39.pyc",
+      "domain": "python.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/io.cpython-39.pyc",
+      "domain": "zen.co.uk",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.cpython-39.pyc",
+      "domain": "redivi.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.cpython-39.pyc",
+      "domain": "os.link",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.cpython-39.pyc",
+      "domain": "path.group",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pkgutil.cpython-39.pyc",
+      "domain": "foo.bar",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site.cpython-39.pyc",
+      "domain": "beopen.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site.cpython-39.pyc",
+      "domain": "www.jython.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site.cpython-39.pyc",
+      "domain": "www.python.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/stat.cpython-39.pyc",
+      "domain": "door.fr",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/stat.cpython-39.pyc",
+      "domain": "port.fr",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/stat.cpython-39.pyc",
+      "domain": "whiteout.fr",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.cpython-39.pyc",
+      "domain": "timer.run",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tokenize.cpython-39.pyc",
+      "domain": "lfw.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/types.cpython-39.pyc",
+      "domain": "560.fr",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/types.cpython-39.pyc",
+      "domain": "metaclass.nz",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/typing.cpython-39.pyc",
+      "domain": "aliases.re",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": ".pycache_codex/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/warnings.cpython-39.pyc",
+      "domain": "exception.nz",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "CLAUDE.md",
+      "domain": "mirrors.aliyun.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/build.gradle.kts",
+      "domain": "proguard-rules.pro",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/AiVisionActivity.java",
+      "domain": "builder.show",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/AiVisionActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/AilImageGenActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/ai/DogView.java",
+      "domain": "paint.align.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/BmiCalculatorActivity.java",
+      "domain": "record.date",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/BmiCalculatorActivity.java",
+      "domain": "this.date",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/CalendarActivity.java",
+      "domain": "gravity.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java",
+      "domain": "color.blue",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java",
+      "domain": "color.green",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerActivity.java",
+      "domain": "color.red",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java",
+      "domain": "color.blue",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java",
+      "domain": "color.green",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java",
+      "domain": "color.red",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerScreenActivity.java",
+      "domain": "manifest.permission.camera",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ColorPickerView.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/CompassView.java",
+      "domain": "paint.align.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/DateCalculatorActivity.java",
+      "domain": "this.day",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/DocumentCameraActivity.java",
+      "domain": "viewrect.top",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/DocumentScannerActivity.java",
+      "domain": "gravity.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/DocumentScannerActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/DrawBoardActivity.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/DrawBoardActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/DrawBoardView.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/FlashlightActivity.java",
+      "domain": "manifest.permission.camera",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ImageCompressorActivity.java",
+      "domain": "manifest.permission.camera",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/ImageCompressorActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/LevelView.java",
+      "domain": "paint.align.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/LunarCalendarActivity.java",
+      "domain": "gravity.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java",
+      "domain": "recordtype.contact",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java",
+      "domain": "recordtype.email",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java",
+      "domain": "unit.link",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/NgtaActivity.java",
+      "domain": "www.google.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/NoiseMeterView.java",
+      "domain": "paint.align.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/PomodoroService.java",
+      "domain": "builder.build",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/QRGeneratorActivity.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/QRGeneratorActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/QRScannerActivity.java",
+      "domain": "manifest.permission.camera",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/QuickShortcutActivity.java",
+      "domain": "www.baidu.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/RegexTesterActivity.java",
+      "domain": "matcher.group",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/RulerActivity.java",
+      "domain": "builder.show",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/RulerView.java",
+      "domain": "paint.align.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TetrisActivity.java",
+      "domain": "color.blue",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TetrisActivity.java",
+      "domain": "color.red",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java",
+      "domain": "color.red",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java",
+      "domain": "insetscontroller.show",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TouchTestActivity.java",
+      "domain": "paint.align.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/TunerView.java",
+      "domain": "paint.align.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/VideoToGifActivity.java",
+      "domain": "manifest.permission.camera",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/VideoToGifActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/VideoToGifActivity.java",
+      "domain": "mediastore.video.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java",
+      "domain": "gravity.top",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java",
+      "domain": "manifest.permission.camera",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WatermarkCameraActivity.java",
+      "domain": "mediastore.images.media",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java",
+      "domain": "forecastitem.date",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java",
+      "domain": "item.date",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WeatherActivity.java",
+      "domain": "openweathermap.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/WhiteNoiseService.java",
+      "domain": "builder.build",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/scanner/NativeClass.java",
+      "domain": "candidaterect.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/scanner/NativeClass.java",
+      "domain": "existingrect.center",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/tools/scanner/OverlayView.java",
+      "domain": "color.black",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/trace/LagTraceActivity.java",
+      "domain": "methodandargscaller.run",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/java/com/example/androiddemo/trace/WhiteScreenTraceActivity.java",
+      "domain": "methodandargscaller.run",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "app/src/main/res/drawable/circle.xml",
+      "domain": "github.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "gradlew",
+      "domain": "github.com",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "gradlew",
+      "domain": "www.apache.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    },
+    {
+      "source": "gradlew.bat",
+      "domain": "www.apache.org",
+      "risk": "INFO",
+      "reasons": [
+        "待人工确认"
+      ]
+    }
+  ]
+}

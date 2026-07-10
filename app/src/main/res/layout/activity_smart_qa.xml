@@ -2,94 +2,222 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
 
-    <!-- 标题栏 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
+        android:layout_height="88dp"
+        android:background="#FFFFFF"
         android:gravity="center_vertical"
-        android:paddingHorizontal="16dp"
-        android:background="?attr/colorPrimary">
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="16dp">
 
-        <TextView
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_smart_qa_bot_avatar"
+                android:contentDescription="AI 智能助手"
+                android:padding="12dp"
+                android:src="@drawable/ic_smart_qa_bot" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/bg_smart_qa_online_dot" />
+        </FrameLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:layout_weight="1"
-            android:text="智能问答"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI 智能助手"
+                android:textColor="#17192C"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="在线"
+                android:textColor="#8F98AE"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_knowledge_base"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_smart_qa_knowledge_chip"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="知识库"
+                android:src="@drawable/ic_smart_qa_globe" />
+
+            <TextView
+                android:id="@+id/tv_knowledge_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:maxLines="1"
+                android:text="通用知识库"
+                android:textColor="#7A5316"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="5dp"
+                android:contentDescription="选择知识库"
+                android:src="@drawable/ic_smart_qa_chevron_down" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- 对话记录面板 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ECE8E0" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_messages"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="12dp"
+        android:background="#F7F4EE"
         android:clipToPadding="false"
-        android:background="#F5F5F5" />
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="20dp" />
 
-    <!-- 底部输入栏：三控件同行 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="#EEEEEE"
-        android:padding="8dp">
+        android:background="#FFFFFF"
+        android:orientation="vertical">
 
-        <!-- 模式切换按钮（固定大小） -->
-        <Button
-            android:id="@+id/btn_mode_toggle"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:text="语音"
-            android:textSize="12sp"
-            android:padding="0dp"
-            android:layout_marginEnd="8dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ECE8E0" />
 
-        <!-- 文本输入框（填充剩余宽度） -->
-        <EditText
-            android:id="@+id/et_input"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="40dp"
-            android:maxHeight="120dp"
-            android:hint="输入文字..."
-            android:textSize="16sp"
-            android:paddingHorizontal="12dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:background="@drawable/edittext_background"
-            android:singleLine="false"
-            android:inputType="textMultiLine"
-            android:imeOptions="actionSend" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="14dp">
 
-        <!-- 语音录音按钮（填充剩余宽度，默认隐藏） -->
-        <Button
-            android:id="@+id/btn_voice_record"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="按住说话"
-            android:textSize="14sp"
-            android:visibility="gone" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_mode_toggle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_smart_qa_icon_button"
+                android:contentDescription="切换到语音输入"
+                android:padding="13dp"
+                android:src="@drawable/ic_smart_qa_mic" />
 
-        <!-- 发送/暂停按钮（固定大小） -->
-        <Button
-            android:id="@+id/btn_send_pause"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:text="发送"
-            android:textSize="12sp"
-            android:padding="0dp"
-            android:layout_marginStart="8dp" />
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_smart_qa_input"
+                android:hint="输入消息..."
+                android:imeOptions="actionSend"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxHeight="112dp"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingTop="11dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="11dp"
+                android:singleLine="false"
+                android:textColor="#17192C"
+                android:textColorHint="#A3AABD"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_voice_record"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_smart_qa_input"
+                android:drawableStart="@drawable/ic_smart_qa_mic"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="12dp"
+                android:text="按住说话"
+                android:textAllCaps="false"
+                android:textColor="#8F98AE"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_send_pause"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_smart_qa_icon_button"
+                android:contentDescription="发送消息"
+                android:padding="13dp"
+                android:src="@drawable/ic_smart_qa_send" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="18dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="12dp">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_smart_qa_connection_dot" />
+
+            <TextView
+                android:id="@+id/tv_connection_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="已连接 · 通用知识库"
+                android:textColor="#A3AABD"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

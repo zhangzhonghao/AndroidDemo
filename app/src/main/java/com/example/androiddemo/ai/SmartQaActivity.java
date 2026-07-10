@@ -15,9 +15,12 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -64,9 +67,12 @@ public class SmartQaActivity extends AppCompatActivity {
     // Views
     private RecyclerView rvMessages;
     private EditText etInput;
-    private Button btnModeToggle;
+    private ImageButton btnModeToggle;
     private Button btnVoiceRecord;
-    private Button btnSendPause;
+    private ImageButton btnSendPause;
+    private View btnKnowledgeBase;
+    private TextView tvKnowledgeBase;
+    private TextView tvConnectionStatus;
 
     // Data
     private final List<VoiceMessage> messageList = new ArrayList<>();
@@ -77,6 +83,7 @@ public class SmartQaActivity extends AppCompatActivity {
     private boolean isStreaming = false;
     private VoiceMessage pendingAiMessage;
     private int pendingAiPosition = -1;
+    private String selectedKnowledgeBase = "通用知识库";
 
     // OkHttp + SSE
     private OkHttpClient okHttpClient;
@@ -151,6 +158,9 @@ public class SmartQaActivity extends AppCompatActivity {
         btnModeToggle = findViewById(R.id.btn_mode_toggle);
         btnVoiceRecord = findViewById(R.id.btn_voice_record);
         btnSendPause = findViewById(R.id.btn_send_pause);
+        btnKnowledgeBase = findViewById(R.id.btn_knowledge_base);
+        tvKnowledgeBase = findViewById(R.id.tv_knowledge_base);
+        tvConnectionStatus = findViewById(R.id.tv_connection_status);
 
         // 默认文本模式
         setTextMode();
@@ -256,6 +266,16 @@ public class SmartQaActivity extends AppCompatActivity {
             }
         });
 
+        btnKnowledgeBase.setOnClickListener(v -> showKnowledgeBaseMenu());
+
+        etInput.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEND) {
+                sendTextMessage();
+                return true;
+            }
+            return false;
+        });
+
         // 语音录音按钮（按住说话）
         btnVoiceRecord.setOnTouchListener((v, event) -> {
             int action = event.getAction();
@@ -291,10 +311,14 @@ public class SmartQaActivity extends AppCompatActivity {
 
     private void setTextMode() {
         isTextMode = true;
-        btnModeToggle.setText("语音");
+        btnModeToggle.setImageResource(R.drawable.ic_smart_qa_mic);
+        btnModeToggle.setBackgroundResource(R.drawable.bg_smart_qa_icon_button);
+        btnModeToggle.setContentDescription("切换到语音输入");
         etInput.setVisibility(View.VISIBLE);
         btnVoiceRecord.setVisibility(View.GONE);
         btnSendPause.setVisibility(View.VISIBLE);
+        btnSendPause.setEnabled(true);
+        btnSendPause.setAlpha(1.0f);
     }
 
     private void setVoiceMode() {
@@ -307,12 +331,12 @@ public class SmartQaActivity extends AppCompatActivity {
             return;
         }
         isTextMode = false;
-        btnModeToggle.setText("键盘");
+        btnModeToggle.setImageResource(R.drawable.ic_smart_qa_chat);
+        btnModeToggle.setBackgroundResource(R.drawable.bg_smart_qa_mode_voice);
+        btnModeToggle.setContentDescription("切换到文字输入");
         etInput.setVisibility(View.GONE);
         btnVoiceRecord.setVisibility(View.VISIBLE);
-        btnSendPause.setVisibility(View.VISIBLE);
-        btnSendPause.setEnabled(false);
-        btnSendPause.setText("发送");
+        btnSendPause.setVisibility(isStreaming ? View.VISIBLE : View.GONE);
 
         if (!sparkChainAvailable) {
             btnVoiceRecord.setEnabled(false);
@@ -374,6 +398,11 @@ public class SmartQaActivity extends AppCompatActivity {
             requestBody.put("stream", true);
 
             JSONArray messages = new JSONArray();
+            JSONObject systemMsg = new JSONObject();
+            systemMsg.put("role", "system");
+            systemMsg.put("content", buildKnowledgeBasePrompt());
+            messages.put(systemMsg);
+
             JSONObject userMsg = new JSONObject();
             userMsg.put("role", "user");
             userMsg.put("content", userMessage);
@@ -534,9 +563,6 @@ public class SmartQaActivity extends AppCompatActivity {
         pendingAiMessage = null;
         pendingAiPosition = -1;
         setStreamingState(false);
-        if (!isTextMode) {
-            btnSendPause.setEnabled(false);
-        }
     }
 
     private void cancelSse() {
@@ -549,11 +575,52 @@ public class SmartQaActivity extends AppCompatActivity {
     private void setStreamingState(boolean streaming) {
         isStreaming = streaming;
         if (streaming) {
-            btnSendPause.setText("暂停");
+            btnSendPause.setVisibility(View.VISIBLE);
+            btnSendPause.setImageResource(R.drawable.ic_smart_qa_stop);
+            btnSendPause.setContentDescription("停止生成");
             btnSendPause.setEnabled(true);
+            btnSendPause.setAlpha(1.0f);
+            tvConnectionStatus.setText("正在生成 · " + selectedKnowledgeBase);
         } else {
-            btnSendPause.setText("发送");
+            btnSendPause.setImageResource(R.drawable.ic_smart_qa_send);
+            btnSendPause.setContentDescription("发送消息");
             btnSendPause.setEnabled(true);
+            btnSendPause.setVisibility(isTextMode ? View.VISIBLE : View.GONE);
+            tvConnectionStatus.setText("已连接 · " + selectedKnowledgeBase);
+        }
+    }
+
+    private void showKnowledgeBaseMenu() {
+        PopupMenu popupMenu = new PopupMenu(this, btnKnowledgeBase);
+        popupMenu.getMenu().add("通用知识库");
+        popupMenu.getMenu().add("产品文档库");
+        popupMenu.getMenu().add("法律法规库");
+        popupMenu.getMenu().add("研究报告库");
+        popupMenu.setOnMenuItemClickListener(item -> {
+            selectedKnowledgeBase = item.getTitle().toString();
+            tvKnowledgeBase.setText(selectedKnowledgeBase);
+            String connectionState = isStreaming ? "正在生成 · " : "已连接 · ";
+            tvConnectionStatus.setText(connectionState + selectedKnowledgeBase);
+            return true;
+        });
+        popupMenu.show();
+    }
+
+    private String buildKnowledgeBasePrompt() {
+        switch (selectedKnowledgeBase) {
+            case "产品文档库":
+                return "你是产品文档助手。优先以产品说明、操作步骤和故障排查的方式回答；"
+                        + "不确定的信息要明确说明，不要编造产品细节。";
+            case "法律法规库":
+                return "你是法律法规信息助手。回答时说明适用范围和时效性，避免虚构法条；"
+                        + "内容仅供一般信息参考，不替代专业法律意见。";
+            case "研究报告库":
+                return "你是研究报告助手。使用结构化、审慎的表达，区分事实、观点和推断；"
+                        + "缺少可靠依据时明确标注不确定性。";
+            case "通用知识库":
+            default:
+                return "你是准确、清晰且友好的 AI 智能助手。优先直接回答问题，"
+                        + "复杂内容使用易读的结构表达。";
         }
     }
 
