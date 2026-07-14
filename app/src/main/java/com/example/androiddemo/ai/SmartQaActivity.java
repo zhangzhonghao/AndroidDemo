@@ -52,16 +52,17 @@ import okhttp3.sse.EventSources;
 
 /**
  * 智能问答 Activity
- * 支持文本输入 + DeepSeek SSE 流式回复，以及语音输入 + SparkChain ASR
+ * 支持文本输入 + NVIDIA NIM SSE 流式回复，以及语音输入 + SparkChain ASR
  */
 public class SmartQaActivity extends AppCompatActivity {
 
     private static final String TAG = "SmartQaActivity";
     private static final int REQUEST_AUDIO_PERMISSION = 2001;
 
-    // DeepSeek API 配置
-    private static final String DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions";
-    private static final String DEEPSEEK_MODEL = "deepseek-v4-flash";
+    // NVIDIA NIM OpenAI-compatible API
+    private static final String NVIDIA_API_URL =
+            "https://integrate.api.nvidia.com/v1/chat/completions";
+    private static final String NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash";
     private static final MediaType JSON_MEDIA_TYPE = MediaType.parse("application/json; charset=utf-8");
 
     // Views
@@ -344,7 +345,7 @@ public class SmartQaActivity extends AppCompatActivity {
         }
     }
 
-    // ========== 文本发送 + DeepSeek SSE ==========
+    // ========== 文本发送 + NVIDIA NIM SSE ==========
 
     private void sendTextMessage() {
         String text = etInput.getText().toString().trim();
@@ -362,7 +363,7 @@ public class SmartQaActivity extends AppCompatActivity {
         etInput.setText("");
 
         // 进入流式状态
-        startDeepSeekSse(text);
+        startNvidiaSse(text);
     }
 
     private void autoSendVoiceText(String text) {
@@ -377,10 +378,15 @@ public class SmartQaActivity extends AppCompatActivity {
         }
 
         addUserMessage(text);
-        startDeepSeekSse(text);
+        startNvidiaSse(text);
     }
 
-    private void startDeepSeekSse(String userMessage) {
+    private void startNvidiaSse(String userMessage) {
+        if (TextUtils.isEmpty(BuildConfig.NVIDIA_API_KEY)) {
+            addAiMessage("NVIDIA API Key 未配置");
+            return;
+        }
+
         // 创建占位AI消息
         pendingAiMessage = new VoiceMessage(VoiceMessage.TYPE_TEXT, false, "...", null, null);
         messageList.add(pendingAiMessage);
@@ -394,8 +400,16 @@ public class SmartQaActivity extends AppCompatActivity {
         try {
             // 构建请求体
             JSONObject requestBody = new JSONObject();
-            requestBody.put("model", DEEPSEEK_MODEL);
+            requestBody.put("model", NVIDIA_MODEL);
             requestBody.put("stream", true);
+            requestBody.put("temperature", 1.0);
+            requestBody.put("top_p", 0.95);
+            requestBody.put("max_tokens", 16384);
+
+            JSONObject chatTemplateKwargs = new JSONObject();
+            chatTemplateKwargs.put("thinking", true);
+            chatTemplateKwargs.put("reasoning_effort", "high");
+            requestBody.put("chat_template_kwargs", chatTemplateKwargs);
 
             JSONArray messages = new JSONArray();
             JSONObject systemMsg = new JSONObject();
@@ -410,9 +424,9 @@ public class SmartQaActivity extends AppCompatActivity {
             requestBody.put("messages", messages);
 
             Request request = new Request.Builder()
-                    .url(DEEPSEEK_URL)
+                    .url(NVIDIA_API_URL)
                     .addHeader("Content-Type", "application/json")
-                    .addHeader("Authorization", "Bearer " + BuildConfig.DEEPSEEK_API_KEY)
+                    .addHeader("Authorization", "Bearer " + BuildConfig.NVIDIA_API_KEY)
                     .post(RequestBody.create(requestBody.toString(), JSON_MEDIA_TYPE))
                     .build();
 
@@ -437,7 +451,7 @@ public class SmartQaActivity extends AppCompatActivity {
             });
 
         } catch (Exception e) {
-            Log.e(TAG, "创建 DeepSeek 请求失败", e);
+            Log.e(TAG, "创建 NVIDIA NIM 请求失败", e);
             onStreamFinished(false);
             Toast.makeText(this, "请求创建失败: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
@@ -445,7 +459,7 @@ public class SmartQaActivity extends AppCompatActivity {
 
     private void handleSseData(String data) {
         Log.d("SmartQaActivity", "SSE data: " + data.substring(0, Math.min(200, data.length())));
-        // DeepSeek SSE 格式: data: {"choices":[{"delta":{"content":"xxx"}}]}
+        // NVIDIA NIM uses the OpenAI-compatible SSE data format.
         try {
             if (data.trim().equals("[DONE]")) {
                 mainHandler.post(() -> onStreamFinished(true));
@@ -454,7 +468,7 @@ public class SmartQaActivity extends AppCompatActivity {
 
             JSONObject json = new JSONObject(data);
 
-            // 先检查 HTTP 状态码（DeepSeek 可能会在 SSE 里也带这些）
+            // Some provider errors are returned inside an HTTP 200 SSE stream.
             if (json.has("error")) {
                 JSONObject error = json.getJSONObject("error");
                 String code = error.optString("code", "");
